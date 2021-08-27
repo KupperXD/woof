@@ -31,6 +31,7 @@
     "gulp-autoprefixer": "^8.0.0",
     "gulp-babel": "^8.0.0",
     "gulp-concat": "^2.6.1",
+    "gulp-file-include": "^2.3.0",
     "gulp-imagemin": "^8.0.0",
     "gulp-newer": "^1.4.0",
     "gulp-posthtml": "^3.0.5",

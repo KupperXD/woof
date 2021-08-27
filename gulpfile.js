@@ -18,7 +18,7 @@ const svgstore     = require('gulp-svgstore');
 const uglify       = require('gulp-uglify-es').default;
 const server       = require("browser-sync").create();
 const posthtml     = require("gulp-posthtml");
-const include      = require("posthtml-include");
+const include      = require("gulp-file-include");
 
 const pluginsJSPaths = [
 ];
@@ -110,16 +110,14 @@ function svg() {
 }
 
 function html() {
-    return gulp.src('source/*.html')
-        .pipe(posthtml([
-            include()
-        ]))
+    return gulp.src(['source/*.html', '!source/components/**/*.html'])
+        .pipe(include())
         .pipe(gulp.dest('dist/'));
 }
 
 function copy() {
     return gulp.src(copySrc)
-        .pipe(gulp.dest('dist/font/'));
+        .pipe(gulp.dest('dist/fonts/'));
 }
 
 function serverLive() {
