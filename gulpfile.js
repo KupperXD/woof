@@ -71,7 +71,8 @@ function styles() {
             cascade: false
         }))
         .pipe(rename({suffix: '.min'}))
-        .pipe(gulp.dest(paths.styles.dest, { sourcemaps: '.' }));
+        .pipe(gulp.dest(paths.styles.dest, { sourcemaps: '.' }))
+        .pipe(server.stream());
 }
 
 function scripts() {
@@ -133,7 +134,7 @@ function serverLive() {
     gulp.watch(paths.styles.watch, {interval: 200}, styles);
     gulp.watch(paths.svg.src, {interval: 200}, svg);
     gulp.watch(paths.images.src, {interval: 200}, images);
-    gulp.watch('source/*.html', html).on('change', server.reload);
+    gulp.watch('source/**/*.html', html).on('change', server.reload);
 }
 
 function pluginsJS() {
@@ -181,3 +182,4 @@ gulp.task('watch', function () {
     gulp.watch(paths.svg.src, {interval: 200}, svg);
 });
 gulp.task('default', gulp.series('build', 'serverLive'));
+gulp.task('start', gulp.series('build', 'serverLive'));
