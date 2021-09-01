@@ -1,4 +1,13 @@
 .header {
+
+  &.catalog-open {
+    .header__catalog-popup {
+      opacity: 1;
+      z-index: 1;
+      transition: opacity 0.3s ease-in-out;
+    }
+  }
+
   &__top {
     display: flex;
     align-items: center;
@@ -98,7 +107,228 @@
     svg {
       width: 22px;
       height: 22px;
+      margin: 0 12px 0 0;
       background-color: tomato;
+    }
+  }
+
+  &__favorite-link,
+  &__cart-link {
+    display: flex;
+    align-items: center;
+  }
+
+  &__telephone {
+    &-link {
+      display: block;
+      width: max-content;
+      color: $text-main-color;
+      font-size: 16px;
+      font-weight: 500;
+    }
+  }
+
+  &__favorite {
+    margin: 0 0 0 auto;
+  }
+
+  &__cart {
+    margin-left: 48px;
+  }
+
+  &__call {
+    padding: 0;
+    margin-top: 8px;
+    border: none;
+    background-color: transparent;
+    font-size: 14px;
+    color: $red;
+    text-decoration: underline;
+  }
+
+  &__bottom {
+    position: relative;
+    background: $red;
+
+    & > .container {
+      display: flex;
+      align-items: center;
+      min-height: 40px;
+    }
+  }
+
+  &__catalog {
+
+    &-title {
+      font-size: 16px;
+      font-weight: 700;
+      color: $red;
+
+      a {
+        font: inherit;
+        color: inherit;
+        transition: opacity 0.3s ease-in-out;
+      }
+    }
+
+    &-link {
+      &:not(:first-of-type) {
+        margin: 8px 0 0;
+      }
+      a {
+        font-size: 16px;
+        font-weight: 700;
+        color: $red;
+        transition: opacity 0.3s ease-in-out;
+
+        &:hover {
+          opacity: 0.7;
+        }
+      }
+    }
+
+    &-list {
+      margin: 12px 0 0;
+    }
+
+    &-item {
+
+      &:not(:first-of-type) {
+        margin: 8px 0 0;
+      }
+
+      a {
+        color: $text-main-color;
+        transition: opacity 0.3s ease-in-out;
+
+        &:hover {
+          opacity: 0.7;
+        }
+      }
+    }
+
+    &-grid {
+      display: grid;
+      grid-template-columns: 148px 1fr 148px;
+      gap: 48px;
+      padding: 32px 0;
+    }
+
+    &-subsection {
+      columns: 4;
+      column-gap: 48px;
+    }
+
+    &-list-wrapper {
+      break-inside: avoid;
+    }
+
+    &-popup {
+      position: absolute;
+      min-height: 297px;
+      max-height: 500px;
+      top: 100%;
+      left: 0;
+      right: 0;
+      background-color: $white;
+      opacity: 0;
+      z-index: -1;
+      overflow-y: auto;
+      transition: z-index 0.1s ease-in-out 0.4s, opacity 0.3s ease-in-out;
+    }
+
+    &-toggle {
+      width: 22px;
+      height: 22px;
+      position: relative;
+      margin: 0 24px 0 0;
+
+      span {
+        backface-visibility: hidden;
+        width: 100%;
+        position: absolute;
+        left: 0;
+        border-top: 3px solid $white;
+        transition: 0.55s;
+
+        &:first-child {
+          top: 0;
+        }
+
+        &:nth-child(2) {
+          top: 9px;
+        }
+
+        &:last-child {
+          top: 18px;
+        }
+      }
+    }
+
+    &-open {
+      display: flex;
+      height: 40px;
+      align-items: center;
+      padding: 0 12px;
+      background-color: $text-main-color;
+      border: none;
+      &-wrapper {
+        margin: 0 102px 0 0;
+      }
+
+      &.opened {
+        .header__catalog-toggle {
+          span {
+            &:first-child {
+              top: 9px;
+              backface-visibility: hidden;
+              transform: rotate(50deg);
+              transition: 0.55s 0.5s;
+            }
+
+            &:nth-child(2) {
+              opacity: 0;
+            }
+
+            &:last-child {
+              top: 9px;
+              backface-visibility: hidden;
+              transform: rotate(-410deg);
+              transition: 0.55s 0.5s;
+            }
+          }
+        }
+      }
+    }
+
+    &-text {
+      font-weight: 500;
+      font-size: 16px;
+      color: $white;
+    }
+  }
+
+  &__nav-list {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: -12px -20px;
+  }
+
+  &__nav-item {
+    margin: 12px 20px;
+    a {
+      display: flex;
+      align-items: center;
+      padding: 6px 0;
+      font-size: 16px;
+      font-weight: 500;
+      color: $white;
+      transition: opacity 0.3s ease-in-out;
+
+      &:hover {
+        opacity: 0.7;
+      }
     }
   }
 }

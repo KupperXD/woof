@@ -1,7 +1,7 @@
 <body>
     <!-- page-wrapper -->
     <div class="page-wrapper">
-        <header class="header">
+        <header class="header js-header">
             <div class="header__wrapper">
                 <div class="header__top">
                     <div class="container">
@@ -74,7 +74,7 @@
                             </div>
                         </div>
                         <div class="header__telephone">
-                            <a href="tel:88001234567" class="header__telephone">
+                            <a href="tel:88001234567" class="header__telephone-link">
                                 8 800 123-45-67
                             </a>
                             <button class="header__call js-open-call-popup" type="button">
@@ -90,15 +90,386 @@
                         <div class="header__cart header__cart--has-items">
                             <a class="header__cart-link">
                                 <svg></svg>
-                                <span class="header__cart-counts">
-                                    12
-                                </span>
                                 Корзина
                             </a>
                         </div>
                     </div>
                     <div class="header__bottom">
-
+                        <div class="container">
+                            <div class="header__catalog-open-wrapper">
+                                <button class="js-catalog-open header__catalog-open" type="button">
+                                <span class="header__catalog-toggle">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </span>
+                                    <span class="header__catalog-text">Каталог</span>
+                                </button>
+                            </div>
+                            <nav class="header__nav">
+                                <ul class="header__nav-list">
+                                    <li class="header__nav-item">
+                                        <a href="#">Новинки</a>
+                                    </li>
+                                    <li class="header__nav-item">
+                                        <a href="#">Бренды</a>
+                                    </li>
+                                    <li class="header__nav-item">
+                                        <a href="#">Кошкам</a>
+                                    </li>
+                                    <li class="header__nav-item">
+                                        <a href="#">Собакам</a>
+                                    </li>
+                                    <li class="header__nav-item">
+                                        <a href="#">Ветаптекам</a>
+                                    </li>
+                                    <li class="header__nav-item">
+                                        <a href="#">Наш мерч</a>
+                                    </li>
+                                </ul>
+                            </nav>
+                            <div class="header__catalog-popup">
+                                <div class="container">
+                                    <div class="header__catalog-grid">
+                                        <div class="header__catalog-brands">
+                                            <div class="header__catalog-list-wrapper">
+                                                <p class="header__catalog-title">
+                                                    <a href="#">
+                                                        Название бренда
+                                                    </a>
+                                                </p>
+                                                <ul class="header__catalog-list">
+                                                    <li class="header__catalog-item">
+                                                        <a href="#">
+                                                            Название бренда
+                                                        </a>
+                                                    </li>
+                                                    <li class="header__catalog-item">
+                                                        <a href="#">
+                                                            Название бренда
+                                                        </a>
+                                                    </li>
+                                                    <li class="header__catalog-item">
+                                                        <a href="#">
+                                                            Название бренда
+                                                        </a>
+                                                    </li>
+                                                    <li class="header__catalog-item">
+                                                        <a href="#">
+                                                            Название бренда
+                                                        </a>
+                                                    </li>
+                                                    <li class="header__catalog-item">
+                                                        <a href="#">
+                                                            Название бренда
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="header__catalog-subsection">
+                                            <div class="header__catalog-list-wrapper">
+                                                <p class="header__catalog-title">
+                                                    <a href="#">Название бренда</a>
+                                                </p>
+                                                <ul class="header__catalog-list">
+                                                    <li class="header__catalog-item">
+                                                        <a href="#">
+                                                            Название бренда
+                                                        </a>
+                                                    </li>
+                                                    <li class="header__catalog-item">
+                                                        <a href="#">
+                                                            Название бренда
+                                                        </a>
+                                                    </li>
+                                                    <li class="header__catalog-item">
+                                                        <a href="#">
+                                                            Название бренда
+                                                        </a>
+                                                    </li>
+                                                    <li class="header__catalog-item">
+                                                        <a href="#">
+                                                            Название бренда
+                                                        </a>
+                                                    </li>
+                                                    <li class="header__catalog-item">
+                                                        <a href="#">
+                                                            Название бренда
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="header__catalog-list-wrapper">
+                                                <p class="header__catalog-title">
+                                                    <a href="#">Название бренда</a>
+                                                </p>
+                                                <ul class="header__catalog-list">
+                                                    <li class="header__catalog-item">
+                                                        <a href="#">
+                                                            Название бренда
+                                                        </a>
+                                                    </li>
+                                                    <li class="header__catalog-item">
+                                                        <a href="#">
+                                                            Название бренда
+                                                        </a>
+                                                    </li>
+                                                    <li class="header__catalog-item">
+                                                        <a href="#">
+                                                            Название бренда
+                                                        </a>
+                                                    </li>
+                                                    <li class="header__catalog-item">
+                                                        <a href="#">
+                                                            Название бренда
+                                                        </a>
+                                                    </li>
+                                                    <li class="header__catalog-item">
+                                                        <a href="#">
+                                                            Название бренда
+                                                        </a>
+                                                    </li>
+                                                    <li class="header__catalog-item">
+                                                        <a href="#">
+                                                            Название бренда
+                                                        </a>
+                                                    </li>
+                                                    <li class="header__catalog-item">
+                                                        <a href="#">
+                                                            Название бренда
+                                                        </a>
+                                                    </li>
+                                                    <li class="header__catalog-item">
+                                                        <a href="#">
+                                                            Название бренда
+                                                        </a>
+                                                    </li>
+                                                    <li class="header__catalog-item">
+                                                        <a href="#">
+                                                            Название бренда
+                                                        </a>
+                                                    </li>
+                                                    <li class="header__catalog-item">
+                                                        <a href="#">
+                                                            Название бренда
+                                                        </a>
+                                                    </li>
+                                                    <li class="header__catalog-item">
+                                                        <a href="#">
+                                                            Название бренда
+                                                        </a>
+                                                    </li>
+                                                    <li class="header__catalog-item">
+                                                        <a href="#">
+                                                            Название бренда
+                                                        </a>
+                                                    </li>
+                                                    <li class="header__catalog-item">
+                                                        <a href="#">
+                                                            Название бренда
+                                                        </a>
+                                                    </li>
+                                                    <li class="header__catalog-item">
+                                                        <a href="#">
+                                                            Название бренда
+                                                        </a>
+                                                    </li>
+                                                    <li class="header__catalog-item">
+                                                        <a href="#">
+                                                            Название бренда
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="header__catalog-list-wrapper">
+                                                <p class="header__catalog-title">
+                                                    <a href="#">Название бренда</a>
+                                                </p>
+                                                <ul class="header__catalog-list">
+                                                    <li class="header__catalog-item">
+                                                        <a href="#">
+                                                            Название бренда
+                                                        </a>
+                                                    </li>
+                                                    <li class="header__catalog-item">
+                                                        <a href="#">
+                                                            Название бренда
+                                                        </a>
+                                                    </li>
+                                                    <li class="header__catalog-item">
+                                                        <a href="#">
+                                                            Название бренда
+                                                        </a>
+                                                    </li>
+                                                    <li class="header__catalog-item">
+                                                        <a href="#">
+                                                            Название бренда
+                                                        </a>
+                                                    </li>
+                                                    <li class="header__catalog-item">
+                                                        <a href="#">
+                                                            Название бренда
+                                                        </a>
+                                                    </li>
+                                                    <li class="header__catalog-item">
+                                                        <a href="#">
+                                                            Название бренда
+                                                        </a>
+                                                    </li>
+                                                    <li class="header__catalog-item">
+                                                        <a href="#">
+                                                            Название бренда
+                                                        </a>
+                                                    </li>
+                                                    <li class="header__catalog-item">
+                                                        <a href="#">
+                                                            Название бренда
+                                                        </a>
+                                                    </li>
+                                                    <li class="header__catalog-item">
+                                                        <a href="#">
+                                                            Название бренда
+                                                        </a>
+                                                    </li>
+                                                    <li class="header__catalog-item">
+                                                        <a href="#">
+                                                            Название бренда
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="header__catalog-list-wrapper">
+                                                <p class="header__catalog-title">
+                                                    <a href="#">Название бренда</a>
+                                                </p>
+                                                <ul class="header__catalog-list">
+                                                    <li class="header__catalog-item">
+                                                        <a href="#">
+                                                            Название бренда
+                                                        </a>
+                                                    </li>
+                                                    <li class="header__catalog-item">
+                                                        <a href="#">
+                                                            Название бренда
+                                                        </a>
+                                                    </li>
+                                                    <li class="header__catalog-item">
+                                                        <a href="#">
+                                                            Название бренда
+                                                        </a>
+                                                    </li>
+                                                    <li class="header__catalog-item">
+                                                        <a href="#">
+                                                            Название бренда
+                                                        </a>
+                                                    </li>
+                                                    <li class="header__catalog-item">
+                                                        <a href="#">
+                                                            Название бренда
+                                                        </a>
+                                                    </li>
+                                                    <li class="header__catalog-item">
+                                                        <a href="#">
+                                                            Название бренда
+                                                        </a>
+                                                    </li>
+                                                    <li class="header__catalog-item">
+                                                        <a href="#">
+                                                            Название бренда
+                                                        </a>
+                                                    </li>
+                                                    <li class="header__catalog-item">
+                                                        <a href="#">
+                                                            Название бренда
+                                                        </a>
+                                                    </li>
+                                                    <li class="header__catalog-item">
+                                                        <a href="#">
+                                                            Название бренда
+                                                        </a>
+                                                    </li>
+                                                    <li class="header__catalog-item">
+                                                        <a href="#">
+                                                            Название бренда
+                                                        </a>
+                                                    </li>
+                                                    <li class="header__catalog-item">
+                                                        <a href="#">
+                                                            Название бренда
+                                                        </a>
+                                                    </li>
+                                                    <li class="header__catalog-item">
+                                                        <a href="#">
+                                                            Название бренда
+                                                        </a>
+                                                    </li>
+                                                    <li class="header__catalog-item">
+                                                        <a href="#">
+                                                            Название бренда
+                                                        </a>
+                                                    </li>
+                                                    <li class="header__catalog-item">
+                                                        <a href="#">
+                                                            Название бренда
+                                                        </a>
+                                                    </li>
+                                                    <li class="header__catalog-item">
+                                                        <a href="#">
+                                                            Название бренда
+                                                        </a>
+                                                    </li>
+                                                    <li class="header__catalog-item">
+                                                        <a href="#">
+                                                            Название бренда
+                                                        </a>
+                                                    </li>
+                                                    <li class="header__catalog-item">
+                                                        <a href="#">
+                                                            Название бренда
+                                                        </a>
+                                                    </li>
+                                                    <li class="header__catalog-item">
+                                                        <a href="#">
+                                                            Название бренда
+                                                        </a>
+                                                    </li>
+                                                    <li class="header__catalog-item">
+                                                        <a href="#">
+                                                            Название бренда
+                                                        </a>
+                                                    </li>
+                                                    <li class="header__catalog-item">
+                                                        <a href="#">
+                                                            Название бренда
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="header__catalog-additional">
+                                            <ul class="header__catalog-links">
+                                                <li class="header__catalog-link">
+                                                    <a href="#">
+                                                        Новински
+                                                    </a>
+                                                </li>
+                                                <li class="header__catalog-link">
+                                                    <a href="#">
+                                                        Скидки и акции
+                                                    </a>
+                                                </li>
+                                                <li class="header__catalog-link">
+                                                    <a href="#">
+                                                        Нужно приютам
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
