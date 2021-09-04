@@ -1,0 +1,38 @@
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: max-content;
+  height: 40px;
+  padding: 8px 32px;
+  border: 1px solid $white;
+  background: transparent;
+  color: $white;
+  border-radius: 24px;
+  text-decoration: none;
+  transition:
+          background-color 0.3s ease-in-out,
+          color 0.3s ease-in-out,
+          border-color 0.3s ease-in-out;
+
+  @media (max-width: $mobile-max) {
+    font-size: 14px;
+  }
+
+  &:hover {
+    background-color: $white;
+    color: $red;
+  }
+
+  &--red {
+    border-color: $red;
+    background-color: $red;
+    color: $white;
+
+    &:hover {
+      border-color: $black;
+      background-color: $text-main-color;
+      color: $white;
+    }
+  }
+}

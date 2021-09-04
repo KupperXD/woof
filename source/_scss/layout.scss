@@ -3,11 +3,20 @@
   flex-direction: column;
   justify-content: space-between;
   min-height: 100vh;
+
+  &.header-fixed {
+    .all {
+      padding: 120px 0 0;
+
+      @media (max-width: $tablet-max) {
+        padding: 60px 0 0;
+      }
+    }
+  }
 }
 
 .all {
   flex-grow: 1;
-  background-color: dodgerblue;
 }
 
 .container {
@@ -15,8 +24,16 @@
   padding: 0 40px;
   margin: 0 auto;
 
-  @media (max-width: $tablet-max) {
+
+  @media (max-width: $mobile-max) {
     width: 100%;
     padding: 0 20px;
+  }
+
+  &--content {
+    @media (max-width: $tablet-max) and (min-width: $tablet-min) {
+      width: 670px;
+      padding: 0 20px;
+    }
   }
 }

@@ -21,9 +21,12 @@ const posthtml     = require("gulp-posthtml");
 const include      = require("gulp-file-include");
 
 const pluginsJSPaths = [
+    'node_modules/jquery/dist/jquery.min.js',
+    'node_modules/swiper/swiper-bundle.min.js',
 ];
 
 const pluginsCSSPaths = [
+    'node_modules/swiper/swiper-bundle.min.css',
 ];
 
 const copySrc = [
@@ -175,7 +178,7 @@ gulp.task('js', gulp.series(scripts));
 gulp.task('clean', gulp.series(clean));
 gulp.task('serverLive', gulp.series(serverLive));
 
-gulp.task('build', gulp.series(clean, copy, images,styles, scripts, svg, html));
+gulp.task('build', gulp.series(clean, copy, images,styles, pluginsJS, pluginsCSS, scripts, svg, html));
 gulp.task('watch', function () {
     gulp.watch(paths.scripts.watch, {interval: 200}, scripts);
     gulp.watch(paths.styles.watch, {interval: 200}, styles);
