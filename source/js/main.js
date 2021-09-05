@@ -1,6 +1,13 @@
 (function ($) {
     'use strict';
 
+    const sweetAlertCssClass = {
+        container: 'custom-popup__container',
+        popup: 'custom-popup',
+        htmlContainer: 'custom-popup__wrapper',
+        closeButton: 'custom-popup__close',
+    }
+
     const html = document.querySelector('html');
     const header = document.querySelector('.js-header');
     const catalogOpened = header.querySelector('.js-catalog-open');
@@ -121,6 +128,61 @@
                 nextEl: $next,
             },
         });
+    });
+
+    const $productSlider = $('.js-product-slider');
+
+    $productSlider.each((index, item) => {
+       const prevButton = $(item).find('.js-product-slider-prev').get(0);
+       const nextButton = $(item).find('.js-product-slider-next').get(0);
+       const pagination = $(item).find('.js-product-slider-pagination').get(0)
+
+       new Swiper($(item).find('.js-swiper-container').get(0), {
+           slidesPerView: 4,
+           spaceBetween: 30,
+           breakpoints: {
+               320: {
+                   spaceBetween: 10,
+                   slidesPerView: 'auto',
+               },
+               768: {
+                   slidesPerView: 'auto',
+               },
+               1280: {
+                   centeredSlides: false,
+                   slidesPerView: 4,
+               },
+           },
+           navigation: {
+               prevEl: prevButton,
+               nextEl: nextButton,
+           },
+           pagination: {
+               clickable: true,
+               el: pagination,
+           },
+       });
+    });
+
+    $(document).on('click', '.js-brands-open-popup', (evt) => {
+        const $target = $(evt.target);
+        const $holder = $target.closest('.js-brands-item');
+        const popupTemplate = $holder.find('.js-brands-popup').get(0);
+
+        if (typeof popupTemplate === 'undefined' || !popupTemplate) {
+            return;
+        }
+
+        const cloneTemplate = popupTemplate.cloneNode(true);
+
+        Swal.fire({
+            backdrop: true,
+            html: cloneTemplate,
+            customClass: sweetAlertCssClass,
+            padding: 0,
+            showConfirmButton: false,
+            showCloseButton: true,
+        })
     });
 
 })(jQuery);

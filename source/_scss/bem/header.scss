@@ -15,7 +15,8 @@
   &.catalog-open {
     .header__catalog-popup {
       opacity: 1;
-      z-index: 1;
+      z-index: 100;
+      visibility: visible;
       transition: opacity 0.3s ease-in-out;
     }
   }
@@ -24,6 +25,7 @@
     .header__mobile {
       opacity: 1;
       z-index: 10;
+      visibility: visible;
       transition: opacity 0.2s ease-in-out;
     }
 
@@ -511,8 +513,9 @@
       background-color: $white;
       opacity: 0;
       z-index: -1;
+      visibility: hidden;
       overflow-y: auto;
-      transition: z-index 0.1s ease-in-out 0.4s, opacity 0.3s ease-in-out;
+      transition: visibility 0.1s ease-in-out 0.4s, z-index 0.1s ease-in-out 0.4s, opacity 0.3s ease-in-out;
     }
 
     &-toggle {
@@ -627,7 +630,8 @@
       overflow-y: auto;
       opacity: 0;
       z-index: -1;
-      transition: z-index 0s ease-in-out 0.2s, opacity 0.2s ease-in-out;
+      visibility: hidden;
+      transition: visibility 0s ease-in-out 0.2s, z-index 0s ease-in-out 0.2s, opacity 0.2s ease-in-out;
     }
 
     @media (max-width: $mobile-max) {

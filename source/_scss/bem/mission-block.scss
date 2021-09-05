@@ -1,0 +1,53 @@
+.mission-block {
+  &__wrapper {
+    padding: 94px 0 168px;
+
+    @media (max-width: $tablet-max) {
+      padding: 64px 0 80px;
+    }
+
+    @media (max-width: $mobile-max) {
+      padding: 56px 0 72px;
+    }
+  }
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin: 24px 0 0;
+
+    @media (max-width: $mobile-max) {
+      display: block;
+    }
+  }
+
+  &__desc {
+    width: 470px;
+
+    @media (max-width: $tablet-max) {
+      width: 330px;
+    }
+
+    @media (max-width: $mobile-max) {
+      width: 100%;
+    }
+
+    .button {
+      margin: 32px 0 0;
+    }
+  }
+
+  &__goals {
+    width: 557px;
+
+    @media (max-width: $tablet-max) {
+      width: 254px;
+    }
+
+    @media (max-width: $mobile-max) {
+      width: 100%;
+      margin: 40px 0 0;
+    }
+  }
+}

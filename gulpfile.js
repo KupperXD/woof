@@ -23,10 +23,12 @@ const include      = require("gulp-file-include");
 const pluginsJSPaths = [
     'node_modules/jquery/dist/jquery.min.js',
     'node_modules/swiper/swiper-bundle.min.js',
+    'node_modules/sweetalert2/dist/sweetalert2.js',
 ];
 
 const pluginsCSSPaths = [
     'node_modules/swiper/swiper-bundle.min.css',
+    'node_modules/sweetalert2/dist/sweetalert2.min.css',
 ];
 
 const copySrc = [
@@ -87,7 +89,7 @@ function scripts() {
 }
 
 function images() {
-    return gulp.src('source/img/official/*')
+    return gulp.src('source/img/official/**/*')
         .pipe(plumber())
         .pipe(newer(paths.images.src))
         .pipe(gulp.dest('dist/img/official'));

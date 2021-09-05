@@ -1,0 +1,124 @@
+.main-navigation {
+  padding-top: 50px;
+
+  @media (max-width: $tablet-max) {
+    padding-top: 28px;
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: 470px 370px 270px;
+    grid-template-rows: repeat(2, 220px);
+    gap: 28px;
+
+    @media (max-width: $tablet-max) {
+      grid-template-columns: 299px auto;
+      grid-template-rows: repeat(2, 142px) 164px;
+      gap: 16px;
+    }
+
+    @media (max-width: $mobile-max) {
+      display: block;
+    }
+  }
+
+  &__item {
+
+    @media (max-width: $mobile-max) {
+      height: 166px;
+      margin: 12px 0 0;
+    }
+    &--dogs {
+      grid-row: span 2;
+
+      @media (max-width: $mobile-max) {
+        height: 286px;
+        margin: 0;
+      }
+
+      .main-navigation__link {
+        background-color: $red;
+        color: $white;
+      }
+    }
+
+    &--pharmacy {
+      .main-navigation__item-picture {
+        bottom: -74px;
+        right: -74px;
+      }
+    }
+
+    &--helps {
+      grid-column: span 2;
+
+      .main-navigation__item-picture {
+        @media (max-width: $mobile-max) {
+          width: 400px;
+          height: 100%;
+
+          img {
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+          }
+        }
+      }
+
+    }
+
+    &--cats {
+      .main-navigation__item-picture {
+        width: 640px;
+        right: -205px;
+        top: 0;
+
+        @media (max-width: $tablet-max) {
+          top: -25px;
+          right: -225px;
+        }
+      }
+    }
+  }
+
+  &__item-picture {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+  }
+
+  &__item-text {
+    position: relative;
+    z-index: 1;
+  }
+
+
+  &__link {
+    position: relative;
+    display: block;
+    height: 100%;
+    padding: 56px 35px 56px;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 28px;
+    color: $text-main-color;
+    border-radius: 12px;
+    background-color: $white;
+    box-shadow: 11px 18px 40px rgba(229, 231, 236, 0.75);
+    overflow: hidden;
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out;
+
+    @media (max-width: $tablet-max) {
+      padding: 32px;
+    }
+
+    @media (max-width: $mobile-max) {
+      padding: 24px;
+    }
+
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+}

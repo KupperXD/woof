@@ -38,7 +38,8 @@
     "gulp-posthtml": "^3.0.5",
     "jquery": "^3.6.0",
     "posthtml-include": "^1.7.1",
-    "sass": "^1.38.1"
+    "sass": "^1.38.1",
+    "sweetalert2": "^11.1.4"
   },
   "devDependencies": {
     "gulp-plumber": "^1.2.1",

@@ -1,4 +1,5 @@
 .big-slider {
+  background: $white;
   &__wrapper {
     height: 600px;
 
@@ -149,6 +150,10 @@
       justify-content: flex-end;
       top: auto;
       bottom: 0;
+    }
+
+    @media (max-width: $mobile-max) {
+      height: 60%;
     }
 
     img {

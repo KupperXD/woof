@@ -1,0 +1,247 @@
+.product-item {
+  position: relative;
+  width: 270px;
+  height: 520px;
+  background-color: $white;
+  border-radius: 20px;
+
+  @media (max-width: $mobile-max) {
+    width: 136px;
+    height: 342px;
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding: 20px 24px;
+    overflow: hidden;
+
+    @media (max-width: $mobile-max) {
+      padding: 12px;
+    }
+  }
+
+  &__picture {
+    height: 194px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 24px 12px;
+    margin: 0 -24px;
+    border-bottom: 1px solid #eee;
+
+    @media (max-width: $mobile-max) {
+      height: 96px;
+      margin: 0 -12px;
+      padding: 0 12px 12px;
+    }
+
+    img {
+      width: 175px;
+      height: 175px;
+      object-fit: cover;
+      object-position: center;
+
+      @media (max-width: $mobile-max) {
+        width: 88px;
+        height: 88px;
+      }
+    }
+  }
+
+  &__bubble {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 40px;
+    padding: 12px;
+    color: $white;
+    font-size: 12px;
+    line-height: 12px;
+    background-color: $red;
+    border-radius: 0 20px 0 20px;
+
+    @media (max-width: $mobile-max) {
+      height: 25px;
+      padding: 2px 8px;
+      font-size: 10px;
+      line-height: 12px;
+    }
+  }
+
+  &__favorite {
+    position: absolute;
+    top: 24px;
+    left: 24px;
+    width: 25px;
+    height: 21px;
+    padding: 0;
+    background: none;
+    border: none;
+
+    &.active {
+      .favorite-icon-within-fill {
+        display: none;
+      }
+    }
+
+    &:not(.active) {
+      .favorite-icon-with-fill {
+        display: none;
+      }
+    }
+
+    .favorite-icon-with-fill {
+      fill: $red;
+    }
+
+    @media (max-width: $mobile-max) {
+      width: 13px;
+      height: 11px;
+      top: 12px;
+      left: 12px;
+    }
+
+    svg {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__desc {
+    height: 72px;
+    margin: 24px 0 0;
+    font-size: 15px;
+    line-height: 18px;
+
+    @media (max-width: $mobile-max) {
+      height: 64px;
+      margin: 6px 0 0;
+      font-size: 12px;
+      line-height: normal;
+    }
+  }
+
+  &__inner {
+    display: flex;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    margin: 10px 0 0;
+
+    @media (max-width: $mobile-max) {
+      align-items: flex-start;
+      justify-content: space-between;
+    }
+  }
+  &__size {
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    min-height: 70px;
+    margin: -4px -7px;
+
+    @media (max-width: $mobile-max) {
+      flex-direction: column;
+      min-height: 0;
+      margin: 0;
+      order: 1;
+    }
+
+    &-item {
+      margin: 4px 7px;
+
+      @media (max-width: $mobile-max) {
+        margin: 0;
+      }
+
+      &.active {
+        .product-item__size-toggle {
+          color: $red;
+        }
+      }
+    }
+
+    &-toggle {
+      padding: 2px 0;
+      border: none;
+      background: none;
+      font-size: 15px;
+      font-weight: 700;
+      line-height: normal;
+      color: #959595;
+
+      @media (max-width: $mobile-max) {
+        font-size: 12px;
+      }
+    }
+  }
+
+  &__price {
+    width: 50%;
+    padding: 0 12px 0 0;
+    font-size: 21px;
+    font-weight: 700;
+    text-align: left;
+
+    @media (max-width: $mobile-max) {
+      width: 100%;
+      margin: 12px 0 0;
+      font-size: 14px;
+      order: 3;
+    }
+  }
+
+  &__status {
+    width: 50%;
+    font-size: 13px;
+    line-height: 15px;
+    color: #1c994e;
+    text-align: right;
+
+    @media (max-width: $mobile-max) {
+      width: auto;
+      padding-left: 4px;
+      font-size: 10px;
+      order: 2;
+    }
+  }
+
+  &__bottom {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin-top: auto;
+  }
+
+  &__add {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 85px;
+    height: 40px;
+    border: 1px solid $red;
+    background: transparent;
+    border-radius: 24px;
+
+    @media (max-width: $mobile-max) {
+      width: 57px;
+      height: 27px;
+      order: -1;
+    }
+
+    svg {
+      width: 24px;
+      height: 24px;
+      fill: $red;
+
+      @media (max-width: $mobile-max) {
+        width: 16px;
+        height: 16px;
+      }
+    }
+  }
+}

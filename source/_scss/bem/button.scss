@@ -35,4 +35,15 @@
       color: $white;
     }
   }
+
+  &--black {
+    border-color: $text-main-color;
+    color: $text-main-color;
+
+    &:hover {
+      border-color: $red;
+      color: $red;
+      background-color: transparent;
+    }
+  }
 }

@@ -1,0 +1,30 @@
+.custom-popup {
+  width: 770px;
+  border-radius: 24px;
+
+  @media (max-width: $tablet-max) {
+    width: 570px;
+  }
+
+  @media (max-width: $mobile-max) {
+    width: 100%;
+  }
+
+  &__wrapper {
+    margin: 0;
+    padding: 40px 56px 72px;
+
+    @media (max-width: $tablet-max) {
+      padding: 32px 68px;
+    }
+
+    @media (max-width: $mobile-max) {
+      padding: 24px 24px 32px;
+    }
+  }
+
+  &__close {
+    color: $black;
+    outline: none;
+  }
+}
