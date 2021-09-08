@@ -1,0 +1,13 @@
+.mission-page {
+  &__helps {
+    margin-top: 116px;
+
+    @media (max-width: $tablet-max) {
+      margin: 32px 0 0;
+    }
+
+    @media (max-width: $mobile-max) {
+      margin: 48px 0 0;
+    }
+  }
+}

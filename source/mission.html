@@ -1,0 +1,57 @@
+@@include('components/head.html')
+<div style="display: none;">
+    @@include('../dist/img/svg/sprite.svg')
+</div>
+@@include('components/header.html')
+    <main class="all mission-page">
+        <section class="preview-big">
+            <div class="container container--content">
+                <div class="preview-big__wrapper">
+                    <div class="preview-big__picture">
+                        <picture>
+                            <source srcset="img/official/banners/mission-banner-tablet.png" media="(max-width: 1279px)">
+                            <img src="img/official/banners/mission-banner.png" alt="">
+                        </picture>
+                    </div>
+                    <div class="preview-big__content">
+                        <h1>Давайте помогать
+                            вместе.
+                            Это не сложно!</h1>
+                        <a class="preview-big__link button button--red" href="#">
+                            В каталог
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="mission-page__helps">
+            <section class="helps-block">
+                <div class="container container--content">
+                    <div class="helps-block__wrapper">
+                        <div class="helps-block__content">
+                            <h3 class="small">
+                                Всем хвостам нужна любовь
+                                и забота!
+                            </h3>
+                            <p class="helps-block__desc">
+                                В&nbsp;нашем приюте содержатся более 40&nbsp;собак
+                                и&nbsp;20&nbsp;кошек. Каждый из&nbsp;них ждет своего
+                                человека с&nbsp;большим сердцем, который заберет друга домой.
+                                Но&nbsp;не&nbsp;всем хвостам повезет&nbsp;&mdash; многие из&nbsp;них
+                                останутся надолго на&nbsp;попечении приюта. Приюту очень нужна ваша помощь,
+                                чтобы обеспечить животным комфортное пребывание и&nbsp;полезную пищу.
+                            </p>
+                        </div>
+                        <div class="helps-block__picture">
+                            <picture>
+                                <source srcset="img/official/banners/dogs-on-ellips.png"  media="(max-width: 768px)">
+                                <source srcset="img/official/banners/dogs-on-ellips.png"  media="(min-width: 1280px)">
+                                <img src="img/official/banners/dogs-on-ellips-tablet.png" width="958" height="304" alt="Грустная собака ждёт помощи">
+                            </picture>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+@@include('components/footer.html')
