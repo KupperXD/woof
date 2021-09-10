@@ -1,0 +1,33 @@
+.goals-number {
+
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(10px, 274px));
+        gap: 24px;
+
+        @media (max-width: $mobile-max) {
+            display: block;
+        }
+    }
+
+    &__item {
+        &:not(:first-of-type) {
+            @media (max-width: $mobile-max) {
+                margin: 40px 0 0;
+            }
+        }
+    }
+
+    &__title {
+        font-size: 32px;
+        font-weight: 500;
+        line-height: 26px;
+        color: $red;
+    }
+
+    &__desc {
+        margin: 20px 0 0;
+        font-size: 16px;
+        line-height: 24px;
+    }
+}

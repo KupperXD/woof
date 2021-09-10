@@ -46,4 +46,10 @@
       background-color: transparent;
     }
   }
+
+  &--bg-white-mobile {
+    @media (max-width: $mobile-max) {
+      background-color: $white;
+    }
+  }
 }

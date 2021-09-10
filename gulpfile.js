@@ -24,11 +24,13 @@ const pluginsJSPaths = [
     'node_modules/jquery/dist/jquery.min.js',
     'node_modules/swiper/swiper-bundle.min.js',
     'node_modules/sweetalert2/dist/sweetalert2.js',
+    'node_modules/select2/dist/js/select2.min.js',
 ];
 
 const pluginsCSSPaths = [
     'node_modules/swiper/swiper-bundle.min.css',
     'node_modules/sweetalert2/dist/sweetalert2.min.css',
+    'node_modules/select2/dist/css/select2.min.css',
 ];
 
 const copySrc = [
