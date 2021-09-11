@@ -27,11 +27,13 @@
     h3 {
       width: 550px;
       margin: 0 104px 0 0;
+      line-height: 38px;
       color: $white;
 
       @media (max-width: $tablet-max) {
         width: 274px;
         margin: 0 60px 0 0;
+        line-height: 30px;
       }
 
       @media (max-width: $mobile-max) {

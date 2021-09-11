@@ -21,4 +21,15 @@
       }
     }
   }
+
+  &--white {
+    .form-field__inner {
+      background-color: $white;
+    }
+
+    input::placeholder {
+      font-style: normal;
+      color: #a1a1a1;
+    }
+  }
 }

@@ -112,6 +112,11 @@
         </div>
         <div class="mission-page__animal-helps">
             <div class="container container--content">
+                <div class="mission-page__decor-woof">
+                    <svg>
+                        <use xlink:href="#ic_big-woof"></use>
+                    </svg>
+                </div>
                 <section class="animal-helps">
                     <div class="animal-helps__wrapper">
                         <h3 class="animal-helps__title small">
@@ -121,12 +126,33 @@
                         <p class="animal-helps__desc">
                             В&nbsp;данный момент эти животные находятся на&nbsp;лечении, каждый с&nbsp;различной степенью
                             заболевания, каждый с&nbsp;различной стоимостью лечения. Лечение этих животных осуществляет
-                            фонд помощи бездомным животным &laquo;Ника&raquo;.
+                            фонд помощи бездомным животным &laquo;Ника&raquo;.<br>
                             Вы&nbsp;можете внести свой вклад в&nbsp;скорейшее выздоровление этих питомцев,
                             нажав на&nbsp;кнопку и&nbsp;пожертвова любую сумму&nbsp;&mdash; эти животные будут
                             вам безмерно благодарны!
                         </p>
                         <ul class="animal-helps__list">
+                            <li class="animal-helps__item">
+                                <div class="animal-helps__item-picture">
+                                    <img src="img/official/test_dogs.jpg" width="272" height="303" alt="">
+                                </div>
+                                <h4 class="animal-helps__item-name">Сея</h4>
+                                <p class="animal-helps__item-desc">Девочка / 4 года</p>
+                            </li>
+                            <li class="animal-helps__item">
+                                <div class="animal-helps__item-picture">
+                                    <img src="img/official/test_dogs.jpg" width="272" height="303" alt="">
+                                </div>
+                                <h4 class="animal-helps__item-name">Сея</h4>
+                                <p class="animal-helps__item-desc">Девочка / 4 года</p>
+                            </li>
+                            <li class="animal-helps__item">
+                                <div class="animal-helps__item-picture">
+                                    <img src="img/official/test_dogs.jpg" width="272" height="303" alt="">
+                                </div>
+                                <h4 class="animal-helps__item-name">Сея</h4>
+                                <p class="animal-helps__item-desc">Девочка / 4 года</p>
+                            </li>
                             <li class="animal-helps__item">
                                 <div class="animal-helps__item-picture">
                                     <img src="img/official/test_dogs.jpg" width="272" height="303" alt="">
@@ -141,7 +167,8 @@
                                     <div class="form-toggle-group__wrapper">
                                         <div class="form-toggle-group__item form-toggle">
                                             <div class="form-toggle__wrapper">
-                                                <input id="donation_sum_1" value="1" name="donation_sum" class="visually-hidden" type="radio">
+                                                <input
+                                                        id="donation_sum_1" value="1" name="donation_sum" class="visually-hidden" type="radio">
                                                 <label for="donation_sum_1" class="form-toggle__label">
                                                     200 Р
                                                 </label>
@@ -176,28 +203,28 @@
                                 <div class="animal-helps__form-group form-grid">
                                     <div class="form-grid__wrapper">
                                         <div class="form-grid__label">
-                                            Назначения платежа
+                                            Назначения платежа:
                                         </div>
                                         <div class="form-grid__inner">
                                             <select class="js-select2" name="sizes">
                                                 <option value="1">
-                                                    XS  (6 лет, 116 см)
+                                                    Благотворительные пожертвования 1
                                                 </option>
                                                 <option value="2">
-                                                    XS  (6 лет, 116 см)
+                                                    Благотворительные пожертвования 2
                                                 </option>
                                                 <option value="3">
-                                                    XS  (6 лет, 116 см)
+                                                    Благотворительные пожертвования 3
                                                 </option>
                                                 <option value="4">
-                                                    XS  (6 лет, 116 см)
+                                                    Благотворительные пожертвования 4
                                                 </option>
                                             </select>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="animal-helps__form-group">
-                                    <div class="form-field">
+                                <div class="animal-helps__form-group animal-helps__form-group--text">
+                                    <div class="form-field form-field--white">
                                         <div class="form-field__inner">
                                             <input
                                                     placeholder="Ваше имя*"
@@ -207,9 +234,7 @@
                                                     type="text">
                                         </div>
                                     </div>
-                                </div>
-                                <div class="animal-helps__form-group">
-                                    <div class="form-field">
+                                    <div class="form-field form-field--white">
                                         <div class="form-field__inner">
                                             <input
                                                     placeholder="Ваше e-mail*"
@@ -223,11 +248,60 @@
                                 <button class="animal-helps__form-submit button button--red" type="submit">
                                     Пожертвовать
                                 </button>
-                                <p class="animal-helps__form-additional"></p>
+                                <p class="animal-helps__form-additional">
+                                    Нажимая &laquo;Пожертвовать&raquo;, вы&nbsp;соглашаетесь с&nbsp;офертой
+                                </p>
                             </form>
                         </div>
                     </div>
                 </section>
+            </div>
+        </div>
+        <div class="mission-page__clothes">
+            <div class="container container--content">
+                <section class="clothes-info">
+                    <div class="clothes-info__wrapper">
+                        <div class="clothes-info__content">
+                            <h3 class="small">
+                                Забавный мерч Woof для людей &mdash;
+                                серьезная помощь бездомным
+                                животным
+                            </h3>
+                            <p class="clothes-info__desc">
+                                Мы&nbsp;верим, что помогать тем, кто нуждается в&nbsp;нашей
+                                помощи&nbsp;&mdash; это поистине благородное дело!
+                                Мы&nbsp;стараемся создать вокруг нашего бренда ответственное
+                                и&nbsp;отзывчивое сообщество, членов которого объединяет стремление
+                                помогать бездомным животным, попавшим в&nbsp;беду.
+                                Сегодня мы&nbsp;ушли чуть дальше первоначальной концепции
+                                и&nbsp;предлагаем вам приобрести наш брендированный мерч,
+                                20% от&nbsp;продажи которого идут в&nbsp;помощь фонду
+                                &laquo;Ника&raquo;. Не&nbsp;бойтесь выделяться и&nbsp;показывать
+                                свою принадлежность к&nbsp;сообществу, ведь за&nbsp;вами пойдут
+                                сотни людей!
+                            </p>
+                            <a class="clothes-info__link button button--black" href="#">
+                                Перейти в каталог
+                            </a>
+                        </div>
+                        <div class="clothes-info__picture">
+                            <img
+                                    src="img/official/merh-picture.png"
+                                    width="566"
+                                    height="549"
+                                    alt="Линейка одежды">
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+        @@include('components/components/subscription.html')
+        <div class="mission-page__required-shelter product-slider-new-item">
+            <div class="container container--content">
+                <h3 class="small">Сейчас требуется приюту</h3>
+                @@include('components/components/product-slider/index.html', {
+                "class": "product-slider-new-item__slider",
+                })
             </div>
         </div>
     </main>

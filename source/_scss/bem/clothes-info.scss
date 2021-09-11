@@ -1,0 +1,77 @@
+.clothes-info {
+    &__wrapper {
+      display: flex;
+      align-items: center;
+
+      @media (max-width: $tablet-max) {
+        display: block;
+      }
+    }
+
+    &__picture {
+      width: 566px;
+      height: 549px;
+      flex-shrink: 0;
+      margin: 0 72px 0 -20px;
+      order: -1;
+
+      @media (max-width: $tablet-max) {
+        width: 405px;
+        height: 393px;
+        margin: 12px auto 0;
+      }
+
+      @media (max-width: $mobile-max) {
+        position: relative;
+        left: 50%;
+        margin: 24px 0 0;
+        transform: translateX(-50%);
+      }
+
+
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    h3 {
+      line-height: 36px;
+
+      @media (max-width: $tablet-max) {
+        line-height: 30px;
+        text-align: center;
+      }
+
+      @media (max-width: $mobile-max) {
+        text-align: left;
+      }
+    }
+
+  &__content {
+    max-width: 560px;
+
+    @media (max-width: $tablet-max) {
+      max-width: none;
+    }
+  }
+
+  &__desc {
+    max-width: 470px;
+    margin: 32px 0 0;
+
+    @media (max-width: $tablet-max) {
+      max-width: none;
+      margin: 24px 0 0;
+      text-align: left;
+    }
+  }
+
+  &__link {
+    margin: 32px 0 0;
+
+    @media (max-width: $tablet-max) {
+      margin: 16px auto 0;
+    }
+  }
+}

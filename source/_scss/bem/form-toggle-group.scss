@@ -1,0 +1,12 @@
+.form-toggle-group {
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    margin: -6px -5px;
+    flex-wrap: wrap;
+  }
+
+  &__item {
+    margin: 6px 5px;
+  }
+}
