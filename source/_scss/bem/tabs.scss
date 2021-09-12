@@ -1,0 +1,38 @@
+.tabs {
+  display: flex;
+  align-items: center;
+  margin: -6px 0;
+  &__button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    min-width: 120px;
+    height: 35px;
+    padding: 4px 32px;
+    background-color: transparent;
+    border-radius: 16px;
+    border: 1px solid transparent;
+    transition: 0.3s opacity ease-in-out;
+  }
+
+  &__item {
+    margin: 6px 0;
+  }
+
+  &__item:not(.active) {
+    .tabs__button:hover {
+      opacity: 0.7;
+    }
+  }
+
+  &__item.active {
+    .tabs__button {
+      background: $white;
+      border-radius: 16px;
+      border: 1px solid $red;
+      color: $red;
+      pointer-events: none;
+    }
+  }
+}

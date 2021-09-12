@@ -191,5 +191,48 @@
                 dropdownParent: $(item).parent(),
             });
         });
+
+        $(document).on('click', '.js-donation-success-open', (evt) => {
+            evt.preventDefault();
+            const popup = $('.js-donation-success-popup').get(0);
+
+            if (typeof popup === 'undefined') {
+                return;
+            }
+
+            const cloneTemplate = popup.cloneNode(true);
+
+            Swal.fire({
+                backdrop: true,
+                html: cloneTemplate,
+                customClass: {
+                    ...sweetAlertCssClass,
+                    popup: 'custom-popup custom-popup--donation'
+                },
+                padding: 0,
+                showConfirmButton: false,
+                showCloseButton: true,
+            })
+        });
+
+        $(document).on('click', '.js-catalog-filters-toggle', () => {
+           $('.js-catalog-filter').toggleClass('open');
+        });
+
+        $(document).on('click', '.js-catalog-filter-close', () => {
+            $('.js-catalog-filter').removeClass('open');
+        });
+
+        $(document).on('click', (evt) => {
+            const $target = $(evt.target);
+            const isToggler = !!($target.closest('.js-catalog-filters-toggle').length);
+            const isFilters = !!($target.closest('.js-catalog-filter').length);
+
+            if (isFilters || isToggler) {
+                return;
+            }
+
+            $('.js-catalog-filter').removeClass('open');
+        });
     })
 })(jQuery);

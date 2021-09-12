@@ -1,0 +1,289 @@
+@@include('components/head.html')
+<div style="display: none;">
+    @@include('../dist/img/svg/sprite.svg')
+</div>
+@@include('components/header.html')
+    <main class="all">
+        <div class="catalog-page">
+            <div class="catalog-page__header">
+                <h2>Каталог</h2>
+                <ul class="catalog-page__header-tabs tabs">
+                    <li class="tabs__item active">
+                        <button class="tabs__button" type="button">
+                            Кошкам
+                        </button>
+                    </li>
+                    <li class="tabs__item">
+                        <button class="tabs__button" type="button">
+                            Собакам
+                        </button>
+                    </li>
+                    <li class="tabs__item">
+                        <button class="tabs__button" type="button">
+                            Требуются приюту
+                        </button>
+                    </li>
+                    <li class="tabs__item">
+                        <button class="tabs__button" type="button">
+                            Ветаптека
+                        </button>
+                    </li>
+                    <li class="tabs__item">
+                        <button class="tabs__button" type="button">
+                            Мерч Woof
+                        </button>
+                    </li>
+                </ul>
+            </div>
+            <div class="catalog-page__grid">
+                <div class="catalog-page__mobile-tabs">
+                    <div class="catalog-page__category-select">
+                        <select class="js-select2" name="sizes">
+                            <option value="1">
+                                Кошкам
+                            </option>
+                            <option value="2">
+                                Собакам
+                            </option>
+                            <option value="3">
+                                Требуются приюту
+                            </option>
+                            <option value="4">
+                                Ветаптека
+                            </option>
+                            <option value="5">
+                                Мерч Woof
+                            </option>
+                        </select>
+                    </div>
+                </div>
+                <div class="catalog-page__filters-wrapper">
+                    <button class="catalog-page__filters-toggle js-catalog-filters-toggle" type="button">
+                        <svg class="catalog-page__filters-icon">
+                            <use xlink:href="#ic_filter"></use>
+                        </svg>
+                        <span class="catalog-page__filters-toggle-text">
+                            Фильтры
+                        </span>
+                    </button>
+                    <div class="catalog-page__filters catalog-filter js-catalog-filter">
+                        <div class="catalog-filter__wrapper">
+                            <h3 class="catalog-filter__title">Фильтры</h3>
+                            <button class="catalog-filter__close js-catalog-filter-close"></button>
+                            <form>
+                                <div class="catalog-filter__group js-catalog-filter-group">
+                                    <p class="catalog-filter__group-title">
+                                        Категория товара
+                                    </p>
+                                    <ul class="catalog-filter__radio-list">
+                                        <li class="catalog-filter__radio-item radio-field">
+                                            <label class="radio-field__inner">
+                                                <input  class="visually-hidden"
+                                                        value="1" name="product-category" type="radio">
+                                                <span class="radio-field__icon"></span>
+                                                <span class="radio-field__text">Корм</span>
+                                            </label>
+                                        </li>
+                                        <li class="catalog-filter__radio-item radio-field">
+                                            <label class="radio-field__inner">
+                                                <input  class="visually-hidden"
+                                                        value="2" name="product-category" type="radio">
+                                                <span class="radio-field__icon"></span>
+                                                <span class="radio-field__text">Витамины</span>
+                                            </label>
+                                        </li>
+                                        <li class="catalog-filter__radio-item radio-field">
+                                            <label class="radio-field__inner">
+                                                <input  class="visually-hidden"
+                                                        value="3" name="product-category" type="radio">
+                                                <span class="radio-field__icon"></span>
+                                                <span class="radio-field__text">Миски</span>
+                                            </label>
+                                        </li>
+                                        <li class="catalog-filter__radio-item radio-field">
+                                            <label class="radio-field__inner">
+                                                <input  class="visually-hidden"
+                                                        value="4" name="product-category" type="radio">
+                                                <span class="radio-field__icon"></span>
+                                                <span class="radio-field__text">Лакомства</span>
+                                            </label>
+                                        </li>
+                                        <li class="catalog-filter__radio-item radio-field">
+                                            <label class="radio-field__inner">
+                                                <input  class="visually-hidden"
+                                                        value="5" name="product-category" type="radio">
+                                                <span class="radio-field__icon"></span>
+                                                <span class="radio-field__text">Домики</span>
+                                            </label>
+                                        </li>
+                                    </ul>
+                                    <button class="catalog-filter__group-show-all" type="button">Показать все</button>
+                                </div>
+                                <div class="catalog-filter__group js-catalog-filter-group">
+                                    <p class="catalog-filter__group-title">
+                                        Бренды
+                                    </p>
+                                    <ul class="catalog-filter__radio-list">
+                                        <li class="catalog-filter__radio-item radio-field">
+                                            <label class="radio-field__inner">
+                                                <input  class="visually-hidden"
+                                                        value="1" name="brands" type="radio">
+                                                <span class="radio-field__icon"></span>
+                                                <span class="radio-field__text">Royal Canin</span>
+                                            </label>
+                                        </li>
+                                        <li class="catalog-filter__radio-item radio-field">
+                                            <label class="radio-field__inner">
+                                                <input  class="visually-hidden"
+                                                        value="2" name="brands" type="radio">
+                                                <span class="radio-field__icon"></span>
+                                                <span class="radio-field__text">Purina ProPlan</span>
+                                            </label>
+                                        </li>
+                                        <li class="catalog-filter__radio-item radio-field">
+                                            <label class="radio-field__inner">
+                                                <input  class="visually-hidden"
+                                                        value="3" name="brands" type="radio">
+                                                <span class="radio-field__icon"></span>
+                                                <span class="radio-field__text">Hils</span>
+                                            </label>
+                                        </li>
+                                        <li class="catalog-filter__radio-item radio-field">
+                                            <label class="radio-field__inner">
+                                                <input  class="visually-hidden"
+                                                        value="4" name="brands" type="radio">
+                                                <span class="radio-field__icon"></span>
+                                                <span class="radio-field__text">Monge</span>
+                                            </label>
+                                        </li>
+                                        <li class="catalog-filter__radio-item radio-field">
+                                            <label class="radio-field__inner">
+                                                <input  class="visually-hidden"
+                                                        value="5" name="brands" type="radio">
+                                                <span class="radio-field__icon"></span>
+                                                <span class="radio-field__text">Eukanuba</span>
+                                            </label>
+                                        </li>
+                                    </ul>
+                                    <button class="catalog-filter__group-show-all" type="button">Показать все</button>
+                                </div>
+                                <div class="catalog-filter__group js-catalog-filter-group">
+                                    <p class="catalog-filter__group-title">
+                                        Показания
+                                    </p>
+                                    <ul class="catalog-filter__radio-list">
+                                        <li class="catalog-filter__radio-item radio-field">
+                                            <label class="radio-field__inner">
+                                                <input  class="visually-hidden"
+                                                        value="1" name="testimony" type="radio">
+                                                <span class="radio-field__icon"></span>
+                                                <span class="radio-field__text">Антистресс</span>
+                                            </label>
+                                        </li>
+                                        <li class="catalog-filter__radio-item radio-field">
+                                            <label class="radio-field__inner">
+                                                <input  class="visually-hidden"
+                                                        value="2" name="testimony" type="radio">
+                                                <span class="radio-field__icon"></span>
+                                                <span class="radio-field__text">Реабилитация</span>
+                                            </label>
+                                        </li>
+                                        <li class="catalog-filter__radio-item radio-field">
+                                            <label class="radio-field__inner">
+                                                <input  class="visually-hidden"
+                                                        value="3" name="testimony" type="radio">
+                                                <span class="radio-field__icon"></span>
+                                                <span class="radio-field__text">Гипоаллергенный</span>
+                                            </label>
+                                        </li>
+                                        <li class="catalog-filter__radio-item radio-field">
+                                            <label class="radio-field__inner">
+                                                <input  class="visually-hidden"
+                                                        value="4" name="testimony" type="radio">
+                                                <span class="radio-field__icon"></span>
+                                                <span class="radio-field__text">Для активных</span>
+                                            </label>
+                                        </li>
+                                        <li class="catalog-filter__radio-item radio-field">
+                                            <label class="radio-field__inner">
+                                                <input  class="visually-hidden"
+                                                        value="5" name="testimony" type="radio">
+                                                <span class="radio-field__icon"></span>
+                                                <span class="radio-field__text">Длинношерстным</span>
+                                            </label>
+                                        </li>
+                                    </ul>
+                                    <button class="catalog-filter__group-show-all" type="button">Показать все</button>
+                                </div>
+                                <div class="catalog-filter__group js-catalog-filter-group">
+                                    <p class="catalog-filter__group-title">
+                                        Опции
+                                    </p>
+                                    <ul class="catalog-filter__radio-list">
+                                        <li class="catalog-filter__radio-item radio-field">
+                                            <label class="radio-field__inner">
+                                                <input  class="visually-hidden"
+                                                        value="1" name="options-category" type="radio">
+                                                <span class="radio-field__icon"></span>
+                                                <span class="radio-field__text">Акции и скидки</span>
+                                            </label>
+                                        </li>
+                                        <li class="catalog-filter__radio-item radio-field">
+                                            <label class="radio-field__inner">
+                                                <input  class="visually-hidden"
+                                                        value="2" name="options-category" type="radio">
+                                                <span class="radio-field__icon"></span>
+                                                <span class="radio-field__text">Новинки</span>
+                                            </label>
+                                        </li>
+                                        <li class="catalog-filter__radio-item radio-field">
+                                            <label class="radio-field__inner">
+                                                <input  class="visually-hidden"
+                                                        value="3" name="options-category" type="radio">
+                                                <span class="radio-field__icon"></span>
+                                                <span class="radio-field__text">Требуются приютам</span>
+                                            </label>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="catalog-page__sort-wrapper">
+                    <p class="catalog-page__sort-label">Сортировать по цене:</p>
+                    <div class="catalog-page__sort-buttons">
+                        <button class="catalog-page__sort-button active" type="button">
+                            Сначала самый дешевый
+                        </button>
+                        <button class="catalog-page__sort-button" type="button">
+                            Сначала самый дорогой
+                        </button>
+                    </div>
+                </div>
+                <div class="catalog-page__products-wrapper">
+                    <ul class="catalog-page__products">
+                        @@include('components/components/catalog-list.html')
+                    </ul>
+                    <ul class="catalog-page__pagination pagination">
+                        <li class="pagination__item">
+                            <a class="disabled pagination__link pagination__link--arrow prev" href="#"></a>
+                        </li>
+                        <li class="pagination__item active">
+                            <a class="pagination__link" href="#">1</a>
+                        </li>
+                        <li class="pagination__item">
+                            <a class="pagination__link" href="#">2</a>
+                        </li>
+                        <li class="pagination__item">
+                            <a class="pagination__link" href="#">3</a>
+                        </li>
+                        <li class="pagination__item">
+                            <a class="pagination__link pagination__link--arrow next" href="#"></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </main>
+@@include('components/footer.html')

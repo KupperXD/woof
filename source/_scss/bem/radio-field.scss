@@ -1,0 +1,31 @@
+.radio-field {
+  font-size: 16px;
+  line-height: 18px;
+
+  &__inner {
+    display: flex;
+    align-items: flex-start;
+    cursor: pointer;
+    transition: 0.3s opacity ease-in-out;
+
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+
+  &__icon {
+    flex-shrink: 0;
+    width: 11px;
+    height: 11px;
+    border-radius: 100%;
+    border: 1px solid $text-main-color;
+    margin: 0 8px 0 0;
+    background: transparent;
+    transition: 0.3s background ease-in-out;
+    transform: translateY(3px);
+  }
+
+  input:checked ~ .radio-field__icon {
+    background: $red;
+  }
+}

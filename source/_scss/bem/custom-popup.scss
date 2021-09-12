@@ -27,4 +27,21 @@
     color: $black;
     outline: none;
   }
+
+  &--donation {
+    width: 510px;
+
+    @media (max-width: $mobile-max) {
+      width: 100%;
+      max-width: 510px;
+    }
+
+    .custom-popup__wrapper {
+      padding: 48px 76px;
+
+      @media (max-width: $mobile-max) {
+        padding: 40px 24px;
+      }
+    }
+  }
 }
