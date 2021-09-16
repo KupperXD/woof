@@ -1,6 +1,8 @@
 (function ($) {
     'use strict';
     $(document).ready(function () {
+        const windowWidth = $(window).innerWidth();
+
         const sweetAlertCssClass = {
             container: 'custom-popup__container',
             popup: 'custom-popup',
@@ -234,5 +236,82 @@
 
             $('.js-catalog-filter').removeClass('open');
         });
+
+        $(document).on('click', '.js-open-shelter-donation-popup', (evt) => {
+            const $target = $(evt.target);
+            const $cartItem = $target.closest('.js-cart-item-main');
+            const popupTemplate = $cartItem.find('.js-gift-shelter-popup').get(0);
+
+            if (typeof popupTemplate === 'undefined') {
+                return;
+            }
+
+            const cloneTemplate = popupTemplate.cloneNode(true);
+
+            const $select = $(cloneTemplate).find('.js-select2-popup');
+
+            if ($select.length) {
+                $select.select2({
+                    placeholder: 'Выберете из списка',
+                    width: 'style',
+                    dropdownParent: $select.parent(),
+                });
+            }
+
+            Swal.fire({
+                backdrop: true,
+                html: cloneTemplate,
+                customClass: {
+                    ...sweetAlertCssClass,
+                    popup: 'custom-popup custom-popup--donation-shelter'
+                },
+                padding: 0,
+                showConfirmButton: false,
+                showCloseButton: true,
+            })
+        });
+
+        const isDesktop = windowWidth > 1024;
+        const shelterNeedTemplate = $('.js-shelter-need-product').get(0);
+        if (isDesktop && typeof shelterNeedTemplate !== 'undefined') {
+            let isShowShelterNeedPopup = false;
+            let shelterNeedPopupTimeoutId = null;
+            const cloneShelterNeedTemplate = shelterNeedTemplate.cloneNode(true);
+
+            const initShelterNeedPopup = () => {
+                shelterNeedPopupTimeoutId = setTimeout(() => {
+                    Swal.fire({
+                        backdrop: true,
+                        html: cloneShelterNeedTemplate,
+                        customClass: {
+                            ...sweetAlertCssClass,
+                            popup: 'custom-popup custom-popup--need-shelter'
+                        },
+                        padding: 0,
+                        showConfirmButton: false,
+                        showCloseButton: true,
+                    });
+                    isShowShelterNeedPopup = true;
+                }, 8000);
+            };
+
+            $(document).on('click mousemove scroll keydown', () => {
+                if (isShowShelterNeedPopup) {
+                    return;
+                }
+
+                if (shelterNeedPopupTimeoutId) {
+                    clearTimeout(shelterNeedPopupTimeoutId);
+                }
+
+                initShelterNeedPopup();
+            });
+
+            $(document).on('click', '.js-not-to-day' , () => {
+                Swal.close();
+            });
+
+            initShelterNeedPopup();
+        }
     })
 })(jQuery);

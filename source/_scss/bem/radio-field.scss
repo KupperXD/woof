@@ -28,4 +28,8 @@
   input:checked ~ .radio-field__icon {
     background: $red;
   }
+
+  &__additional {
+    color: #a1a1a1;
+  }
 }

@@ -1,0 +1,386 @@
+@@include('components/head.html')
+<div style="display: none;">
+    @@include('../dist/img/svg/sprite.svg')
+</div>
+@@include('components/header.html')
+    <main class="all">
+        <section class="cart-page">
+            <div class="container container--content">
+                <div class="cart-page__wrapper">
+                    <a class="cart-page__back" href="#">Вернуться в каталог</a>
+                    <h2>Корзина</h2>
+                    <div class="cart-page__grid">
+                        <div class="cart-page__products">
+                            <ul class="cart-page__products-list">
+                                <li class="cart-page__products-item cart-item js-cart-item-main">
+                                    <div class="cart-item__wrapper">
+                                        <button class="cart-item__close" type="button"></button>
+                                        <div class="cart-item__picture">
+                                            <img src="img/official/cart-item-example.jpg" alt="">
+                                        </div>
+                                        <div class="cart-item__info">
+                                            <div class="cart-item__desc">
+                                                <p class="cart-item__name">
+                                                    Functional Nutrition Indor
+                                                    корм для домашних кошек
+                                                    старше 1 года,
+                                                    с курицей и индейкой
+                                                </p>
+                                                <p class="cart-item__size">
+                                                    Вес 70г.
+                                                </p>
+                                            </div>
+                                            <div class="cart-item__amount">
+                                                <button class="cart-item__amount-button minus" type="button">
+
+                                                </button>
+                                                <input value="99" class="cart-item__amount-field" readonly type="text">
+                                                <button class="cart-item__amount-button plus" type="button"></button>
+                                            </div>
+                                            <div class="cart-item__price-wrapper">
+                                                <span class="cart-item__price">900 Р</span>
+                                                <button class="cart-item__donation js-open-shelter-donation-popup"
+                                                        type="button">
+                                                    Отправить в приют
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <div class="hidden">
+                                            <div class="gift-shelter-popup js-gift-shelter-popup">
+                                                <h3>Отправить позицию в приюты</h3>
+                                                <p class="gift-shelter-popup__desc">
+                                                    Выберите приют, в&nbsp;который вы&nbsp;хотите направить этот товар.
+                                                    Доставка товаров в&nbsp;приюты будет бесплатной.
+                                                </p>
+                                                <div class="gift-shelter-popup__form-wrapper">
+                                                    <div class="gift-shelter-popup__select">
+                                                        <select class="js-select2-popup">
+                                                            <option value="1">
+                                                                Приют Ника
+                                                            </option>
+                                                            <option value="2">
+                                                                Приют Ника 1
+                                                            </option>
+                                                            <option value="3">
+                                                                Приют Ника 2
+                                                            </option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="gift-shelter-popup__cart-item cart-item cart-item--popup">
+                                                    <div class="cart-item__wrapper">
+                                                        <div class="cart-item__picture">
+                                                            <img src="img/official/cart-item-example.jpg" alt="">
+                                                        </div>
+                                                        <div class="cart-item__info">
+                                                            <div class="cart-item__desc">
+                                                                <p class="cart-item__name">
+                                                                    Functional Nutrition Indor
+                                                                    корм для домашних кошек
+                                                                    старше 1 года,
+                                                                    с курицей и индейкой
+                                                                    <span class="cart-item__name-count">
+                                                                        1шт
+                                                                    </span>
+                                                                </p>
+                                                            </div>
+                                                            <div class="cart-item__amount">
+                                                                <button class="cart-item__amount-button minus" type="button">
+
+                                                                </button>
+                                                                <input value="99" class="cart-item__amount-field" readonly type="text">
+                                                                <button class="cart-item__amount-button plus" type="button"></button>
+                                                            </div>
+                                                            <div class="cart-item__price-wrapper">
+                                                                <span class="cart-item__price">900 Р</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <button class="gift-shelter-popup__accept button button--black" type="button">
+                                                    Подтверждаю
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="cart-page__products-item cart-item js-cart-item-main">
+                                    <div class="cart-item__wrapper">
+                                        <button class="cart-item__close" type="button"></button>
+                                        <div class="cart-item__picture">
+                                            <img src="img/official/cart-item-example.jpg" alt="">
+                                        </div>
+                                        <div class="cart-item__info">
+                                            <div class="cart-item__desc">
+                                                <p class="cart-item__name">
+                                                    Functional Nutrition Indor
+                                                    корм для домашних кошек
+                                                    старше 1 года,
+                                                    с курицей и индейкой
+                                                </p>
+                                                <p class="cart-item__size">
+                                                    Вес 70г.
+                                                </p>
+                                            </div>
+                                            <div class="cart-item__amount">
+                                                <button class="cart-item__amount-button minus" type="button">
+
+                                                </button>
+                                                <input value="99" class="cart-item__amount-field" readonly type="text">
+                                                <button class="cart-item__amount-button plus" type="button"></button>
+                                            </div>
+                                            <div class="cart-item__price-wrapper">
+                                                <span class="cart-item__price">900 Р</span>
+                                                <button class="cart-item__donation js-open-shelter-donation-popup" type="button">
+                                                    Отправить в приют
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <div class="hidden">
+                                            <div class="gift-shelter-popup js-gift-shelter-popup">
+                                                <h3>Отправить позицию в приюты</h3>
+                                                <p class="gift-shelter-popup__desc">
+                                                    Выберите приют, в&nbsp;который вы&nbsp;хотите направить этот товар.
+                                                    Доставка товаров в&nbsp;приюты будет бесплатной.
+                                                </p>
+                                                <div class="gift-shelter-popup__form-wrapper">
+                                                    <div class="gift-shelter-popup__select">
+                                                        <select class="js-select2-popup">
+                                                            <option value="1">
+                                                                Приют Ника
+                                                            </option>
+                                                            <option value="2">
+                                                                Приют Ника 1
+                                                            </option>
+                                                            <option value="3">
+                                                                Приют Ника 2
+                                                            </option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="gift-shelter-popup__cart-item cart-item cart-item--popup">
+                                                    <div class="cart-item__wrapper">
+                                                        <div class="cart-item__picture">
+                                                            <img src="img/official/cart-item-example.jpg" alt="">
+                                                        </div>
+                                                        <div class="cart-item__info">
+                                                            <div class="cart-item__desc">
+                                                                <p class="cart-item__name">
+                                                                    Functional Nutrition Indor
+                                                                    корм для домашних кошек
+                                                                    старше 1 года,
+                                                                    с курицей и индейкой
+                                                                    <span class="cart-item__name-count">
+                                                                        1шт
+                                                                    </span>
+                                                                </p>
+                                                            </div>
+                                                            <div class="cart-item__amount">
+                                                                <button class="cart-item__amount-button minus" type="button">
+
+                                                                </button>
+                                                                <input value="99" class="cart-item__amount-field" readonly type="text">
+                                                                <button class="cart-item__amount-button plus" type="button"></button>
+                                                            </div>
+                                                            <div class="cart-item__price-wrapper">
+                                                                <span class="cart-item__price">900 Р</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <button class="gift-shelter-popup__accept button button--black" type="button">
+                                                    Подтверждаю
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="cart-page__products-item cart-item js-cart-item-main">
+                                    <div class="cart-item__wrapper">
+                                        <button class="cart-item__close" type="button"></button>
+                                        <div class="cart-item__picture">
+                                            <img src="img/official/cart-item-example.jpg" alt="">
+                                        </div>
+                                        <div class="cart-item__info">
+                                            <div class="cart-item__desc">
+                                                <p class="cart-item__name">
+                                                    Консервированный корм
+                                                    для взрослых кошек,
+                                                    куриное филе
+                                                </p>
+                                                <p class="cart-item__size">
+                                                    Вес 70г.
+                                                </p>
+                                            </div>
+                                            <div class="cart-item__amount">
+                                                <button class="cart-item__amount-button minus" type="button">
+
+                                                </button>
+                                                <input value="99" class="cart-item__amount-field" readonly type="text">
+                                                <button class="cart-item__amount-button plus" type="button"></button>
+                                            </div>
+                                            <div class="cart-item__price-wrapper">
+                                                <span class="cart-item__price">900 Р</span>
+                                                <div class="cart-item__donation-success">
+                                                    Отправлено в приют
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="hidden">
+                                            <div class="gift-shelter-popup js-gift-shelter-popup">
+                                                <h3>Отправить позицию в приюты</h3>
+                                                <p class="gift-shelter-popup__desc">
+                                                    Выберите приют, в&nbsp;который вы&nbsp;хотите направить этот товар.
+                                                    Доставка товаров в&nbsp;приюты будет бесплатной.
+                                                </p>
+                                                <div class="gift-shelter-popup__form-wrapper">
+                                                    <div class="gift-shelter-popup__select">
+                                                        <select class="js-select2-popup">
+                                                            <option value="1">
+                                                                Приют Ника
+                                                            </option>
+                                                            <option value="2">
+                                                                Приют Ника 1
+                                                            </option>
+                                                            <option value="3">
+                                                                Приют Ника 2
+                                                            </option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="gift-shelter-popup__cart-item cart-item cart-item--popup">
+                                                    <div class="cart-item__wrapper">
+                                                        <div class="cart-item__picture">
+                                                            <img src="img/official/cart-item-example.jpg" alt="">
+                                                        </div>
+                                                        <div class="cart-item__info">
+                                                            <div class="cart-item__desc">
+                                                                <p class="cart-item__name">
+                                                                    Functional Nutrition Indor
+                                                                    корм для домашних кошек
+                                                                    старше 1 года,
+                                                                    с курицей и индейкой
+                                                                    <span class="cart-item__name-count">
+                                                                        1шт
+                                                                    </span>
+                                                                </p>
+                                                            </div>
+                                                            <div class="cart-item__amount">
+                                                                <button class="cart-item__amount-button minus" type="button">
+
+                                                                </button>
+                                                                <input value="99" class="cart-item__amount-field" readonly type="text">
+                                                                <button class="cart-item__amount-button plus" type="button"></button>
+                                                            </div>
+                                                            <div class="cart-item__price-wrapper">
+                                                                <span class="cart-item__price">900 Р</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <button class="gift-shelter-popup__accept button button--black" type="button">
+                                                    Подтверждаю
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="cart-page__delivery">
+                            <div class="cart-page__delivery-top">
+                                <p class="cart-page__delivery-title">
+                                    Выберите способ доставки ваших товаров:
+                                </p>
+                                <ul class="cart-page__delivery-list">
+                                    <li class="cart-page__delivery-item radio-field">
+                                        <label class="radio-field__inner">
+                                            <input  class="visually-hidden"
+                                                    value="1" name="delivery" type="radio">
+                                            <span class="radio-field__icon"></span>
+                                            <span class="radio-field__text">
+                                            Доставка Woof
+                                            <span class="radio-field__additional">
+                                                (Зеленоград и область, от 200 Р)
+                                            </span>
+                                        </span>
+                                        </label>
+                                    </li>
+                                    <li class="cart-page__delivery-item radio-field">
+                                        <label class="radio-field__inner">
+                                            <input  class="visually-hidden"
+                                                    value="2" name="delivery" type="radio">
+                                            <span class="radio-field__icon"></span>
+                                            <span class="radio-field__text">
+                                            Экспресс доставка
+                                            <span class="radio-field__additional">
+                                                (Зеленоград и область, доставка за 3 часа,
+                                                от 200 Р)
+                                            </span>
+                                        </span>
+                                        </label>
+                                    </li>
+                                    <li class="cart-page__delivery-item radio-field">
+                                        <label class="radio-field__inner">
+                                            <input  class="visually-hidden"
+                                                    value="3" name="delivery" type="radio">
+                                            <span class="radio-field__icon"></span>
+                                            <span class="radio-field__text">
+                                            Доставка СДЭК
+                                            <span class="radio-field__additional">
+                                                (любой город, по тарифам ТК)
+                                            </span>
+                                        </span>
+                                        </label>
+                                    </li>
+                                    <li class="cart-page__delivery-item radio-field">
+                                        <label class="radio-field__inner">
+                                            <input  class="visually-hidden"
+                                                    value="4" name="delivery" type="radio">
+                                            <span class="radio-field__icon"></span>
+                                            <span class="radio-field__text">
+                                            Самовывоз
+                                            <span class="radio-field__additional">
+                                                (г. Зеленоград, корпус 438, ТЦ "1000 мелочей",
+                                                -1этаж)
+                                            </span>
+                                        </span>
+                                        </label>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="cart-page__delivery-bottom">
+                                <p class="cart-page__delivery-sum">
+                                    <span class="cart-page__delivery-sum-text">
+                                        Итого без учета доставки:
+                                    </span>
+                                    <span class="cart-page__delivery-amount">
+                                        1740Р
+                                    </span>
+                                </p>
+                                <a class="cart-page__link button button--red" href="#">Перейти к оформлению</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+<div class="hidden">
+    <div class="shelter-need-products js-shelter-need-product">
+        <h3>Эти товары сейчас требуются приюту</h3>
+        <p>
+            Вы&nbsp;нам очень поможете, если приобретете некоторые из&nbsp;этих товаров для наших подопечных приютов
+        </p>
+        <div class="shelter-need-products__inner">
+            <div class="shelter-need-products__item">
+                @@include('components/components/product-item.html')
+            </div>
+            <div class="shelter-need-products__item">
+                @@include('components/components/product-item.html')
+            </div>
+        </div>
+        <button class="shelter-need-products__not-to-day js-not-to-day button button--black" type="button">Не сейчас</button>
+    </div>
+</div>
+@@include('components/footer.html')

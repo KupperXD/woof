@@ -1,0 +1,227 @@
+.cart-page {
+  &__wrapper {
+    padding: 32px 0 224px;
+
+    @media (max-width: $tablet-max) {
+      padding: 40px 0 70px;
+    }
+
+    @media (max-width: $mobile-max) {
+      padding: 32px 0 76px;
+    }
+  }
+
+  h2 {
+    margin: 24px 0 0;
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 36px;
+
+    @media (max-width: $tablet-max) {
+      margin: 0;
+      font-size: 24px;
+      line-height: 30px;
+    }
+  }
+
+  &__back {
+    display: flex;
+    align-items: center;
+    width: max-content;
+    color: $red;
+    font-size: 12px;
+    line-height: 16px;
+    box-shadow: 0 1px 0 $red;
+    transition: 0.3s ease-in-out;
+    transition-property: box-shadow, opacity;
+
+    @media (max-width: $tablet-max) {
+      display: none;
+    }
+
+    &:hover {
+      box-shadow: none;
+      opacity: 0.7;
+    }
+
+    &::before {
+      width: 8px;
+      height: 8px;
+      content: '';
+      border-top: 1px solid $red;
+      border-left: 1px solid $red;
+      transform: rotate(-45deg);
+    }
+  }
+
+  &__grid {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin: 40px 0 0;
+
+    @media (max-width: $tablet-max) {
+      display: block;
+      margin: 16px 0 0;
+    }
+
+    @media (max-width: $mobile-max) {
+      margin: 12px 0 0;
+    }
+  }
+
+  &__products {
+    max-width: 702px;
+
+    @media (max-width: $mobile-max) {
+      margin: 0 -20px;
+    }
+  }
+
+  &__products-item {
+    @media (max-width: $tablet-max) {
+      padding: 24px 0;
+      border-bottom: 1px solid #959595;
+    }
+
+    @media (max-width: $mobile-max) {
+      padding: 20px 20px 32px;
+    }
+    &:not(:first-of-type) {
+      margin: 12px 0 0;
+
+      @media (max-width: $tablet-max) {
+        margin: 0;
+      }
+    }
+  }
+
+  &__delivery {
+    width: 400px;
+    padding: 32px 0 52px;
+    background: $white;
+    border-radius: 16px;
+    box-shadow: 11px 18px 40px rgba(229, 231, 236, 0.75);
+
+    @media (max-width: $tablet-max) {
+      width: 100%;
+      padding: 32px 0;
+      margin: 42px 0 0;
+    }
+  }
+
+  &__delivery-top {
+    padding: 0 20px 52px 36px;
+    border-bottom: 1px solid #959595;
+
+    @media (max-width: $tablet-max) {
+      padding: 0 40px 20px;
+    }
+
+    @media (max-width: $mobile-max) {
+      padding: 0 16px 24px 24px;
+    }
+  }
+
+  &__delivery-bottom {
+    padding: 48px 20px 0 36px;
+
+    @media (max-width: $tablet-max) {
+      padding: 28px 40px 0;
+    }
+
+    @media (max-width: $mobile-max) {
+      padding: 20px 24px 0;
+    }
+  }
+
+  &__delivery-title {
+    max-width: 230px;
+    font-size: 16px;
+    line-height: 21px;
+    font-weight: 500;
+  }
+
+  &__delivery-list {
+    margin: 16px 0 0;
+  }
+
+  &__delivery-item {
+    &:not(:first-of-type) {
+      margin: 8px 0 0;
+    }
+  }
+
+  &__delivery-sum {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 24px;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 18px;
+
+    @media (max-width: $tablet-max) {
+      padding: 0;
+    }
+
+    @media (max-width: $mobile-max) {
+      justify-content: flex-start;
+      align-items: flex-start;
+      flex-direction: column;
+      padding: 0;
+    }
+  }
+
+  &__delivery-sum-text {
+    max-width: 220px;
+    flex-shrink: 1;
+
+    @media (max-width: $tablet-max) {
+      margin: 0 32px 0 0;
+    }
+
+    @media (max-width: $mobile-max) {
+      max-width: none;
+      flex-shrink: 0;
+      margin: 0;
+    }
+  }
+
+  &__delivery-amount {
+    flex-grow: 1;
+    flex-shrink: 0;
+    padding: 0 0 0 8px;
+    font-size: 21px;
+    font-weight: 700;
+    line-height: 21px;
+    text-align: right;
+
+    @media (max-width: $tablet-max) {
+      text-align: left;
+    }
+
+    @media (max-width: $mobile-max) {
+      margin: 8px 0 0;
+      padding: 0;
+    }
+  }
+
+  &__link {
+    width: 300px;
+    margin: 38px auto 0;
+
+    @media (max-width: $tablet-max) {
+      margin: 20px 0 0;
+    }
+
+    @media (max-width: $mobile-max) {
+      width: auto;
+      max-width: 300px;
+    }
+  }
+
+  .radio-field {
+    font-size: 14px;
+  }
+}
