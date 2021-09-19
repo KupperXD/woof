@@ -1,0 +1,74 @@
+@@include('components/head.html')
+<div style="display: none;">
+    @@include('../dist/img/svg/sprite.svg')
+</div>
+@@include('components/header.html')
+    <main class="all search-page">
+        <div class="container container--content">
+            <div class="search-page__wrapper">
+                <h2>Результаты поиска</h2>
+                <div class="search-page__top">
+                    <p class="search-page__desc">
+                        Найдено 25 товаров по запросу “корм для кошек сухой”
+                    </p>
+                    <div class="search-page__tabs-wrapper">
+                        <ul class="search-page__tabs tabs">
+                            <li class="tabs__item active">
+                                <button class="tabs__button" type="button">
+                                    Товары
+                                </button>
+                            </li>
+                            <li class="tabs__item">
+                                <button class="tabs__button" type="button">
+                                    Акции
+                                </button>
+                            </li>
+                            <li class="tabs__item">
+                                <button class="tabs__button" type="button">
+                                    Мерч Woof
+                                </button>
+                            </li>
+                            <li class="tabs__item">
+                                <button class="tabs__button" type="button">
+                                    Ветааптека
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="search-page__select-wrapper">
+                        <div class="search-page__select">
+                            <select class="js-select2">
+                                <option value="1">Товары</option>
+                                <option value="2">Акции</option>
+                                <option value="3">Мерч Woof</option>
+                                <option value="4">Ветааптека</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="search-page__content">
+                    <ul class="search-page__list">
+                        @@include('components/components/search-list.html')
+                    </ul>
+                    <ul class="search-page__pagination pagination">
+                        <li class="pagination__item">
+                            <a class="disabled pagination__link pagination__link--arrow prev" href="#"></a>
+                        </li>
+                        <li class="pagination__item active">
+                            <a class="pagination__link" href="#">1</a>
+                        </li>
+                        <li class="pagination__item">
+                            <a class="pagination__link" href="#">2</a>
+                        </li>
+                        <li class="pagination__item">
+                            <a class="pagination__link" href="#">3</a>
+                        </li>
+                        <li class="pagination__item">
+                            <a class="pagination__link pagination__link--arrow next" href="#"></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </main>
+@@include('components/footer.html')

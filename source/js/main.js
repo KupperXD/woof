@@ -313,5 +313,129 @@
 
             initShelterNeedPopup();
         }
+
+        //Инициализация слайдеров на детальной продукта
+        $('.js-sliders-with-thumbs-container').each((index, item) => {
+            const thumbsContainer = $(item).find('.js-thumbs-container .swiper').get(0);
+            const mainSliderContainer = $(item).find('.js-product-detail-slider-container .swiper').get(0);
+            const thumbsNext = $(item).find('.js-product-detail-nav-next').get(0);
+            const mainPagination = $(item).find('.js-product-detail-slider-container .swiper-pagination').get(0);
+            console.log(thumbsContainer);
+            console.log(mainSliderContainer);
+            const thumbs = new Swiper(thumbsContainer, {
+                spaceBetween: 24,
+                slidesPerView: 'auto',
+                direction: 'vertical',
+                touchRatio: 0.2,
+                slideToClickedSlide: true,
+                navigation: {
+                    nextEl: thumbsNext,
+                },
+            });
+
+            const mainSlider = new Swiper(mainSliderContainer, {
+                slidesPerView: 1,
+                spaceBetween: 40,
+                thumbs: {
+                    swiper: thumbs,
+                },
+                pagination: {
+                    el: mainPagination,
+                    clickable: true,
+                }
+            });
+        });
+
+        const tabsFabric = ($tabsHolder) => {
+            const $self = $($tabsHolder);
+            const $headers = $self.find('.js-tab-header');
+            const $contents = $self.find('.js-tab-content');
+
+            /**
+             * Выбор таба с указанным индексом
+             * @param {Number} index - индекс таба
+             */
+            const selectTab = function (index) {
+                $headers.removeClass('active').eq(index).addClass('active');
+                $contents.removeClass('active').eq(index).addClass('active');
+
+                // событие при переключении таба
+                $self.trigger('tabchange', {
+                    index: index,
+                    tabElement: $headers.eq(index),
+                    contentElement: $contents.eq(index)
+                });
+            };
+
+            /**
+             * Инициализация
+             */
+            const init = function () {
+                selectTab(0);
+
+                // обработка событий
+                $headers.on('click', function() {
+                    selectTab($(this).index());
+                });
+            };
+
+            init();
+        };
+
+        const $tabsHolder = $('.js-tabs-holder');
+
+        $tabsHolder.each((index, item) => {
+            tabsFabric($(item));
+        });
+
+        $('.js-product-reviews-holder').on('click', '.js-show-more-reviews', (evt) => {
+            const $target = $(evt.target);
+            const $holder = $target.closest('.js-product-reviews-holder');
+
+            $holder.toggleClass('show-full-reviews');
+        });
+
+        $(document).on('click', '.js-product-detail-buy-one-click', () => {
+            const popupTemplate = $('.js-buy-one-click-popup').get(0);
+
+            if (typeof popupTemplate === 'undefined') {
+                return;
+            }
+
+            const cloneTemplate = popupTemplate.cloneNode(true);
+
+            Swal.fire({
+                backdrop: true,
+                html: cloneTemplate,
+                customClass: {
+                    ...sweetAlertCssClass,
+                    popup: 'custom-popup custom-popup--with-form'
+                },
+                padding: 0,
+                showConfirmButton: false,
+                showCloseButton: true,
+            })
+        });
+        $(document).on('click', '.js-product-detail-notify', () => {
+            const popupTemplate = $('.js-notify-popup').get(0);
+
+            if (typeof popupTemplate === 'undefined') {
+                return;
+            }
+
+            const cloneTemplate = popupTemplate.cloneNode(true);
+
+            Swal.fire({
+                backdrop: true,
+                html: cloneTemplate,
+                customClass: {
+                    ...sweetAlertCssClass,
+                    popup: 'custom-popup custom-popup--with-form'
+                },
+                padding: 0,
+                showConfirmButton: false,
+                showCloseButton: true,
+            })
+        });
     })
 })(jQuery);

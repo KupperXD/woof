@@ -1,0 +1,39 @@
+.product-size-button {
+  &__label {
+    display: block;
+    width: 113px;
+    min-height: 59px;
+    padding: 8px 16px 8px 12px;
+    border: 1px solid #d2d2d2;
+    border-radius: 8px;
+    transition: 0.3s ease-in-out;
+    transition-property: opacity, border;
+    cursor: pointer;
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+
+  &__additional,
+  &__price {
+    display: block;
+  }
+
+  &__additional {
+    font-size: 12px;
+    line-height: 16px;
+    color: #959595;
+  }
+
+  &__price {
+    margin: 2px 0 0;
+    font-size: 21px;
+    line-height: 1;
+    font-weight: 700;
+    color: $black;
+  }
+
+  input:checked ~ .product-size-button__label {
+    border-color: $red;
+  }
+}
