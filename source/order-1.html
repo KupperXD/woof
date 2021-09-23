@@ -1,0 +1,232 @@
+@@include('components/head.html')
+<div style="display: none;">
+    @@include('../dist/img/svg/sprite.svg')
+</div>
+@@include('components/header.html')
+    <main class="all">
+        <section class="order-section">
+            <div class="container container--content">
+                <div class="order-section__back-wrapper">
+                    <a class="order-section__back-link">
+                        < Назад в корзину
+                    </a>
+                </div>
+                <h2 class="order-section__title">Оформление заказа. Шаг 1 из 3</h2>
+                <div class="order-section__grid">
+                    <div class="order-section__form-wrapper">
+                        <form>
+                            <p class="order-section__form-title">Контактные данные</p>
+                            <div class="order-section__form-open-popup">
+                                <button class="order-section__form-open-popup-button">
+                                    У меня есть личный кабинет
+                                </button>
+                            </div>
+                            <div class="order-section__form-group">
+                                <div class="order-section__form-field form-field has-error">
+                                    <label class="form-field__inner">
+                                        <input name="name" placeholder="Ваше имя*" type="text">
+                                    </label>
+                                    <div class="form-field__error"></div>
+                                </div>
+                            </div>
+                            <div class="order-section__form-group">
+                                <div class="order-section__form-field form-field has-error">
+                                    <label class="form-field__inner">
+                                        <input
+                                                name="telephone"
+                                                placeholder="Номер телефона*"
+                                                type="text">
+                                    </label>
+                                    <div class="form-field__error"></div>
+                                </div>
+                                <span class="order-section__form-field-desc">
+                                    Курьер позвонит вам за час до приезда
+                                </span>
+                            </div>
+                            <div class="order-section__form-group">
+                                <div class="order-section__form-field form-field has-error">
+                                    <label class="form-field__inner">
+                                        <input
+                                                name="email"
+                                                placeholder="Ваш e-mail*"
+                                                type="text">
+                                    </label>
+                                    <div class="form-field__error"></div>
+                                </div>
+                                <span class="order-section__form-field-desc">
+                                    Мы вышлем вам электронный чек
+                                </span>
+                            </div>
+                            <p class="order-section__form-title">
+                                Как с вами связаться для подтверждения заказа?
+                            </p>
+                            <div class="order-section__form-inner">
+                                <div class="order-section__form-radio radio-field">
+                                    <label class="radio-field__inner">
+                                        <input class="visually-hidden" name="notification_type" value="1" type="radio">
+                                        <span class="radio-field__icon"></span>
+                                        <span class="radio-field__txt">
+                                            Позвоните мне
+                                        </span>
+                                    </label>
+                                </div>
+                                <div class="order-section__form-radio radio-field">
+                                    <label class="radio-field__inner">
+                                        <input class="visually-hidden" name="notification_type" value="2" type="radio">
+                                        <span class="radio-field__icon"></span>
+                                        <span class="radio-field__txt">
+                                            Пришлите смс
+                                        </span>
+                                    </label>
+                                </div>
+                            </div>
+                            <p class="order-section__form-operator">
+                                Оператор свяжется с вами в течение рабочего дня с 9:00 до 19:00
+                            </p>
+                            <button class="button button--red" type="submit">
+                                Продолжить оформление
+                            </button>
+                        </form>
+                    </div>
+                    <div class="order-section__result">
+                        <div class="order-section__result-wrapper">
+                            <div class="order-section__result-top">
+                                <p class="order-section__result-title">Ваш заказ</p>
+                                <ul class="order-section__result-list">
+                                    <li class="order-section__result-item">
+                                        <div class="order-section__result-image">
+                                            <img src="img/official/cart-item-example.jpg" alt="">
+                                        </div>
+                                        <div class="order-section__result-item-desc">
+                                            <p class="order-section__result-item-title">
+                                                Functional Nutrition Indor
+                                                корм для домашних кошек
+                                                старше 1 года,
+                                                с курицей и индейкой
+                                            </p>
+                                            <span class="order-section__result-item-amount">
+                                                1шт.
+                                            </span>
+                                        </div>
+                                        <div class="order-section__result-item-right">
+                                            <span class="order-section__result-item-price">
+                                                390 Р
+                                            </span>
+                                            <span class="order-section__result-send-shelter">
+                                                Отправлено в приют
+                                            </span>
+                                        </div>
+                                    </li>
+                                    <li class="order-section__result-item">
+                                        <div class="order-section__result-image">
+                                            <img src="img/official/cart-item-example.jpg" alt="">
+                                        </div>
+                                        <div class="order-section__result-item-desc">
+                                            <p class="order-section__result-item-title">
+                                                Functional Nutrition Indor
+                                                корм для домашних кошек
+                                                старше 1 года,
+                                                с курицей и индейкой
+                                            </p>
+                                            <span class="order-section__result-item-amount">
+                                                1шт.
+                                            </span>
+                                        </div>
+                                        <div class="order-section__result-item-right">
+                                        <span class="order-section__result-item-price">
+                                            390 Р
+                                        </span>
+                                            <span class="order-section__result-send-shelter">
+                                            Отправлено в приют
+                                        </span>
+                                        </div>
+                                    </li>
+                                    <li class="order-section__result-item">
+                                        <div class="order-section__result-image">
+                                            <img src="img/official/cart-item-example.jpg" alt="">
+                                        </div>
+                                        <div class="order-section__result-item-desc">
+                                            <p class="order-section__result-item-title">
+                                                Functional Nutrition Indor
+                                                корм для домашних кошек
+                                                старше 1 года,
+                                                с курицей и индейкой
+                                            </p>
+                                            <span class="order-section__result-item-amount">
+                                                1шт.
+                                            </span>
+                                        </div>
+                                        <div class="order-section__result-item-right">
+                                        <span class="order-section__result-item-price">
+                                            390 Р
+                                        </span>
+                                            <span class="order-section__result-send-shelter">
+                                            Отправлено в приют
+                                        </span>
+                                        </div>
+                                    </li>
+                                    <li class="order-section__result-item">
+                                        <div class="order-section__result-image">
+                                            <img src="img/official/cart-item-example.jpg" alt="">
+                                        </div>
+                                        <div class="order-section__result-item-desc">
+                                            <p class="order-section__result-item-title">
+                                                Functional Nutrition Indor
+                                                корм для домашних кошек
+                                                старше 1 года,
+                                                с курицей и индейкой
+                                            </p>
+                                            <span class="order-section__result-item-amount">
+                                                1шт.
+                                            </span>
+                                        </div>
+                                        <div class="order-section__result-item-right">
+                                        <span class="order-section__result-item-price">
+                                            390 Р
+                                        </span>
+                                            <span class="order-section__result-send-shelter">
+                                            Отправлено в приют
+                                        </span>
+                                        </div>
+                                    </li>
+                                    <li class="order-section__result-item">
+                                        <div class="order-section__result-image">
+                                            <img src="img/official/cart-item-example.jpg" alt="">
+                                        </div>
+                                        <div class="order-section__result-item-desc">
+                                            <p class="order-section__result-item-title">
+                                                Functional Nutrition Indor
+                                                корм для домашних кошек
+                                                старше 1 года,
+                                                с курицей и индейкой
+                                            </p>
+                                            <span class="order-section__result-item-amount">
+                                                1шт.
+                                            </span>
+                                        </div>
+                                        <div class="order-section__result-item-right">
+                                        <span class="order-section__result-item-price">
+                                            390 Р
+                                        </span>
+                                            <span class="order-section__result-send-shelter">
+                                            Отправлено в приют
+                                        </span>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="order-section__result-bottom">
+                                <p class="order-section__result-bottom-desc">
+                                    В корзине 3 товара на сумму 1740 Р
+                                </p>
+                                <div class="order-section__result-total-price">
+                                    Итого: 1740 Р
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+@@include('components/footer.html')
