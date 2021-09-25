@@ -8,90 +8,62 @@
             <div class="container container--content">
                 <div class="order-section__back-wrapper">
                     <a class="order-section__back-link">
-                        < Изменить контактные данные
+                        < Изменить адрес доставки
                     </a>
                 </div>
-                <h2 class="order-section__title">Оформление заказа. Шаг 2 из 3</h2>
+                <h2 class="order-section__title">Оформление заказа. Шаг 3 из 3</h2>
                 <div class="order-section__grid">
                     <div class="order-section__form-wrapper">
                         <form>
-                            <p class="order-section__form-title">Адрес доставки</p>
+                            <p class="order-section__form-title">Выберете вариант оплаты</p>
                             <div class="order-section__form-open-popup">
                                 <button type="button" class="order-section__form-open-popup-button js-open-auth-popup">
                                     У меня есть личный кабинет
                                 </button>
                             </div>
-                            <div class="order-section__form-group">
-                                <div class="order-section__form-field form-field">
-                                    <label class="form-field__inner">
-                                        <input name="city" placeholder="Город" type="text">
+                            <div class="order-section__form-group order-section__form-group--radio">
+                                <div class="order-section__form-radio radio-field">
+                                    <label class="radio-field__inner">
+                                        <input class="visually-hidden" name="pay_type" value="1" type="radio">
+                                        <span class="radio-field__icon"></span>
+                                        <span class="radio-field__txt">
+                                            Оплата наличными при получении
+                                        </span>
                                     </label>
-                                    <div class="form-field__error"></div>
                                 </div>
                             </div>
-                            <div class="order-section__form-group">
-                                <div class="order-section__form-field form-field">
-                                    <label class="form-field__inner">
-                                        <input
-                                                name="address"
-                                                placeholder="Адрес"
-                                                type="text">
-                                    </label>
-                                    <div class="form-field__error"></div>
-                                </div>
-                            </div>
-                            <div class="order-section__form-group">
-                                <div class="order-section__form-field form-field form-field--textarea">
-                                    <label class="form-field__inner">
-                                        <textarea name="comments" placeholder="Комментарий для курьера"></textarea>
+                            <div class="order-section__form-group order-section__form-group--radio">
+                                <div class="order-section__form-radio radio-field">
+                                    <label class="radio-field__inner">
+                                        <input class="visually-hidden" name="pay_type" value="2" type="radio">
+                                        <span class="radio-field__icon"></span>
+                                        <span class="radio-field__txt">
+                                            Картой онлайн
+                                            <span class="radio-field__sub">
+                                                Вы перейдете на страницу оплаты
+                                            </span>
+                                        </span>
                                     </label>
                                 </div>
                             </div>
                             <p class="order-section__form-title order-section__form-title--gap">
-                                Выберите удобное время доставки
+                                У вас есть подарочный сертификат ?
                             </p>
-                            <div class="order-section__form-inner">
-                                <div class="order-section__form-select">
-                                    <select name="date" class="js-select2">
-                                        <option value="1">
-                                            Пн, 29 марта
-                                        </option>
-                                        <option value="2">
-                                            Вт, 30 марта
-                                        </option>
-                                        <option value="3">
-                                            Ср, 1 апреля
-                                        </option>
-                                        <option value="4">
-                                            Чт, 2 апреля
-                                        </option>
-                                        <option value="5">
-                                            Пт, 3 апреля
-                                        </option>
-                                        <option value="6">
-                                            Сб, 4 апреля
-                                        </option>
-                                        <option value="7">
-                                            Вс, 5 апреля
-                                        </option>
-                                    </select>
-                                </div>
-                                <div class="order-section__form-select">
-                                    <select name="time" class="js-select2">
-                                        <option value="1">
-                                            C 10:00 до 14:00
-                                        </option>
-                                        <option value="2">
-                                            C 14:00 до 16:00
-                                        </option>
-                                        <option value="3">
-                                            C 16:00 до 18:00
-                                        </option>
-                                    </select>
+                            <div class="order-section__form-group">
+                                <div class="order-section__form-field form-field">
+                                    <label class="form-field__inner">
+                                        <input name="coupon"
+                                               placeholder="Введите здесь номер сертификата"
+                                               type="text">
+                                    </label>
+                                    <div class="form-field__error"></div>
                                 </div>
                             </div>
+                            <div class="order-section__form-total">
+                                Итого с учетом доставки: <span class="order-section__form-price">2 220 Р</span>
+                            </div>
                             <button class="order-section__form-submit button button--red" type="submit">
-                                Перейти к оплате
+                                Оплатить
                             </button>
                         </form>
                     </div>
@@ -227,7 +199,7 @@
                                     В корзине 3 товара на сумму 1740 Р
                                 </p>
                                 <p class="order-section__result-express">
-                                    Экспресс-доставка 500 Р
+                                    Доставка курьером Woof (бесплатно от 1500 Р)
                                 </p>
                                 <div class="order-section__result-total-price">
                                     Итого: 1740 Р

@@ -29,7 +29,15 @@
     background: $red;
   }
 
-  &__additional {
+  &__additional,
+  &__sub {
     color: #a1a1a1;
+  }
+
+  &__sub {
+    display: block;
+    margin: 8px 0 0;
+    font-size: 12px;
+    line-height: 16px;
   }
 }

@@ -11,7 +11,7 @@
     position: absolute;
     border: none;
     background: none;
-    top: 50%;
+    top: calc((100% - 116px) / 2);
     transform: translateY(-50%);
     z-index: 10;
     
@@ -32,6 +32,10 @@
     &.prev {
       right: calc(100% + 48px);
 
+      @media (max-width: $desktop-sm-max) {
+        right: calc(100% + 16px);
+      }
+
       @media (max-width: $tablet-max) {
         right: 100%;
       }
@@ -39,6 +43,10 @@
 
     &.next {
       left: calc(100% + 48px);
+
+      @media (max-width: $desktop-sm-max) {
+        left: calc(100% + 16px);
+      }
 
       @media (max-width: $tablet-max) {
         left: 100%;

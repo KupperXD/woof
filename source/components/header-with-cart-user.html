@@ -1,0 +1,915 @@
+<body>
+<!-- page-wrapper -->
+<div class="page-wrapper">
+    <header class="header js-header">
+        <div class="header__wrapper">
+            <div class="header__top">
+                <div class="container">
+                    <div class="header__top-links-wrapper">
+                        <ul class="header__top-links">
+                            <li class="header__top-link">
+                                <a>
+                                    Доставка и оплата
+                                </a>
+                            </li>
+                            <li class="header__top-link">
+                                <a>
+                                    Оферта
+                                </a>
+                            </li>
+                            <li class="header__top-link">
+                                <a>
+                                    Миссия бренда
+                                </a>
+                            </li>
+                            <li class="header__top-link">
+                                <a>
+                                    Подарочный сертификат
+                                </a>
+                            </li>
+                            <li class="header__top-link">
+                                <a>
+                                    Контакты
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="header__socials">
+                        <ul class="social">
+                            <li>
+                                <a class="social__link" href="#">
+                                    <svg>
+                                        <use xlink:href="#ic_inst"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="social__link" href="#">
+                                    <svg>
+                                        <use xlink:href="#ic_fc"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="social__link" href="#">
+                                    <svg>
+                                        <use xlink:href="#ic_vk"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="header__profile">
+                        <button class="header__profile-open js-open-auth-popup" type="button">
+                            <svg>
+                                <use xlink:href="#ic_login"></use>
+                            </svg>
+                            Здравствуйте, Ирина!
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="header__fixable">
+                <div class="header__middle container">
+                    <div class="header__burger-button-wrapper">
+                        <button class="header__burger-button js-burger-open" type="button">
+                                <span class="header__burger-toggle">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </span>
+                        </button>
+                    </div>
+                    <a class="header__logo">
+                        <picture>
+                            <source srcset="img/official/mobile_logo.svg" media="(max-width: 1279px)">
+                            <img src="img/official/woof_icon.svg" alt="">
+                        </picture>
+                    </a>
+                    <div class="header__search js-search-header-panel">
+                        <div class="form-field">
+                            <label class="form-field__inner">
+                                <input placeholder="Поиск товаров" type="text">
+                                <svg class="header__search-icon">
+                                    <use xlink:href="#ic_search"></use>
+                                </svg>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="header__telephone">
+                        <a href="tel:88001234567" class="header__telephone-link">
+                            8 800 123-45-67
+                        </a>
+                        <button class="header__call js-open-call-popup" type="button">
+                            Перезвони мне
+                        </button>
+                    </div>
+                    <div class="header__search-open js-search-open">
+                        <button type="button">
+                            <svg>
+                                <use xlink:href="#ic_search"></use>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="header__favorite">
+                        <a class="header__favorite-link">
+                            <svg>
+                                <use xlink:href="#ic_favorite"></use>
+                            </svg>
+                            Избранное
+                        </a>
+                    </div>
+                    <div class="header__middle-profile">
+                        <button class="header__profile-open js-open-auth-popup" type="button">
+                            <svg>
+                                <use xlink:href="#ic_login"></use>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="header__cart header__cart--has-items">
+                        <a class="header__cart-link">
+                            <span class="header__cart-amount">
+                               <span>99</span>
+                            </span>
+                            <svg>
+                                <use xlink:href="#ic_cart"></use>
+                            </svg>
+                            <span class="header__cart-text">
+                                    Корзина
+                                </span>
+                        </a>
+                    </div>
+                </div>
+                <div class="header__bottom">
+                    <div class="container">
+                        <div class="header__catalog-open-wrapper">
+                            <button class="js-catalog-open header__catalog-open" type="button">
+                                <span class="header__catalog-toggle">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </span>
+                                <span class="header__catalog-text">Каталог</span>
+                            </button>
+                        </div>
+                        <nav class="header__nav">
+                            <ul class="header__nav-list">
+                                <li class="header__nav-item">
+                                    <a href="#">Новинки</a>
+                                </li>
+                                <li class="header__nav-item">
+                                    <a href="#">Бренды</a>
+                                </li>
+                                <li class="header__nav-item">
+                                    <a href="#">Кошкам</a>
+                                </li>
+                                <li class="header__nav-item">
+                                    <a href="#">Собакам</a>
+                                </li>
+                                <li class="header__nav-item">
+                                    <a href="#">Ветаптекам</a>
+                                </li>
+                                <li class="header__nav-item">
+                                    <a href="#">Наш мерч</a>
+                                </li>
+                            </ul>
+                        </nav>
+                        <div class="header__catalog-popup">
+                            <div class="container">
+                                <div class="header__catalog-grid">
+                                    <div class="header__catalog-brands">
+                                        <div class="header__catalog-list-wrapper">
+                                            <p class="header__catalog-title">
+                                                <a href="#">
+                                                    Название бренда
+                                                </a>
+                                            </p>
+                                            <ul class="header__catalog-list">
+                                                <li class="header__catalog-item">
+                                                    <a href="#">
+                                                        Название бренда
+                                                    </a>
+                                                </li>
+                                                <li class="header__catalog-item">
+                                                    <a href="#">
+                                                        Название бренда
+                                                    </a>
+                                                </li>
+                                                <li class="header__catalog-item">
+                                                    <a href="#">
+                                                        Название бренда
+                                                    </a>
+                                                </li>
+                                                <li class="header__catalog-item">
+                                                    <a href="#">
+                                                        Название бренда
+                                                    </a>
+                                                </li>
+                                                <li class="header__catalog-item">
+                                                    <a href="#">
+                                                        Название бренда
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="header__catalog-subsection">
+                                        <div class="header__catalog-list-wrapper">
+                                            <p class="header__catalog-title">
+                                                <a href="#">Название бренда</a>
+                                            </p>
+                                            <ul class="header__catalog-list">
+                                                <li class="header__catalog-item">
+                                                    <a href="#">
+                                                        Название бренда
+                                                    </a>
+                                                </li>
+                                                <li class="header__catalog-item">
+                                                    <a href="#">
+                                                        Название бренда
+                                                    </a>
+                                                </li>
+                                                <li class="header__catalog-item">
+                                                    <a href="#">
+                                                        Название бренда
+                                                    </a>
+                                                </li>
+                                                <li class="header__catalog-item">
+                                                    <a href="#">
+                                                        Название бренда
+                                                    </a>
+                                                </li>
+                                                <li class="header__catalog-item">
+                                                    <a href="#">
+                                                        Название бренда
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="header__catalog-list-wrapper">
+                                            <p class="header__catalog-title">
+                                                <a href="#">Название бренда</a>
+                                            </p>
+                                            <ul class="header__catalog-list">
+                                                <li class="header__catalog-item">
+                                                    <a href="#">
+                                                        Название бренда
+                                                    </a>
+                                                </li>
+                                                <li class="header__catalog-item">
+                                                    <a href="#">
+                                                        Название бренда
+                                                    </a>
+                                                </li>
+                                                <li class="header__catalog-item">
+                                                    <a href="#">
+                                                        Название бренда
+                                                    </a>
+                                                </li>
+                                                <li class="header__catalog-item">
+                                                    <a href="#">
+                                                        Название бренда
+                                                    </a>
+                                                </li>
+                                                <li class="header__catalog-item">
+                                                    <a href="#">
+                                                        Название бренда
+                                                    </a>
+                                                </li>
+                                                <li class="header__catalog-item">
+                                                    <a href="#">
+                                                        Название бренда
+                                                    </a>
+                                                </li>
+                                                <li class="header__catalog-item">
+                                                    <a href="#">
+                                                        Название бренда
+                                                    </a>
+                                                </li>
+                                                <li class="header__catalog-item">
+                                                    <a href="#">
+                                                        Название бренда
+                                                    </a>
+                                                </li>
+                                                <li class="header__catalog-item">
+                                                    <a href="#">
+                                                        Название бренда
+                                                    </a>
+                                                </li>
+                                                <li class="header__catalog-item">
+                                                    <a href="#">
+                                                        Название бренда
+                                                    </a>
+                                                </li>
+                                                <li class="header__catalog-item">
+                                                    <a href="#">
+                                                        Название бренда
+                                                    </a>
+                                                </li>
+                                                <li class="header__catalog-item">
+                                                    <a href="#">
+                                                        Название бренда
+                                                    </a>
+                                                </li>
+                                                <li class="header__catalog-item">
+                                                    <a href="#">
+                                                        Название бренда
+                                                    </a>
+                                                </li>
+                                                <li class="header__catalog-item">
+                                                    <a href="#">
+                                                        Название бренда
+                                                    </a>
+                                                </li>
+                                                <li class="header__catalog-item">
+                                                    <a href="#">
+                                                        Название бренда
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="header__catalog-list-wrapper">
+                                            <p class="header__catalog-title">
+                                                <a href="#">Название бренда</a>
+                                            </p>
+                                            <ul class="header__catalog-list">
+                                                <li class="header__catalog-item">
+                                                    <a href="#">
+                                                        Название бренда
+                                                    </a>
+                                                </li>
+                                                <li class="header__catalog-item">
+                                                    <a href="#">
+                                                        Название бренда
+                                                    </a>
+                                                </li>
+                                                <li class="header__catalog-item">
+                                                    <a href="#">
+                                                        Название бренда
+                                                    </a>
+                                                </li>
+                                                <li class="header__catalog-item">
+                                                    <a href="#">
+                                                        Название бренда
+                                                    </a>
+                                                </li>
+                                                <li class="header__catalog-item">
+                                                    <a href="#">
+                                                        Название бренда
+                                                    </a>
+                                                </li>
+                                                <li class="header__catalog-item">
+                                                    <a href="#">
+                                                        Название бренда
+                                                    </a>
+                                                </li>
+                                                <li class="header__catalog-item">
+                                                    <a href="#">
+                                                        Название бренда
+                                                    </a>
+                                                </li>
+                                                <li class="header__catalog-item">
+                                                    <a href="#">
+                                                        Название бренда
+                                                    </a>
+                                                </li>
+                                                <li class="header__catalog-item">
+                                                    <a href="#">
+                                                        Название бренда
+                                                    </a>
+                                                </li>
+                                                <li class="header__catalog-item">
+                                                    <a href="#">
+                                                        Название бренда
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="header__catalog-list-wrapper">
+                                            <p class="header__catalog-title">
+                                                <a href="#">Название бренда</a>
+                                            </p>
+                                            <ul class="header__catalog-list">
+                                                <li class="header__catalog-item">
+                                                    <a href="#">
+                                                        Название бренда
+                                                    </a>
+                                                </li>
+                                                <li class="header__catalog-item">
+                                                    <a href="#">
+                                                        Название бренда
+                                                    </a>
+                                                </li>
+                                                <li class="header__catalog-item">
+                                                    <a href="#">
+                                                        Название бренда
+                                                    </a>
+                                                </li>
+                                                <li class="header__catalog-item">
+                                                    <a href="#">
+                                                        Название бренда
+                                                    </a>
+                                                </li>
+                                                <li class="header__catalog-item">
+                                                    <a href="#">
+                                                        Название бренда
+                                                    </a>
+                                                </li>
+                                                <li class="header__catalog-item">
+                                                    <a href="#">
+                                                        Название бренда
+                                                    </a>
+                                                </li>
+                                                <li class="header__catalog-item">
+                                                    <a href="#">
+                                                        Название бренда
+                                                    </a>
+                                                </li>
+                                                <li class="header__catalog-item">
+                                                    <a href="#">
+                                                        Название бренда
+                                                    </a>
+                                                </li>
+                                                <li class="header__catalog-item">
+                                                    <a href="#">
+                                                        Название бренда
+                                                    </a>
+                                                </li>
+                                                <li class="header__catalog-item">
+                                                    <a href="#">
+                                                        Название бренда
+                                                    </a>
+                                                </li>
+                                                <li class="header__catalog-item">
+                                                    <a href="#">
+                                                        Название бренда
+                                                    </a>
+                                                </li>
+                                                <li class="header__catalog-item">
+                                                    <a href="#">
+                                                        Название бренда
+                                                    </a>
+                                                </li>
+                                                <li class="header__catalog-item">
+                                                    <a href="#">
+                                                        Название бренда
+                                                    </a>
+                                                </li>
+                                                <li class="header__catalog-item">
+                                                    <a href="#">
+                                                        Название бренда
+                                                    </a>
+                                                </li>
+                                                <li class="header__catalog-item">
+                                                    <a href="#">
+                                                        Название бренда
+                                                    </a>
+                                                </li>
+                                                <li class="header__catalog-item">
+                                                    <a href="#">
+                                                        Название бренда
+                                                    </a>
+                                                </li>
+                                                <li class="header__catalog-item">
+                                                    <a href="#">
+                                                        Название бренда
+                                                    </a>
+                                                </li>
+                                                <li class="header__catalog-item">
+                                                    <a href="#">
+                                                        Название бренда
+                                                    </a>
+                                                </li>
+                                                <li class="header__catalog-item">
+                                                    <a href="#">
+                                                        Название бренда
+                                                    </a>
+                                                </li>
+                                                <li class="header__catalog-item">
+                                                    <a href="#">
+                                                        Название бренда
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="header__catalog-additional">
+                                        <ul class="header__catalog-links">
+                                            <li class="header__catalog-link">
+                                                <a href="#">
+                                                    Новински
+                                                </a>
+                                            </li>
+                                            <li class="header__catalog-link">
+                                                <a href="#">
+                                                    Скидки и акции
+                                                </a>
+                                            </li>
+                                            <li class="header__catalog-link">
+                                                <a href="#">
+                                                    Нужно приютам
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="header__mobile js-burger-menu burger-menu">
+                <div class="header__mobile-wrapper">
+                    <div class="header__mobile-catalogs burger-menu__filter-panel js-filter-panel">
+                        <div class="js-filter-panel-section burger-menu__filter-section">
+                            <div class="burger-menu__filter-header js-filter-panel-section-open">
+                                <button class="js-filter-panel-section-close burger-menu__filter-header-return" type="button">
+                                    <svg>
+                                        <use xlink:href="#ic_left_arrow"></use>
+                                    </svg>
+                                </button>
+                                <p class="burger-menu__filter-header-text">
+                                    Бренды
+                                </p>
+                            </div>
+                            <div class="burger-menu__filter-content">
+                                <ul class="burger-menu__filter-content-list">
+                                    <li class="burger-menu__filter-content-item">
+                                        <a href="#">Название бренда</a>
+                                    </li>
+                                    <li class="burger-menu__filter-content-item">
+                                        <a href="#">Название бренда</a>
+                                    </li>
+                                    <li class="burger-menu__filter-content-item">
+                                        <a href="#">Название бренда</a>
+                                    </li>
+                                    <li class="burger-menu__filter-content-item">
+                                        <a href="#">Название бренда</a>
+                                    </li>
+                                    <li class="burger-menu__filter-content-item">
+                                        <a href="#">Название бренда</a>
+                                    </li>
+                                    <li class="burger-menu__filter-content-item">
+                                        <a href="#">Название бренда</a>
+                                    </li>
+                                    <li class="burger-menu__filter-content-item">
+                                        <a href="#">Название бренда</a>
+                                    </li>
+                                    <li class="burger-menu__filter-content-item">
+                                        <a href="#">Название бренда</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="js-filter-panel-section burger-menu__filter-section">
+                            <div class="burger-menu__filter-header js-filter-panel-section-open">
+                                <button class="js-filter-panel-section-close burger-menu__filter-header-return" type="button">
+                                    <svg>
+                                        <use xlink:href="#ic_left_arrow"></use>
+                                    </svg>
+                                </button>
+                                <p class="burger-menu__filter-header-text">
+                                    Кошкам
+                                </p>
+                            </div>
+                            <div class="burger-menu__filter-content">
+                                <ul class="burger-menu__filter-content-list">
+                                    <li class="burger-menu__filter-content-item">
+                                        <a href="#">Название бренда</a>
+                                    </li>
+                                    <li class="burger-menu__filter-content-item">
+                                        <a href="#">Название бренда</a>
+                                    </li>
+                                    <li class="burger-menu__filter-content-item">
+                                        <a href="#">Название бренда</a>
+                                    </li>
+                                    <li class="burger-menu__filter-content-item">
+                                        <a href="#">Название бренда</a>
+                                    </li>
+                                    <li class="burger-menu__filter-content-item">
+                                        <a href="#">Название бренда</a>
+                                    </li>
+                                    <li class="burger-menu__filter-content-item">
+                                        <a href="#">Название бренда</a>
+                                    </li>
+                                    <li class="burger-menu__filter-content-item">
+                                        <a href="#">Название бренда</a>
+                                    </li>
+                                    <li class="burger-menu__filter-content-item">
+                                        <a href="#">Название бренда</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="js-filter-panel-section burger-menu__filter-section">
+                            <div class="burger-menu__filter-header js-filter-panel-section-open">
+                                <button class="js-filter-panel-section-close burger-menu__filter-header-return" type="button">
+                                    <svg>
+                                        <use xlink:href="#ic_left_arrow"></use>
+                                    </svg>
+                                </button>
+                                <p class="burger-menu__filter-header-text">
+                                    Собакам
+                                </p>
+                            </div>
+                            <div class="burger-menu__filter-content">
+                                <ul class="burger-menu__filter-content-list">
+                                    <li class="burger-menu__filter-content-item">
+                                        <a href="#">Название бренда</a>
+                                    </li>
+                                    <li class="burger-menu__filter-content-item">
+                                        <a href="#">Название бренда</a>
+                                    </li>
+                                    <li class="burger-menu__filter-content-item">
+                                        <a href="#">Название бренда</a>
+                                    </li>
+                                    <li class="burger-menu__filter-content-item">
+                                        <a href="#">Название бренда</a>
+                                    </li>
+                                    <li class="burger-menu__filter-content-item">
+                                        <a href="#">Название бренда</a>
+                                    </li>
+                                    <li class="burger-menu__filter-content-item">
+                                        <a href="#">Название бренда</a>
+                                    </li>
+                                    <li class="burger-menu__filter-content-item">
+                                        <a href="#">Название бренда</a>
+                                    </li>
+                                    <li class="burger-menu__filter-content-item">
+                                        <a href="#">Название бренда</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="js-filter-panel-section burger-menu__filter-section">
+                            <div class="burger-menu__filter-header js-filter-panel-section-open">
+                                <button class="js-filter-panel-section-close burger-menu__filter-header-return" type="button">
+                                    <svg>
+                                        <use xlink:href="#ic_left_arrow"></use>
+                                    </svg>
+                                </button>
+                                <p class="burger-menu__filter-header-text">
+                                    Ветааптека
+                                </p>
+                            </div>
+                            <div class="burger-menu__filter-content">
+                                <ul class="burger-menu__filter-content-list">
+                                    <li class="burger-menu__filter-content-item">
+                                        <a href="#">Название бренда</a>
+                                    </li>
+                                    <li class="burger-menu__filter-content-item">
+                                        <a href="#">Название бренда</a>
+                                    </li>
+                                    <li class="burger-menu__filter-content-item">
+                                        <a href="#">Название бренда</a>
+                                    </li>
+                                    <li class="burger-menu__filter-content-item">
+                                        <a href="#">Название бренда</a>
+                                    </li>
+                                    <li class="burger-menu__filter-content-item">
+                                        <a href="#">Название бренда</a>
+                                    </li>
+                                    <li class="burger-menu__filter-content-item">
+                                        <a href="#">Название бренда</a>
+                                    </li>
+                                    <li class="burger-menu__filter-content-item">
+                                        <a href="#">Название бренда</a>
+                                    </li>
+                                    <li class="burger-menu__filter-content-item">
+                                        <a href="#">Название бренда</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="js-filter-panel-section burger-menu__filter-section">
+                            <div class="burger-menu__filter-header js-filter-panel-section-open">
+                                <button class="js-filter-panel-section-close burger-menu__filter-header-return" type="button">
+                                    <svg>
+                                        <use xlink:href="#ic_left_arrow"></use>
+                                    </svg>
+                                </button>
+                                <p class="burger-menu__filter-header-text">
+                                    Наш мерч
+                                </p>
+                            </div>
+                            <div class="burger-menu__filter-content">
+                                <ul class="burger-menu__filter-content-list">
+                                    <li class="burger-menu__filter-content-item">
+                                        <a href="#">Название бренда</a>
+                                    </li>
+                                    <li class="burger-menu__filter-content-item">
+                                        <a href="#">Название бренда</a>
+                                    </li>
+                                    <li class="burger-menu__filter-content-item">
+                                        <a href="#">Название бренда</a>
+                                    </li>
+                                    <li class="burger-menu__filter-content-item">
+                                        <a href="#">Название бренда</a>
+                                    </li>
+                                    <li class="burger-menu__filter-content-item">
+                                        <a href="#">Название бренда</a>
+                                    </li>
+                                    <li class="burger-menu__filter-content-item">
+                                        <a href="#">Название бренда</a>
+                                    </li>
+                                    <li class="burger-menu__filter-content-item">
+                                        <a href="#">Название бренда</a>
+                                    </li>
+                                    <li class="burger-menu__filter-content-item">
+                                        <a href="#">Название бренда</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="js-filter-panel-section burger-menu__filter-section">
+                            <div class="burger-menu__filter-header js-filter-panel-section-open">
+                                <button class="js-filter-panel-section-close burger-menu__filter-header-return" type="button">
+                                    <svg>
+                                        <use xlink:href="#ic_left_arrow"></use>
+                                    </svg>
+                                </button>
+                                <p class="burger-menu__filter-header-text">
+                                    Новинки
+                                </p>
+                            </div>
+                            <div class="burger-menu__filter-content">
+                                <ul class="burger-menu__filter-content-list">
+                                    <li class="burger-menu__filter-content-item">
+                                        <a href="#">Название бренда</a>
+                                    </li>
+                                    <li class="burger-menu__filter-content-item">
+                                        <a href="#">Название бренда</a>
+                                    </li>
+                                    <li class="burger-menu__filter-content-item">
+                                        <a href="#">Название бренда</a>
+                                    </li>
+                                    <li class="burger-menu__filter-content-item">
+                                        <a href="#">Название бренда</a>
+                                    </li>
+                                    <li class="burger-menu__filter-content-item">
+                                        <a href="#">Название бренда</a>
+                                    </li>
+                                    <li class="burger-menu__filter-content-item">
+                                        <a href="#">Название бренда</a>
+                                    </li>
+                                    <li class="burger-menu__filter-content-item">
+                                        <a href="#">Название бренда</a>
+                                    </li>
+                                    <li class="burger-menu__filter-content-item">
+                                        <a href="#">Название бренда</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="js-filter-panel-section burger-menu__filter-section">
+                            <div class="burger-menu__filter-header js-filter-panel-section-open">
+                                <button class="js-filter-panel-section-close burger-menu__filter-header-return" type="button">
+                                    <svg>
+                                        <use xlink:href="#ic_left_arrow"></use>
+                                    </svg>
+                                </button>
+                                <p class="burger-menu__filter-header-text">
+                                    Акции и скидки
+                                </p>
+                            </div>
+                            <div class="burger-menu__filter-content">
+                                <ul class="burger-menu__filter-content-list">
+                                    <li class="burger-menu__filter-content-item">
+                                        <a href="#">Название бренда</a>
+                                    </li>
+                                    <li class="burger-menu__filter-content-item">
+                                        <a href="#">Название бренда</a>
+                                    </li>
+                                    <li class="burger-menu__filter-content-item">
+                                        <a href="#">Название бренда</a>
+                                    </li>
+                                    <li class="burger-menu__filter-content-item">
+                                        <a href="#">Название бренда</a>
+                                    </li>
+                                    <li class="burger-menu__filter-content-item">
+                                        <a href="#">Название бренда</a>
+                                    </li>
+                                    <li class="burger-menu__filter-content-item">
+                                        <a href="#">Название бренда</a>
+                                    </li>
+                                    <li class="burger-menu__filter-content-item">
+                                        <a href="#">Название бренда</a>
+                                    </li>
+                                    <li class="burger-menu__filter-content-item">
+                                        <a href="#">Название бренда</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="js-filter-panel-section burger-menu__filter-section">
+                            <div class="burger-menu__filter-header js-filter-panel-section-open">
+                                <button class="js-filter-panel-section-close burger-menu__filter-header-return" type="button">
+                                    <svg>
+                                        <use xlink:href="#ic_left_arrow"></use>
+                                    </svg>
+                                </button>
+                                <p class="burger-menu__filter-header-text">
+                                    Нужно приютам
+                                </p>
+                            </div>
+                            <div class="burger-menu__filter-content">
+                                <ul class="burger-menu__filter-content-list">
+                                    <li class="burger-menu__filter-content-item">
+                                        <a href="#">Название бренда</a>
+                                    </li>
+                                    <li class="burger-menu__filter-content-item">
+                                        <a href="#">Название бренда</a>
+                                    </li>
+                                    <li class="burger-menu__filter-content-item">
+                                        <a href="#">Название бренда</a>
+                                    </li>
+                                    <li class="burger-menu__filter-content-item">
+                                        <a href="#">Название бренда</a>
+                                    </li>
+                                    <li class="burger-menu__filter-content-item">
+                                        <a href="#">Название бренда</a>
+                                    </li>
+                                    <li class="burger-menu__filter-content-item">
+                                        <a href="#">Название бренда</a>
+                                    </li>
+                                    <li class="burger-menu__filter-content-item">
+                                        <a href="#">Название бренда</a>
+                                    </li>
+                                    <li class="burger-menu__filter-content-item">
+                                        <a href="#">Название бренда</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="header__mobile-additional">
+                        <nav class="header__mobile-navs">
+                            <a class="header__mobile-nav" href="#">
+                                Доставка и оплата
+                            </a>
+                            <a class="header__mobile-nav" href="#">
+                                Оферта
+                            </a>
+                            <a class="header__mobile-nav" href="#">
+                                Миссия бренда
+                            </a>
+                            <a class="header__mobile-nav" href="#">
+                                Подарочный сертификат
+                            </a>
+                            <a class="header__mobile-nav" href="#">
+                                Контакты
+                            </a>
+                        </nav>
+                        <div class="header__mobile-socials">
+                            <ul class="social">
+                                <li>
+                                    <a class="social__link" href="#">
+                                        <svg>
+                                            <use xlink:href="#ic_inst"></use>
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="social__link" href="#">
+                                        <svg>
+                                            <use xlink:href="#ic_fc"></use>
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="social__link" href="#">
+                                        <svg>
+                                            <use xlink:href="#ic_vk"></use>
+                                        </svg>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="header__telephone">
+                            <a href="tel:88001234567" class="header__telephone-link">
+                                8 800 123-45-67
+                            </a>
+                            <button class="header__call js-open-call-popup" type="button">
+                                Перезвони мне
+                            </button>
+                        </div>
+                        <div class="header__favorite">
+                            <a class="header__favorite-link">
+                                <svg>
+                                    <use xlink:href="#ic_favorite"></use>
+                                </svg>
+                                Избранное
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="fixed-button js-scroll-up-inner">
+        <button class="fixed-button__button js-scroll-up-button">
+            <svg>
+                <use xlink:href="#ic_arrow_scroll"></use>
+            </svg>
+        </button>
+    </div>

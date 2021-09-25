@@ -115,3 +115,47 @@ p:not([class]) {
     }
   }
 }
+
+.fixed-button {
+  position: fixed;
+  right: 120px;
+  bottom: 54px;
+  z-index: 50;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-12px);
+  transition: 0.3s ease-in-out;
+  transition-property: opacity, visibility, transform;
+
+  @media (max-width: $tablet-max) {
+    right: 24px;
+  }
+
+  &__button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 54px;
+    height: 54px;
+    border-radius: 100%;
+    background-color: $red;
+    border: none;
+    transition: box-shadow 0.3s ease-in-out;
+
+    &:hover {
+      box-shadow: 4px 4px 19px 0 rgba(0, 0, 0, 0.2);
+    }
+
+    svg {
+      width: 21px;
+      height: 25px;
+      fill: $white;
+    }
+  }
+
+  &.visible {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+}

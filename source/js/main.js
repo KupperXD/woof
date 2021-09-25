@@ -478,7 +478,46 @@
                 padding: 0,
                 showConfirmButton: false,
                 showCloseButton: true,
-            })
+            });
         });
+
+        $(document).on('click', '.js-open-call-popup', () => {
+            const popupTemplate = $('.js-popup-call-back').get(0);
+
+            if (typeof popupTemplate === 'undefined') {
+                console.log('Попап звонка');
+                return;
+            }
+
+            const cloneTemplate = popupTemplate.cloneNode(true);
+            Swal.fire({
+                backdrop: true,
+                html: cloneTemplate,
+                customClass: {
+                    ...sweetAlertCssClass,
+                    popup: 'custom-popup custom-popup--with-form'
+                },
+                padding: 0,
+                showConfirmButton: false,
+                showCloseButton: true,
+            });
+        });
+
+        $(window).on('scroll', function (evt) {
+            const offsetY = evt.target.scrollingElement.scrollTop;
+            const $scrollUpButton = $('.js-scroll-up-inner');
+
+            if (offsetY > 80) {
+                $scrollUpButton.addClass('visible');
+                return;
+            }
+
+            $scrollUpButton.removeClass('visible');
+        });
+
+        $(document).on('click', '.js-scroll-up-button', function () {
+            $(window).scrollTop(0);
+        });
+
     });
 })(jQuery);
