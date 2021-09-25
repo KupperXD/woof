@@ -8,14 +8,14 @@
             <div class="container container--content">
                 <div class="order-section__back-wrapper">
                     <a class="order-section__back-link">
-                        < Назад в корзину
+                        < Изменить контактные данные
                     </a>
                 </div>
-                <h2 class="order-section__title">Оформление заказа. Шаг 1 из 3</h2>
+                <h2 class="order-section__title">Оформление заказа. Шаг 2 из 3</h2>
                 <div class="order-section__grid">
                     <div class="order-section__form-wrapper">
                         <form>
-                            <p class="order-section__form-title">Контактные данные</p>
+                            <p class="order-section__form-title">Адрес доставки</p>
                             <div class="order-section__form-open-popup">
                                 <button type="button" class="order-section__form-open-popup-button js-open-auth-popup">
                                     У меня есть личный кабинет
@@ -24,7 +24,7 @@
                             <div class="order-section__form-group">
                                 <div class="order-section__form-field form-field">
                                     <label class="form-field__inner">
-                                        <input name="name" placeholder="Ваше имя*" type="text">
+                                        <input name="city" placeholder="Город" type="text">
                                     </label>
                                     <div class="form-field__error"></div>
                                 </div>
@@ -33,60 +33,65 @@
                                 <div class="order-section__form-field form-field">
                                     <label class="form-field__inner">
                                         <input
-                                                name="telephone"
-                                                placeholder="Номер телефона*"
+                                                name="address"
+                                                placeholder="Адрес"
                                                 type="text">
                                     </label>
                                     <div class="form-field__error"></div>
                                 </div>
-                                <span class="order-section__form-field-desc">
-                                    Курьер позвонит вам за час до приезда
-                                </span>
                             </div>
                             <div class="order-section__form-group">
-                                <div class="order-section__form-field form-field has-error">
+                                <div class="order-section__form-field form-field form-field--textarea">
                                     <label class="form-field__inner">
-                                        <input
-                                                name="email"
-                                                placeholder="Ваш e-mail*"
-                                                type="text">
+                                        <textarea name="comments" placeholder="Комментарий для курьера"></textarea>
                                     </label>
-                                    <div class="form-field__error">
-                                        Ошибка валидации
-                                    </div>
                                 </div>
-                                <span class="order-section__form-field-desc">
-                                    Мы вышлем вам электронный чек
-                                </span>
                             </div>
                             <p class="order-section__form-title order-section__form-title--gap">
-                                Как с вами связаться для подтверждения заказа?
+                                Выберите удобное время доставки
                             </p>
                             <div class="order-section__form-inner">
-                                <div class="order-section__form-radio radio-field">
-                                    <label class="radio-field__inner">
-                                        <input class="visually-hidden" name="notification_type" value="1" type="radio">
-                                        <span class="radio-field__icon"></span>
-                                        <span class="radio-field__txt">
-                                            Позвоните мне
-                                        </span>
-                                    </label>
+                                <div class="order-section__form-select">
+                                    <select name="date" class="js-select2">
+                                        <option value="1">
+                                            Пн, 29 марта
+                                        </option>
+                                        <option value="2">
+                                            Вт, 30 марта
+                                        </option>
+                                        <option value="3">
+                                            Ср, 1 апреля
+                                        </option>
+                                        <option value="4">
+                                            Чт, 2 апреля
+                                        </option>
+                                        <option value="5">
+                                            Пт, 3 апреля
+                                        </option>
+                                        <option value="6">
+                                            Сб, 4 апреля
+                                        </option>
+                                        <option value="7">
+                                            Вс, 5 апреля
+                                        </option>
+                                    </select>
                                 </div>
-                                <div class="order-section__form-radio radio-field">
-                                    <label class="radio-field__inner">
-                                        <input class="visually-hidden" name="notification_type" value="2" type="radio">
-                                        <span class="radio-field__icon"></span>
-                                        <span class="radio-field__txt">
-                                            Пришлите смс
-                                        </span>
-                                    </label>
+                                <div class="order-section__form-select">
+                                    <select name="time" class="js-select2">
+                                        <option value="1">
+                                            C 10:00 до 14:00
+                                        </option>
+                                        <option value="2">
+                                            C 14:00 до 16:00
+                                        </option>
+                                        <option value="3">
+                                            C 16:00 до 18:00
+                                        </option>
+                                    </select>
                                 </div>
                             </div>
-                            <p class="order-section__form-operator">
-                                Оператор свяжется с вами в течение рабочего дня с 9:00 до 19:00
-                            </p>
                             <button class="order-section__form-submit button button--red" type="submit">
-                                Продолжить оформление
+                                Перейти к оплате
                             </button>
                         </form>
                     </div>

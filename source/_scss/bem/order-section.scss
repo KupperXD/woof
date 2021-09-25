@@ -2,11 +2,11 @@
   padding: 32px 0 104px;
 
   @media (max-width: $tablet-max) {
-    margin-bottom: 64px;
+    padding-bottom: 64px;
   }
 
   @media (max-width: $mobile-max) {
-    margin: 24px 0 88px;
+    padding: 24px 0 88px;
   }
 
   &__back-link {
@@ -50,6 +50,164 @@
 
   &__form-wrapper {
     width: 585px;
+    padding: 32px 40px;
+    background: $white;
+    border-radius: 16px;
+
+    @media (max-width: $tablet-max) {
+      width: 100%;
+      max-width: 700px;
+    }
+
+    @media (max-width: $mobile-max) {
+      padding: 24px 16px 32px;
+    }
+  }
+
+  .order-section__form-select {
+    width: 200px;
+    margin: 0 24px 0 0;
+
+    .select2.select2-container .select2-selection__rendered {
+      padding-right: 48px;
+      text-align: right;
+    }
+  }
+
+  &__form-title {
+    font-size: 16px;
+    font-weight: 500;
+
+    @media (max-width: $mobile-max) {
+      max-width: 220px;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: center;
+    }
+
+    &--gap {
+      margin: 32px 0 0;
+
+      @media (max-width: $mobile-max) {
+        margin: 24px auto 0;
+      }
+    }
+  }
+
+  &__form-inner {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 24px 0 0;
+
+    @media (max-width: $mobile-max) {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  &__form-radio {
+    margin: 0 24px 0 0;
+
+    @media (max-width: $mobile-max) {
+      margin: 8px 0 0;
+    }
+  }
+
+  &__form-operator {
+    margin: 12px 0 0;
+    font-size: 12px;
+    line-height: 16px;
+    color: #a1a1a1;
+
+    @media (max-width: $mobile-max) {
+      margin: 20px 0 0;
+      text-align: center;
+    }
+  }
+
+  &__form-submit {
+    min-width: 300px;
+    margin: 24px 0 0;
+
+    @media (max-width: $mobile-max) {
+      margin: 24px auto 0;
+    }
+  }
+
+  &__form-open-popup {
+    min-height: 16px;
+    margin: 20px 0 8px;
+
+    @media (max-width: $mobile-max) {
+      display: flex;
+      justify-content: center;
+      margin: 12px 0 4px;
+    }
+    &-button {
+      width: max-content;
+      color: $red;
+      padding: 0;
+      background: none;
+      border: none;
+      font-size: 12px;
+      line-height: 16px;
+      text-decoration: underline;
+    }
+  }
+
+  &__form-group {
+    display: flex;
+    align-items: center;
+    margin-top: 12px;
+
+    @media (max-width: $mobile-max) {
+      flex-direction: column;
+      align-items: stretch;
+    }
+  }
+
+  &__form-field {
+    width: 300px;
+
+    @media (max-width: $mobile-max) {
+      width: 100%;
+      max-width: 300px;
+    }
+  }
+
+  &__form-field-desc {
+    max-width: 124px;
+    margin: 0 0 0 24px;
+    font-size: 12px;
+    line-height: 16px;
+    color: #a1a1a1;
+
+    @media (max-width: $tablet-max) {
+      max-width: none;
+    }
+
+    @media (max-width: $mobile-max) {
+      margin: 8px 0 0;
+      text-align: center;
+    }
+  }
+
+  .form-field input {
+    &::placeholder {
+      font-style: normal;
+    }
+  }
+
+  .form-field__error {
+    @media (max-width: $mobile-max) {
+      text-align: center;
+    }
+  }
+
+  .radio-field {
+    @media (max-width: $mobile-max) {
+      font-size: 14px;
+    }
   }
 
   &__result {
@@ -209,4 +367,5 @@
       }
     }
   }
+
 }

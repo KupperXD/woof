@@ -1,3 +1,56 @@
+<div class="hidden">
+    <div class="popup-with-form popup-auth js-popup-auth">
+        <p class="popup-with-form__title">
+            Вход в личный кабинет
+        </p>
+        <form action="">
+            <div class="popup-with-form__form-inner">
+                <div class="form-field has-error">
+                    <label class="form-field__inner">
+                        <input name="name" placeholder="Логин" type="text">
+                    </label>
+                    <span class="form-field__error">Ошибка валидации</span>
+                </div>
+                <div class="form-field">
+                    <label class="form-field__inner">
+                        <input name="telephone" placeholder="Пароль" type="text">
+                    </label>
+                </div>
+                <button class="popup-with-form__submit button button--black" type="submit">
+                    Войти
+                </button>
+                <button type="button" class="popup-auth__recovery-button js-open-recovery-popup">
+                    Я забыл пароль
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
+<div class="hidden">
+    <div class="popup-with-form popup-auth js-popup-recovery-password">
+        <p class="popup-with-form__title">
+            Восстановление пароля
+        </p>
+        <p class="popup-with-form__desc">
+            Укажите e-mail, с&nbsp;которого вы&nbsp;регистрировались
+            в&nbsp;личном кабинете.
+            На&nbsp;указанную почту будет выслано письмо с&nbsp;паролем.
+        </p>
+        <form action="">
+            <div class="popup-with-form__form-inner">
+                <div class="form-field has-error">
+                    <label class="form-field__inner">
+                        <input name="name" placeholder="Ваш e-mail*" type="text">
+                    </label>
+                    <span class="form-field__error">Ошибка валидации</span>
+                </div>
+                <button class="popup-with-form__submit button button--black" type="submit">
+                    Отправить
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
 <footer class="footer">
     <div class="container">
         <div class="footer__wrapper">

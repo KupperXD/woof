@@ -437,5 +437,48 @@
                 showCloseButton: true,
             })
         });
-    })
+
+        $(document).on('click', '.js-open-auth-popup', () => {
+            const popupTemplate = $('.js-popup-auth').get(0);
+
+            if (typeof popupTemplate === 'undefined') {
+                console.log('Попап авторизации не был найден');
+                return;
+            }
+
+            const cloneTemplate = popupTemplate.cloneNode(true);
+            Swal.fire({
+                backdrop: true,
+                html: cloneTemplate,
+                customClass: {
+                    ...sweetAlertCssClass,
+                    popup: 'custom-popup custom-popup--with-form'
+                },
+                padding: 0,
+                showConfirmButton: false,
+                showCloseButton: true,
+            })
+        });
+        $(document).on('click', '.js-open-recovery-popup', () => {
+            const popupTemplate = $('.js-popup-recovery-password').get(0);
+
+            if (typeof popupTemplate === 'undefined') {
+                console.log('Попап восстановления не был найден');
+                return;
+            }
+
+            const cloneTemplate = popupTemplate.cloneNode(true);
+            Swal.fire({
+                backdrop: true,
+                html: cloneTemplate,
+                customClass: {
+                    ...sweetAlertCssClass,
+                    popup: 'custom-popup custom-popup--with-form'
+                },
+                padding: 0,
+                showConfirmButton: false,
+                showCloseButton: true,
+            })
+        });
+    });
 })(jQuery);
