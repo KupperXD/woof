@@ -39,5 +39,10 @@
     margin: 8px 0 0;
     font-size: 12px;
     line-height: 16px;
+
+    &--default {
+      font-size: 14px;
+      color: $black;
+    }
   }
 }

@@ -1,0 +1,194 @@
+@@include('components/head.html')
+<div style="display: none;">
+    @@include('../dist/img/svg/sprite.svg')
+</div>
+@@include('components/header-with-cart-user.html')
+<main class="all">
+    <section class="profile-page">
+        <div class="profile-page__decor">
+            <svg>
+                <use xlink:href="#ic_big-woof"></use>
+            </svg>
+        </div>
+        <div class="container container--content">
+            <div class="profile-page__wrapper">
+                <div class="profile-page__inner">
+                    <a class="profile-page__quit" href="#">Выйти из личного кабинета</a>
+                    <h2 class="profile-page__title">
+                        Личный кабинет
+                    </h2>
+                </div>
+                <div class="profile-page__navigation">
+                    <ul class="profile-page__tabs tabs">
+                        <li class="tabs__item active">
+                            <a class="tabs__button" href="#">
+                                Личные данные
+                            </a>
+                        </li>
+                        <li class="tabs__item">
+                            <a class="tabs__button" href="#">
+                                Мои заказы
+                            </a>
+                        </li>
+                        <li class="tabs__item">
+                            <a class="tabs__button" href="#">
+                                Адреса доставки
+                            </a>
+                        </li>
+                        <li class="tabs__item">
+                            <a class="tabs__button" href="#">
+                                Моё избранное
+                            </a>
+                        </li>
+                        <li class="tabs__item">
+                            <a class="tabs__button" href="#">
+                                Мои питомцы
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="profile-page__mobile-nav">
+                        <select class="js-select2">
+                            <option data-href="#" value="0">
+                                Личные данные
+                            </option>
+                            <option data-href="#" value="1">
+                                Мои заказы
+                            </option>
+                            <option data-href="#" value="2">
+                                Адрес доставки
+                            </option>
+                            <option data-href="#" value="3">
+                                Моё избранное
+                            </option>
+                            <option value="4">
+                                Мои питомцы
+                            </option>
+                        </select>
+                    </div>
+                </div>
+                <div class="profile-page__content">
+                    <div class="profile-card">
+                        <div class="profile-card__grid">
+                            <div class="profile-card__item profile-card__item--big">
+                            <span class="profile-card__item-label">
+                                ФИО
+                            </span>
+                            <span class="profile-card__item-text">
+                                Константинопольская
+                                Ирина Константиновна
+                            </span>
+                            </div>
+                            <div class="profile-card__item">
+                            <span class="profile-card__item-label">
+                                Пол
+                            </span>
+                                <span class="profile-card__item-text">
+                                Женский
+                            </span>
+                            </div>
+                            <div class="profile-card__item">
+                            <span class="profile-card__item-label">
+                                Дата рождения
+                            </span>
+                                <span class="profile-card__item-text">
+                                02.12.1990
+                            </span>
+                            </div>
+                            <div class="profile-card__item">
+                            <span class="profile-card__item-label">
+                                Телефон
+                            </span>
+                                <span class="profile-card__item-text">
+                                +7 (999) 123-45-67
+                            </span>
+                            </div>
+                            <div class="profile-card__item">
+                                <span class="profile-card__item-label">
+                                    Email
+                                </span>
+                                    <span class="profile-card__item-text profile-card__item-text--empty">
+                                    Не указан
+                                </span>
+                                <div class="profile-card__item-checkbox radio-field">
+                                    <label class="radio-field__inner">
+                                        <input class="visually-hidden" name="notification" value="2" type="checkbox">
+                                        <span class="radio-field__icon"></span>
+                                        <span class="radio-field__txt">
+                                        Хочу получать рассылку и уведомления
+                                    </span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="js-open-profile-edit-popup profile-card__open-edit button button--red">
+                            Изменить информацию
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="hidden">
+        <div class="popup-with-form js-popup-edit-profile">
+            <p class="popup-with-form__title">
+                Изменить информацию
+            </p>
+            <form action="">
+                <div class="popup-with-form__form-inner">
+                    <div class="form-field">
+                        <label class="form-field__inner">
+                            <input name="name" placeholder="Ваше имя, фамилия, отчество" type="text">
+                        </label>
+                    </div>
+                    <div class="popup-with-form__group">
+                        <span class="popup-with-form__group-label">
+                            Ваш пол:
+                        </span>
+                        <div class="popup-with-form__group-grid">
+                            <div class="popup-with-form__group-item radio-field">
+                                <label class="radio-field__inner">
+                                    <input class="visually-hidden" name="gender-type" value="0" type="radio">
+                                    <span class="radio-field__icon"></span>
+                                    <span class="radio-field__txt">
+                                            Мужской
+                                    </span>
+                                </label>
+                            </div>
+                            <div class="popup-with-form__group-item radio-field">
+                                <label class="radio-field__inner">
+                                    <input class="visually-hidden" name="gender-type" value="1" type="radio">
+                                    <span class="radio-field__icon"></span>
+                                    <span class="radio-field__txt">
+                                            Женский
+                                    </span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-field">
+                        <label class="form-field__inner">
+                            <input name="birthday" placeholder="Ваша дата рождения" type="text">
+                        </label>
+                        <span class="form-field__error"></span>
+                    </div>
+                    <div class="form-field">
+                        <label class="form-field__inner">
+                            <input name="telephone" placeholder="Номер телефона*" type="text">
+                        </label>
+                        <span class="form-field__error"></span>
+                    </div>
+                    <div class="form-field">
+                        <label class="form-field__inner">
+                            <input name="e-mail" placeholder="Ваш e-mail" type="text">
+                        </label>
+                        <span class="form-field__error"></span>
+                    </div>
+                    <button class="popup-with-form__submit button button--black" type="submit">
+                        Сохранить
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</main>
+@@include('components/footer.html')

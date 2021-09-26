@@ -1,0 +1,670 @@
+@@include('components/head.html')
+<div style="display: none;">
+    @@include('../dist/img/svg/sprite.svg')
+</div>
+@@include('components/header-with-cart-user.html')
+<main class="all">
+    <section class="profile-page">
+        <div class="container container--content">
+            <div class="profile-page__wrapper">
+                <div class="profile-page__inner">
+                    <a class="profile-page__quit" href="#">Выйти из личного кабинета</a>
+                    <h2 class="profile-page__title">
+                        Личный кабинет
+                    </h2>
+                </div>
+                <div class="profile-page__navigation">
+                    <ul class="profile-page__tabs tabs">
+                        <li class="tabs__item">
+                            <a class="tabs__button" href="#">
+                                Личные данные
+                            </a>
+                        </li>
+                        <li class="tabs__item active">
+                            <a class="tabs__button" href="#">
+                                Мои заказы
+                            </a>
+                        </li>
+                        <li class="tabs__item">
+                            <a class="tabs__button" href="#">
+                                Адреса доставки
+                            </a>
+                        </li>
+                        <li class="tabs__item">
+                            <a class="tabs__button" href="#">
+                                Моё избранное
+                            </a>
+                        </li>
+                        <li class="tabs__item">
+                            <a class="tabs__button" href="#">
+                                Мои питомцы
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="profile-page__mobile-nav">
+                        <select class="js-select2">
+                            <option data-href="#" value="0">
+                                Личные данные
+                            </option>
+                            <option selected data-href="#" value="1">
+                                Мои заказы
+                            </option>
+                            <option data-href="#" value="2">
+                                Адрес доставки
+                            </option>
+                            <option data-href="#" value="3">
+                                Моё избранное
+                            </option>
+                            <option value="4">
+                                Мои питомцы
+                            </option>
+                        </select>
+                    </div>
+                </div>
+                <div class="profile-page__content">
+                    <div class="profile-page__orders js-profile-orders-holder">
+                        <div class="profile-page__order profile-order js-profile-order">
+                            <div class="profile-order__wrapper js-profile-order-wrapper">
+                                <button class="profile-order__arrow js-profile-order-open" type="button"></button>
+                                <div class="profile-order__top">
+                                <span class="profile-order__number">
+                                    Заказ #123456
+                                </span>
+                                    <span class="profile-order__date">
+                                    Дата заказа: 02.10.2021
+                                </span>
+                                </div>
+                                <div class="profile-order__right">
+                                    <p class="profile-order__status">
+                                        Статус заказа: оплачен, выполняется
+                                        <button class="profile-order__repeat" type="button">
+                                            Повторить заказ
+                                        </button>
+                                    </p>
+                                    <p class="profile-order__address">
+                                        Адрес доставки: МО, г.Химки, ул. 1-го Мая, д15к5, кв. 15
+                                    </p>
+                                    <button class="profile-order__subscribe button button--red js-add-subscribe-order" type="button">
+                                        Оформить подписку
+                                    </button>
+                                </div>
+                                <div class="profile-order__products-wrapper">
+                                    <ul class="profile-order__products">
+                                        <li class="profile-order__product profile-cart-item">
+                                            <div class="profile-cart-item__image">
+                                                <img src="img/official/cart-item-example.jpg" alt="">
+                                            </div>
+                                            <div class="profile-cart-item__desc">
+                                                <p class="profile-cart-item__title">
+                                                    Functional Nutrition Indor корм для домашних кошек старше 1 года,
+                                                    с курицей и индейкой
+                                                </p>
+                                                <span class="profile-cart-item__amount">1шт.</span>
+                                            </div>
+                                            <div class="profile-cart-item__price">
+                                                390 Р
+                                            </div>
+                                            <button class="profile-cart-item__add-review js-open-review-popup" type="button">
+                                                Оставить отзыв о товаре
+                                            </button>
+                                        </li>
+                                        <li class="profile-order__product profile-cart-item">
+                                            <div class="profile-cart-item__image">
+                                                <img src="img/official/cart-item-example.jpg" alt="">
+                                            </div>
+                                            <div class="profile-cart-item__desc">
+                                                <p class="profile-cart-item__title">
+                                                    Functional Nutrition Indor корм для домашних кошек старше 1 года,
+                                                    с курицей и индейкой
+                                                </p>
+                                                <span class="profile-cart-item__amount">1шт.</span>
+                                            </div>
+                                            <div class="profile-cart-item__price">
+                                                390 Р
+                                            </div>
+                                            <button class="profile-cart-item__add-review js-open-review-popup" type="button">
+                                                Оставить отзыв о товаре
+                                            </button>
+                                        </li>
+                                        <li class="profile-order__product profile-cart-item">
+                                            <div class="profile-cart-item__image">
+                                                <img src="img/official/cart-item-example.jpg" alt="">
+                                            </div>
+                                            <div class="profile-cart-item__desc">
+                                                <p class="profile-cart-item__title">
+                                                    Functional Nutrition Indor корм для домашних кошек старше 1 года,
+                                                    с курицей и индейкой
+                                                </p>
+                                                <span class="profile-cart-item__amount">1шт.</span>
+                                            </div>
+                                            <div class="profile-cart-item__price">
+                                                390 Р
+                                            </div>
+                                            <button class="profile-cart-item__add-review js-open-review-popup" type="button">
+                                                Оставить отзыв о товаре
+                                            </button>
+                                        </li>
+                                        <li class="profile-order__product profile-cart-item">
+                                            <div class="profile-cart-item__image">
+                                                <img src="img/official/cart-item-example.jpg" alt="">
+                                            </div>
+                                            <div class="profile-cart-item__desc">
+                                                <p class="profile-cart-item__title">
+                                                    Functional Nutrition Indor корм для домашних кошек старше 1 года,
+                                                    с курицей и индейкой
+                                                </p>
+                                                <span class="profile-cart-item__amount">1шт.</span>
+                                            </div>
+                                            <div class="profile-cart-item__price">
+                                                390 Р
+                                            </div>
+                                            <button class="profile-cart-item__add-review js-open-review-popup" type="button">
+                                                Оставить отзыв о товаре
+                                            </button>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <button class="js-add-subscribe-order profile-order__subscribe profile-order__subscribe--mobile button button--red"
+                                        type="button">
+                                    Оформить подписку
+                                </button>
+                            </div>
+                        </div>
+                        <div class="profile-page__order profile-order js-profile-order">
+                            <div class="profile-order__wrapper js-profile-order-wrapper">
+                                <button class="profile-order__arrow js-profile-order-open" type="button"></button>
+                                <div class="profile-order__top">
+                                <span class="profile-order__number">
+                                    Заказ #123456
+                                </span>
+                                    <span class="profile-order__date">
+                                    Дата заказа: 02.10.2021
+                                </span>
+                                </div>
+                                <div class="profile-order__right">
+                                    <p class="profile-order__status">
+                                        Статус заказа: оплачен, выполняется
+                                        <button class="profile-order__repeat" type="button">
+                                            Повторить заказ
+                                        </button>
+                                    </p>
+                                    <p class="profile-order__address">
+                                        Адрес доставки: МО, г.Химки, ул. 1-го Мая, д15к5, кв. 15
+                                    </p>
+                                    <button class="profile-order__subscribe button button--red js-add-subscribe-order" type="button">
+                                        Оформить подписку
+                                    </button>
+                                </div>
+                                <div class="profile-order__products-wrapper">
+                                    <ul class="profile-order__products">
+                                        <li class="profile-order__product profile-cart-item">
+                                            <div class="profile-cart-item__image">
+                                                <img src="img/official/cart-item-example.jpg" alt="">
+                                            </div>
+                                            <div class="profile-cart-item__desc">
+                                                <p class="profile-cart-item__title">
+                                                    Functional Nutrition Indor корм для домашних кошек старше 1 года,
+                                                    с курицей и индейкой
+                                                </p>
+                                                <span class="profile-cart-item__amount">1шт.</span>
+                                            </div>
+                                            <div class="profile-cart-item__price">
+                                                390 Р
+                                            </div>
+                                            <button class="profile-cart-item__add-review js-open-review-popup" type="button">
+                                                Оставить отзыв о товаре
+                                            </button>
+                                        </li>
+                                        <li class="profile-order__product profile-cart-item">
+                                            <div class="profile-cart-item__image">
+                                                <img src="img/official/cart-item-example.jpg" alt="">
+                                            </div>
+                                            <div class="profile-cart-item__desc">
+                                                <p class="profile-cart-item__title">
+                                                    Functional Nutrition Indor корм для домашних кошек старше 1 года,
+                                                    с курицей и индейкой
+                                                </p>
+                                                <span class="profile-cart-item__amount">1шт.</span>
+                                            </div>
+                                            <div class="profile-cart-item__price">
+                                                390 Р
+                                            </div>
+                                            <button class="profile-cart-item__add-review js-open-review-popup" type="button">
+                                                Оставить отзыв о товаре
+                                            </button>
+                                        </li>
+                                        <li class="profile-order__product profile-cart-item">
+                                            <div class="profile-cart-item__image">
+                                                <img src="img/official/cart-item-example.jpg" alt="">
+                                            </div>
+                                            <div class="profile-cart-item__desc">
+                                                <p class="profile-cart-item__title">
+                                                    Functional Nutrition Indor корм для домашних кошек старше 1 года,
+                                                    с курицей и индейкой
+                                                </p>
+                                                <span class="profile-cart-item__amount">1шт.</span>
+                                            </div>
+                                            <div class="profile-cart-item__price">
+                                                390 Р
+                                            </div>
+                                            <button class="profile-cart-item__add-review js-open-review-popup" type="button">
+                                                Оставить отзыв о товаре
+                                            </button>
+                                        </li>
+                                        <li class="profile-order__product profile-cart-item">
+                                            <div class="profile-cart-item__image">
+                                                <img src="img/official/cart-item-example.jpg" alt="">
+                                            </div>
+                                            <div class="profile-cart-item__desc">
+                                                <p class="profile-cart-item__title">
+                                                    Functional Nutrition Indor корм для домашних кошек старше 1 года,
+                                                    с курицей и индейкой
+                                                </p>
+                                                <span class="profile-cart-item__amount">1шт.</span>
+                                            </div>
+                                            <div class="profile-cart-item__price">
+                                                390 Р
+                                            </div>
+                                            <button class="profile-cart-item__add-review js-open-review-popup" type="button">
+                                                Оставить отзыв о товаре
+                                            </button>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <button class="js-add-subscribe-order profile-order__subscribe profile-order__subscribe--mobile button button--red"
+                                        type="button">
+                                    Оформить подписку
+                                </button>
+                            </div>
+                        </div>
+                        <div class="profile-page__order profile-order js-profile-order">
+                            <div class="profile-order__wrapper js-profile-order-wrapper">
+                                <button class="profile-order__arrow js-profile-order-open" type="button"></button>
+                                <div class="profile-order__top">
+                                <span class="profile-order__number">
+                                    Заказ #123456
+                                </span>
+                                    <span class="profile-order__date">
+                                    Дата заказа: 02.10.2021
+                                </span>
+                                </div>
+                                <div class="profile-order__right">
+                                    <p class="profile-order__status">
+                                        Статус заказа: оплачен, выполняется
+                                        <button class="profile-order__repeat" type="button">
+                                            Повторить заказ
+                                        </button>
+                                    </p>
+                                    <p class="profile-order__address">
+                                        Адрес доставки: МО, г.Химки, ул. 1-го Мая, д15к5, кв. 15
+                                    </p>
+                                    <button class="profile-order__subscribe button button--red js-add-subscribe-order" type="button">
+                                        Оформить подписку
+                                    </button>
+                                </div>
+                                <div class="profile-order__products-wrapper">
+                                    <ul class="profile-order__products">
+                                        <li class="profile-order__product profile-cart-item">
+                                            <div class="profile-cart-item__image">
+                                                <img src="img/official/cart-item-example.jpg" alt="">
+                                            </div>
+                                            <div class="profile-cart-item__desc">
+                                                <p class="profile-cart-item__title">
+                                                    Functional Nutrition Indor корм для домашних кошек старше 1 года,
+                                                    с курицей и индейкой
+                                                </p>
+                                                <span class="profile-cart-item__amount">1шт.</span>
+                                            </div>
+                                            <div class="profile-cart-item__price">
+                                                390 Р
+                                            </div>
+                                            <button class="profile-cart-item__add-review js-open-review-popup" type="button">
+                                                Оставить отзыв о товаре
+                                            </button>
+                                        </li>
+                                        <li class="profile-order__product profile-cart-item">
+                                            <div class="profile-cart-item__image">
+                                                <img src="img/official/cart-item-example.jpg" alt="">
+                                            </div>
+                                            <div class="profile-cart-item__desc">
+                                                <p class="profile-cart-item__title">
+                                                    Functional Nutrition Indor корм для домашних кошек старше 1 года,
+                                                    с курицей и индейкой
+                                                </p>
+                                                <span class="profile-cart-item__amount">1шт.</span>
+                                            </div>
+                                            <div class="profile-cart-item__price">
+                                                390 Р
+                                            </div>
+                                            <button class="profile-cart-item__add-review js-open-review-popup" type="button">
+                                                Оставить отзыв о товаре
+                                            </button>
+                                        </li>
+                                        <li class="profile-order__product profile-cart-item">
+                                            <div class="profile-cart-item__image">
+                                                <img src="img/official/cart-item-example.jpg" alt="">
+                                            </div>
+                                            <div class="profile-cart-item__desc">
+                                                <p class="profile-cart-item__title">
+                                                    Functional Nutrition Indor корм для домашних кошек старше 1 года,
+                                                    с курицей и индейкой
+                                                </p>
+                                                <span class="profile-cart-item__amount">1шт.</span>
+                                            </div>
+                                            <div class="profile-cart-item__price">
+                                                390 Р
+                                            </div>
+                                            <button class="profile-cart-item__add-review js-open-review-popup" type="button">
+                                                Оставить отзыв о товаре
+                                            </button>
+                                        </li>
+                                        <li class="profile-order__product profile-cart-item">
+                                            <div class="profile-cart-item__image">
+                                                <img src="img/official/cart-item-example.jpg" alt="">
+                                            </div>
+                                            <div class="profile-cart-item__desc">
+                                                <p class="profile-cart-item__title">
+                                                    Functional Nutrition Indor корм для домашних кошек старше 1 года,
+                                                    с курицей и индейкой
+                                                </p>
+                                                <span class="profile-cart-item__amount">1шт.</span>
+                                            </div>
+                                            <div class="profile-cart-item__price">
+                                                390 Р
+                                            </div>
+                                            <button class="profile-cart-item__add-review js-open-review-popup" type="button">
+                                                Оставить отзыв о товаре
+                                            </button>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <button class="js-add-subscribe-order profile-order__subscribe profile-order__subscribe--mobile button button--red"
+                                        type="button">
+                                    Оформить подписку
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="hidden">
+        <div class="popup-reviews js-popup-reviews-add">
+            <p class="popup-reviews__title">
+                Оставьте свой отзыв
+            </p>
+            <div class="popup-reviews__product">
+                <div class="popup-reviews__image">
+                    <img src="#" alt="">
+                </div>
+                <div class="popup-reviews__desc"></div>
+            </div>
+            <div class="popup-reviews__form-wrapper">
+                <form action="">
+                    <div class="popup-reviews__form-inner">
+                        <div class="popup-reviews__field form-field form-field--textarea">
+                            <label class="form-field__inner">
+                                <textarea name="comments" placeholder="Ваш отзыв"></textarea>
+                            </label>
+                        </div>
+                        <div class="popup-reviews__rating">
+                            <div class="popup-reviews__rating-title">
+                                Ваша оценка
+                            </div>
+                            <div class="popup-reviews__rating-inner">
+                                <input class="visually-hidden" id="reviews_rating_5" name="rating" type="radio">
+                                <label for="reviews_rating_5" class="popup-reviews__rating-label">
+                                    <svg class="popup-reviews__icon-fill">
+                                        <use xlink:href="#ic_star"></use>
+                                    </svg>
+                                    <svg class="popup-reviews__icon-stroke">
+                                        <use xlink:href="#ic_star_stroke"></use>
+                                    </svg>
+                                </label>
+                                <input class="visually-hidden" id="reviews_rating_4" name="rating" type="radio">
+                                <label for="reviews_rating_4" class="popup-reviews__rating-label">
+                                    <svg class="popup-reviews__icon-fill">
+                                        <use xlink:href="#ic_star"></use>
+                                    </svg>
+                                    <svg class="popup-reviews__icon-stroke">
+                                        <use xlink:href="#ic_star_stroke"></use>
+                                    </svg>
+                                </label>
+                                <input class="visually-hidden" id="reviews_rating_3" name="rating"  type="radio">
+                                <label for="reviews_rating_3" class="popup-reviews__rating-label">
+                                    <svg class="popup-reviews__icon-fill">
+                                        <use xlink:href="#ic_star"></use>
+                                    </svg>
+                                    <svg class="popup-reviews__icon-stroke">
+                                        <use xlink:href="#ic_star_stroke"></use>
+                                    </svg>
+                                </label>
+                                <input class="visually-hidden" id="reviews_rating_2" name="rating" type="radio">
+                                <label for="reviews_rating_2" class="popup-reviews__rating-label">
+                                    <svg class="popup-reviews__icon-fill">
+                                        <use xlink:href="#ic_star"></use>
+                                    </svg>
+                                    <svg class="popup-reviews__icon-stroke">
+                                        <use xlink:href="#ic_star_stroke"></use>
+                                    </svg>
+                                </label>
+                                <input class="visually-hidden" checked id="reviews_rating_1" name="rating" type="radio">
+                                <label for="reviews_rating_1" class="popup-reviews__rating-label">
+                                    <svg class="popup-reviews__icon-fill">
+                                        <use xlink:href="#ic_star"></use>
+                                    </svg>
+                                    <svg class="popup-reviews__icon-stroke">
+                                        <use xlink:href="#ic_star_stroke"></use>
+                                    </svg>
+                                </label>
+                            </div>
+                        </div>
+                        <button class="popup-reviews__submit button button--black" type="submit">
+                            Отправить
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="hidden">
+        <div class="popup-subscribe-order js-popup-subscribe-order">
+            <div class="popup-subscribe-order__title">
+                Оформите подписку на товары!
+            </div>
+            <div class="popup-subscribe-order__total">
+                3 товара на сумму 1 740 Р
+            </div>
+            <div class="popup-subscribe-order__grid">
+                <div class="popup-subscribe-order__products-wrapper">
+                    <ul class="popup-subscribe-order__products">
+                        <li class="popup-subscribe-order__product profile-cart-item profile-cart-item--popup">
+                            <div class="profile-cart-item__image">
+                                <img src="img/official/cart-item-example.jpg" alt="">
+                            </div>
+                            <div class="profile-cart-item__desc">
+                                <p class="profile-cart-item__title">
+                                    Functional Nutrition Indor корм для домашних кошек старше 1 года,
+                                    с курицей и индейкой
+                                </p>
+                                <span class="profile-cart-item__amount">1шт.</span>
+                            </div>
+                            <div class="profile-cart-item__price">
+                                390 Р
+                            </div>
+                        </li>
+                        <li class="popup-subscribe-order__product profile-cart-item profile-cart-item--popup">
+                            <div class="profile-cart-item__image">
+                                <img src="img/official/cart-item-example.jpg" alt="">
+                            </div>
+                            <div class="profile-cart-item__desc">
+                                <p class="profile-cart-item__title">
+                                    Functional Nutrition Indor корм для домашних кошек старше 1 года,
+                                    с курицей и индейкой
+                                </p>
+                                <span class="profile-cart-item__amount">1шт.</span>
+                            </div>
+                            <div class="profile-cart-item__price">
+                                390 Р
+                            </div>
+                        </li>
+                        <li class="popup-subscribe-order__product profile-cart-item profile-cart-item--popup">
+                            <div class="profile-cart-item__image">
+                                <img src="img/official/cart-item-example.jpg" alt="">
+                            </div>
+                            <div class="profile-cart-item__desc">
+                                <p class="profile-cart-item__title">
+                                    Functional Nutrition Indor корм для домашних кошек старше 1 года,
+                                    с курицей и индейкой
+                                </p>
+                                <span class="profile-cart-item__amount">1шт.</span>
+                            </div>
+                            <div class="profile-cart-item__price">
+                                390 Р
+                            </div>
+                        </li>
+                        <li class="popup-subscribe-order__product profile-cart-item profile-cart-item--popup">
+                            <div class="profile-cart-item__image">
+                                <img src="img/official/cart-item-example.jpg" alt="">
+                            </div>
+                            <div class="profile-cart-item__desc">
+                                <p class="profile-cart-item__title">
+                                    Functional Nutrition Indor корм для домашних кошек старше 1 года,
+                                    с курицей и индейкой
+                                </p>
+                                <span class="profile-cart-item__amount">1шт.</span>
+                            </div>
+                            <div class="profile-cart-item__price">
+                                390 Р
+                            </div>
+                        </li>
+                        <li class="popup-subscribe-order__product profile-cart-item profile-cart-item--popup">
+                            <div class="profile-cart-item__image">
+                                <img src="img/official/cart-item-example.jpg" alt="">
+                            </div>
+                            <div class="profile-cart-item__desc">
+                                <p class="profile-cart-item__title">
+                                    Functional Nutrition Indor корм для домашних кошек старше 1 года,
+                                    с курицей и индейкой
+                                </p>
+                                <span class="profile-cart-item__amount">1шт.</span>
+                            </div>
+                            <div class="profile-cart-item__price">
+                                390 Р
+                            </div>
+                        </li>
+                        <li class="popup-subscribe-order__product profile-cart-item profile-cart-item--popup">
+                            <div class="profile-cart-item__image">
+                                <img src="img/official/cart-item-example.jpg" alt="">
+                            </div>
+                            <div class="profile-cart-item__desc">
+                                <p class="profile-cart-item__title">
+                                    Functional Nutrition Indor корм для домашних кошек старше 1 года,
+                                    с курицей и индейкой
+                                </p>
+                                <span class="profile-cart-item__amount">1шт.</span>
+                            </div>
+                            <div class="profile-cart-item__price">
+                                390 Р
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="popup-subscribe-order__form-wrapper">
+                    <form action="">
+                        <div class="popup-subscribe-order__form-grid">
+                            <div class="popup-subscribe-order__form-group">
+                                <div class="popup-subscribe-order__form-group-title">
+                                    01. Я хочу получать этот список товаров...
+                                </div>
+                                <div class="popup-subscribe-order__form-group-grid">
+                                    <div class="radio-field">
+                                        <label class="radio-field__inner">
+                                            <input class="visually-hidden" value="0" name="delivery_repeat_date" type="radio">
+                                            <span class="radio-field__icon"></span>
+                                            <span class="radio-field__txt">
+                                            Каждую неделю
+                                        </span>
+                                        </label>
+                                    </div>
+                                    <div class="radio-field">
+                                        <label class="radio-field__inner">
+                                            <input class="visually-hidden" value="1" name="delivery_repeat_date" type="radio">
+                                            <span class="radio-field__icon"></span>
+                                            <span class="radio-field__txt">
+                                            Каждый месяц
+                                        </span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="popup-subscribe-order__form-group">
+                                <div class="popup-subscribe-order__form-group-title">
+                                    02. Выберете удобное время доставки
+                                </div>
+                                <div class="popup-subscribe-order__form-group-grid popup-subscribe-order__form-group-grid--select">
+                                    <div class="popup-subscribe-order__form-group-select">
+                                        <select name="date" class="js-select2-order-subscribe">
+                                            <option value="0">
+                                                c 10:00 до 14:00
+                                            </option>
+                                            <option value="1">
+                                                c 14:00 до 16:00
+                                            </option>
+                                            <option value="2">
+                                                c 16:00 до 18:00
+                                            </option>
+                                        </select>
+                                    </div>
+                                    <div class="popup-subscribe-order__form-group-sub">
+                                        Мы заранее свяжемся с вами и уточним
+                                        актуальность заказа, а также вышлем
+                                        ссылку для оплаты
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="popup-subscribe-order__form-group">
+                                <div class="popup-subscribe-order__form-group-title">
+                                    03. Куда доставить ?
+                                </div>
+                                <div class="popup-subscribe-order__form-group-grid">
+                                    <div class="radio-field">
+                                        <label class="radio-field__inner">
+                                            <input class="visually-hidden" value="0" name="delivery_repeat_address" type="radio">
+                                            <span class="radio-field__icon"></span>
+                                            <span class="radio-field__txt">
+                                            Основной адрес
+                                        </span>
+                                        </label>
+                                    </div>
+                                    <div class="radio-field">
+                                        <label class="radio-field__inner">
+                                            <input class="visually-hidden" value="1" name="delivery_repeat_address" type="radio">
+                                            <span class="radio-field__icon"></span>
+                                            <span class="radio-field__txt">
+                                            Для мамы и тоси
+                                        </span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="popup-subscribe-order__submit button button--black js-open-subscribe-order-success" type="button">Отправить</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="hidden">
+        <div class="popup-order-subscribe-success js-popup-order-subscribe-success">
+            <p class="popup-order-subscribe-success__title">
+                Ваша заявка оформлена!
+            </p>
+            <p class="popup-order-subscribe-success__text">
+                Наш менеджер свяжется с вами для уточнения деталей заказа.
+            </p>
+        </div>
+    </div>
+</main>
+@@include('components/footer.html')

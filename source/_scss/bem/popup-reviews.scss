@@ -1,0 +1,134 @@
+.popup-reviews {
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__title {
+    font-size: 21px;
+    font-weight: 500;
+    line-height: 1;
+    text-align: center;
+  }
+
+  &__product {
+    display: flex;
+    align-items: center;
+    margin: 20px 0 0;
+
+    @media (max-width: $mobile-max) {
+      display: block;
+    }
+  }
+
+  &__image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 100px;
+    margin: 0 20px 0 0;
+    padding: 2px;
+    background: $white;
+    border-radius: 4px;
+
+    @media (max-width: $mobile-max) {
+      margin: 0 auto;
+    }
+
+    img {
+      width: auto;
+      height: auto;
+      max-height: 100%;
+      object-fit: contain;
+      object-position: center;
+    }
+  }
+
+
+  &__desc {
+    max-width: 220px;
+    font-weight: 500;
+
+    @media (max-width: $mobile-max) {
+      max-width: 100%;
+      margin: 20px 0 0;
+      text-align: left;
+    }
+  }
+
+  &__form-wrapper {
+    margin: 16px 0 0;
+
+    @media (max-width: $mobile-max) {
+      width: 100%;
+    }
+  }
+
+  &__form-inner {
+    display: flex;
+    width: 375px;
+    flex-direction: column;
+    align-items: center;
+
+    @media (max-width: $mobile-max) {
+      width: 100%;
+    }
+  }
+
+  &__field {
+    width: 100%;
+  }
+
+  &__rating {
+    display: flex;
+    align-items: center;
+    margin: 24px 0 0;
+
+    &-title {
+      flex-shrink: 0;
+      margin: 0 24px 0 0;
+    }
+
+    &-inner {
+      display: flex;
+      align-items: center;
+      flex-direction: row-reverse;
+      margin: 0 -3px;
+    }
+
+    &-label {
+      position: relative;
+      width: 20px;
+      height: 20px;
+      margin: 0 3px;
+      cursor: pointer;
+
+      svg {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 20px;
+        height: 20px;
+        fill: $red;
+      }
+
+      .popup-reviews__icon-fill {
+        opacity: 0;
+        transition: opacity 0.2s ease-in-out;
+      }
+
+    }
+
+    input:checked ~ .popup-reviews__rating-label {
+      .popup-reviews__icon-fill {
+        opacity: 1;
+      }
+    }
+  }
+
+  &__submit {
+    margin: 32px 0 0;
+  }
+}

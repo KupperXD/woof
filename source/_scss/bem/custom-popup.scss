@@ -75,4 +75,60 @@
       }
     }
   }
+
+  &--reviews {
+    width: 580px;
+
+    @media (max-width: $mobile-max) {
+      width: 100%;
+    }
+
+    .custom-popup__wrapper {
+      padding: 32px 24px 48px;
+
+      @media (max-width: $mobile-max) {
+        padding: 24px 16px;
+      }
+    }
+  }
+
+  &--add-order-subscribe {
+    width: 1170px;
+
+    @media (max-width: $tablet-max) {
+      width: 590px;
+    }
+
+    @media (max-width: $mobile-max) {
+      width: 100%;
+    }
+
+    .custom-popup__wrapper {
+      position: relative;
+      padding: 32px 40px 40px;
+
+      @media (max-width: $tablet-max) {
+        padding: 40px 24px 54px;
+      }
+
+      @media (max-width: $mobile-max) {
+        padding: 40px 16px;
+      }
+
+      &::before {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 50%;
+        width: 1px;
+        content: '';
+        background-color: #959595;
+        transform: translate(-50%, 0);
+
+        @media (max-width: $tablet-max) {
+          content: none;
+        }
+      }
+    }
+  }
 }

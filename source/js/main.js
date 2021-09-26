@@ -519,5 +519,145 @@
             $(window).scrollTop(0);
         });
 
+        $(document).on('click', '.js-open-profile-edit-popup', () => {
+            const popupTemplate = $('.js-popup-edit-profile').get(0);
+
+            if (typeof popupTemplate === 'undefined') {
+                console.log('Попап изменения данных не найден');
+                return;
+            }
+
+            const cloneTemplate = popupTemplate.cloneNode(true);
+            Swal.fire({
+                backdrop: true,
+                html: cloneTemplate,
+                customClass: {
+                    ...sweetAlertCssClass,
+                    popup: 'custom-popup custom-popup--with-form'
+                },
+                padding: 0,
+                showConfirmButton: false,
+                showCloseButton: true,
+            });
+        });
+
+        const $profileOrdersHolder = $('.js-profile-orders-holder');
+
+        $profileOrdersHolder.on('click', '.js-profile-order-open', (evt) => {
+            const $order = $(evt.target).closest('.js-profile-order');
+            const $orderWrapper = $order.find('.js-profile-order-wrapper');
+
+            if ($order.hasClass('open')) {
+                const maxHeight = $order.css('maxHeight');
+                $order.removeClass('open');
+                $order.css('minHeight', maxHeight || '0px');
+                return;
+            }
+
+            const heightContent = $($orderWrapper).innerHeight();
+            $order.addClass('open');
+            $order.css('minHeight', `${heightContent}px`);
+        });
+
+        $(document).on('click', '.js-open-review-popup', (evt) => {
+            const $target = $(evt.target);
+            const popupTemplate = $('.js-popup-reviews-add').get(0);
+
+            if (typeof popupTemplate === 'undefined') {
+                return;
+            }
+
+            const $itemHolder = $target.closest('.profile-cart-item');
+
+            const originalDesc = $itemHolder.find('.profile-cart-item__title').text();
+            const originalImg = $itemHolder.find('.profile-cart-item__image img');
+            const cloneTemplate = popupTemplate.cloneNode(true);
+            const $starInputs = $(cloneTemplate).find('input[type="radio"]');
+            const $labels = $(cloneTemplate).find('.popup-reviews__rating-label');
+            const image = $(cloneTemplate).find('.popup-reviews__image img');
+            const desc = $(cloneTemplate).find('.popup-reviews__desc');
+
+            //Нужны к id input добавить слово что бы они были уникальными
+            $starInputs.each((index, item) => {
+                const originalId = $(item).attr('id');
+                $(item).attr('id', `clone_${originalId}`);
+            });
+
+            $labels.each((index, item) => {
+                const originalId = $(item).attr('for');
+                $(item).attr('for', `clone_${originalId}`);
+            });
+
+            /**
+             * заполняем контейнеры попапа данными
+             */
+            desc.text(originalDesc);
+            image.attr('src', originalImg.attr('src'));
+
+            Swal.fire({
+                backdrop: true,
+                html: cloneTemplate,
+                customClass: {
+                    ...sweetAlertCssClass,
+                    popup: 'custom-popup custom-popup--reviews'
+                },
+                padding: 0,
+                showConfirmButton: false,
+                showCloseButton: true,
+            });
+        });
+
+        $(document).on('click', '.js-add-subscribe-order', () => {
+            const popupTemplate = $('.js-popup-subscribe-order').get(0);
+
+            if (typeof popupTemplate === 'undefined') {
+                return;
+            }
+
+            const cloneTemplate = popupTemplate.cloneNode(true);
+            $(cloneTemplate).find('.js-select2-order-subscribe').each((index, item) => {
+                $(item).select2({
+                    placeholder: 'Выберете из списка',
+                    width: 'style',
+                    dropdownParent: $(item).parent(),
+                });
+            });
+
+            Swal.fire({
+                backdrop: true,
+                html: cloneTemplate,
+                customClass: {
+                    ...sweetAlertCssClass,
+                    popup: 'custom-popup custom-popup--add-order-subscribe'
+                },
+                padding: 0,
+                showConfirmButton: false,
+                showCloseButton: true,
+            });
+        });
+
+        $(document).on('click', '.js-open-subscribe-order-success', () => {
+            const popupTemplate = $('.js-popup-order-subscribe-success').get(0);
+
+            if (typeof popupTemplate === 'undefined') {
+                return;
+            }
+
+            const cloneTemplate = popupTemplate.cloneNode(true);
+
+            Swal.fire({
+                backdrop: true,
+                html: cloneTemplate,
+                customClass: {
+                    ...sweetAlertCssClass,
+                    popup: 'custom-popup custom-popup--donation'
+                },
+                padding: 0,
+                showConfirmButton: false,
+                showCloseButton: true,
+            });
+
+        });
+
     });
 })(jQuery);

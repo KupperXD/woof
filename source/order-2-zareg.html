@@ -1,0 +1,273 @@
+@@include('components/head.html')
+<div style="display: none;">
+    @@include('../dist/img/svg/sprite.svg')
+</div>
+@@include('components/header.html')
+    <main class="all">
+        <section class="order-section">
+            <div class="container container--content">
+                <div class="order-section__back-wrapper">
+                    <a class="order-section__back-link">
+                        < Изменить контактные данные
+                    </a>
+                </div>
+                <h2 class="order-section__title">Оформление заказа. Шаг 2 из 3</h2>
+                <div class="order-section__grid">
+                    <div class="order-section__form-wrapper">
+                        <form>
+                            <p class="order-section__form-title">Адрес доставки</p>
+                            <div class="order-section__form-open-popup">
+                            </div>
+                            <div class="order-section__form-group order-section__form-group--radio">
+                                <div class="order-section__form-radio radio-field">
+                                    <label class="radio-field__inner">
+                                        <input class="visually-hidden" name="pay_type" value="1" type="radio">
+                                        <span class="radio-field__icon"></span>
+                                        <span class="radio-field__txt">
+                                            Для мамы и тоси
+                                            <span class="radio-field__sub radio-field__sub--default">
+                                                Зеленоград, 1430, подъезд 4, этаж 14, кв 191, код домофона,
+                                                205к4212
+                                            </span>
+                                        </span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="order-section__form-group order-section__form-group--radio">
+                                <div class="order-section__form-radio radio-field">
+                                    <label class="radio-field__inner">
+                                        <input class="visually-hidden" name="pay_type" value="2" type="radio">
+                                        <span class="radio-field__icon"></span>
+                                        <span class="radio-field__txt">
+                                            Основной адрес
+                                            <span class="radio-field__sub radio-field__sub--default">
+                                                Зеленоград, 1430, подъезд 4, этаж 14, кв 191, код домофона,
+                                                205к4212
+                                            </span>
+                                        </span>
+                                    </label>
+                                </div>
+                            </div>
+                            <p class="order-section__form-title order-section__form-title--gap">
+                                Введите новый адрес
+                            </p>
+                            <div class="order-section__form-group">
+                                <div class="order-section__form-field form-field">
+                                    <label class="form-field__inner">
+                                        <input name="city" placeholder="Город" type="text">
+                                    </label>
+                                    <div class="form-field__error"></div>
+                                </div>
+                            </div>
+                            <div class="order-section__form-group">
+                                <div class="order-section__form-field form-field">
+                                    <label class="form-field__inner">
+                                        <input
+                                                name="address"
+                                                placeholder="Адрес"
+                                                type="text">
+                                    </label>
+                                    <div class="form-field__error"></div>
+                                </div>
+                            </div>
+                            <div class="order-section__form-group">
+                                <div class="order-section__form-field form-field form-field--textarea">
+                                    <label class="form-field__inner">
+                                        <textarea name="comments" placeholder="Комментарий для курьера"></textarea>
+                                    </label>
+                                </div>
+                            </div>
+                            <p class="order-section__form-title order-section__form-title--gap">
+                                Выберите удобное время доставки
+                            </p>
+                            <div class="order-section__form-inner">
+                                <div class="order-section__form-select">
+                                    <select name="date" class="js-select2">
+                                        <option value="1">
+                                            Пн, 29 марта
+                                        </option>
+                                        <option value="2">
+                                            Вт, 30 марта
+                                        </option>
+                                        <option value="3">
+                                            Ср, 1 апреля
+                                        </option>
+                                        <option value="4">
+                                            Чт, 2 апреля
+                                        </option>
+                                        <option value="5">
+                                            Пт, 3 апреля
+                                        </option>
+                                        <option value="6">
+                                            Сб, 4 апреля
+                                        </option>
+                                        <option value="7">
+                                            Вс, 5 апреля
+                                        </option>
+                                    </select>
+                                </div>
+                                <div class="order-section__form-select">
+                                    <select name="time" class="js-select2">
+                                        <option value="1">
+                                            C 10:00 до 14:00
+                                        </option>
+                                        <option value="2">
+                                            C 14:00 до 16:00
+                                        </option>
+                                        <option value="3">
+                                            C 16:00 до 18:00
+                                        </option>
+                                    </select>
+                                </div>
+                            </div>
+                            <button class="order-section__form-submit button button--red" type="submit">
+                                Перейти к оплате
+                            </button>
+                        </form>
+                    </div>
+                    <div class="order-section__result">
+                        <div class="order-section__result-wrapper">
+                            <div class="order-section__result-top">
+                                <p class="order-section__result-title">Ваш заказ</p>
+                                <ul class="order-section__result-list">
+                                    <li class="order-section__result-item">
+                                        <div class="order-section__result-image">
+                                            <img src="img/official/cart-item-example.jpg" alt="">
+                                        </div>
+                                        <div class="order-section__result-item-desc">
+                                            <p class="order-section__result-item-title">
+                                                Functional Nutrition Indor
+                                                корм для домашних кошек
+                                                старше 1 года,
+                                                с курицей и индейкой
+                                            </p>
+                                            <span class="order-section__result-item-amount">
+                                                1шт.
+                                            </span>
+                                        </div>
+                                        <div class="order-section__result-item-right">
+                                            <span class="order-section__result-item-price">
+                                                390 Р
+                                            </span>
+                                            <span class="order-section__result-send-shelter">
+                                                Отправлено в приют
+                                            </span>
+                                        </div>
+                                    </li>
+                                    <li class="order-section__result-item">
+                                        <div class="order-section__result-image">
+                                            <img src="img/official/cart-item-example.jpg" alt="">
+                                        </div>
+                                        <div class="order-section__result-item-desc">
+                                            <p class="order-section__result-item-title">
+                                                Functional Nutrition Indor
+                                                корм для домашних кошек
+                                                старше 1 года,
+                                                с курицей и индейкой
+                                            </p>
+                                            <span class="order-section__result-item-amount">
+                                                1шт.
+                                            </span>
+                                        </div>
+                                        <div class="order-section__result-item-right">
+                                        <span class="order-section__result-item-price">
+                                            390 Р
+                                        </span>
+                                            <span class="order-section__result-send-shelter">
+                                            Отправлено в приют
+                                        </span>
+                                        </div>
+                                    </li>
+                                    <li class="order-section__result-item">
+                                        <div class="order-section__result-image">
+                                            <img src="img/official/cart-item-example.jpg" alt="">
+                                        </div>
+                                        <div class="order-section__result-item-desc">
+                                            <p class="order-section__result-item-title">
+                                                Functional Nutrition Indor
+                                                корм для домашних кошек
+                                                старше 1 года,
+                                                с курицей и индейкой
+                                            </p>
+                                            <span class="order-section__result-item-amount">
+                                                1шт.
+                                            </span>
+                                        </div>
+                                        <div class="order-section__result-item-right">
+                                        <span class="order-section__result-item-price">
+                                            390 Р
+                                        </span>
+                                            <span class="order-section__result-send-shelter">
+                                            Отправлено в приют
+                                        </span>
+                                        </div>
+                                    </li>
+                                    <li class="order-section__result-item">
+                                        <div class="order-section__result-image">
+                                            <img src="img/official/cart-item-example.jpg" alt="">
+                                        </div>
+                                        <div class="order-section__result-item-desc">
+                                            <p class="order-section__result-item-title">
+                                                Functional Nutrition Indor
+                                                корм для домашних кошек
+                                                старше 1 года,
+                                                с курицей и индейкой
+                                            </p>
+                                            <span class="order-section__result-item-amount">
+                                                1шт.
+                                            </span>
+                                        </div>
+                                        <div class="order-section__result-item-right">
+                                        <span class="order-section__result-item-price">
+                                            390 Р
+                                        </span>
+                                            <span class="order-section__result-send-shelter">
+                                            Отправлено в приют
+                                        </span>
+                                        </div>
+                                    </li>
+                                    <li class="order-section__result-item">
+                                        <div class="order-section__result-image">
+                                            <img src="img/official/cart-item-example.jpg" alt="">
+                                        </div>
+                                        <div class="order-section__result-item-desc">
+                                            <p class="order-section__result-item-title">
+                                                Functional Nutrition Indor
+                                                корм для домашних кошек
+                                                старше 1 года,
+                                                с курицей и индейкой
+                                            </p>
+                                            <span class="order-section__result-item-amount">
+                                                1шт.
+                                            </span>
+                                        </div>
+                                        <div class="order-section__result-item-right">
+                                        <span class="order-section__result-item-price">
+                                            390 Р
+                                        </span>
+                                            <span class="order-section__result-send-shelter">
+                                            Отправлено в приют
+                                        </span>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="order-section__result-bottom">
+                                <p class="order-section__result-bottom-desc">
+                                    В корзине 3 товара на сумму 1740 Р
+                                </p>
+                                <p class="order-section__result-express">
+                                    Экспресс-доставка 500 Р
+                                </p>
+                                <div class="order-section__result-total-price">
+                                    Итого: 1740 Р
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+@@include('components/footer.html')

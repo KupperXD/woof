@@ -1,0 +1,81 @@
+.profile-card {
+  width: 700px;
+  padding: 32px;
+  background-color: $white;
+  border-radius: 20px;
+
+  @media (max-width: $tablet-max) {
+    width: 100%;
+    max-width: 700px;
+  }
+
+  @media (max-width: $mobile-max) {
+    padding: 24px;
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: minmax(100px, auto);
+    gap: 16px 24px;
+
+    @media (max-width: $tablet-max) {
+      grid-auto-rows: minmax(86px, auto);
+      gap: 16px;
+    }
+
+    @media (max-width: $mobile-max) {
+      display: block;
+    }
+  }
+
+  &__item {
+    &--big {
+      @media (max-width: $tablet-max) {
+        grid-column: 2 span;
+      }
+    }
+
+    &:not(:first-of-type) {
+      @media (max-width: $mobile-max) {
+        margin: 32px 0 0;
+      }
+    }
+  }
+
+  &__item-text,
+  &__item-label {
+    display: block;
+  }
+
+  &__item-label {
+    font-size: 16px;
+    line-height: 18px;
+    font-weight: 500;
+  }
+
+  &__item-text {
+    margin: 12px 0 0;
+
+    &--empty {
+      font-style: italic;
+      color: #848484;
+    }
+  }
+
+  &__item-checkbox {
+    margin: 12px 0 0;
+  }
+
+  &__item-checkbox .radio-field__txt {
+    font-size: 12px;
+  }
+
+  &__open-edit {
+    margin: 28px 0 0;
+    @media (max-width: $mobile-max) {
+      width: 100%;
+      max-width: 300px;
+    }
+  }
+}

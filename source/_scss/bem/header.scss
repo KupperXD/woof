@@ -407,16 +407,15 @@
     border-radius: 100%;
     background-color: $red;
 
-    @media (max-width: $mobile-max) {
+    @media (max-width: $tablet-max) {
       width: 12px;
       height: 12px;
       padding: 1px;
-      top: 30%;
-      right: auto;
-      left: 50%;
+      top: 0;
+      right: 0;
       font-size: 8px;
       line-height: 10px;
-      transform: translateX(-40%);
+      transform: translateX(50%);
       background-color: $black;
       color: $white;
     }
