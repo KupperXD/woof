@@ -8,6 +8,7 @@
   @media (max-width: $mobile-max) {
     width: 136px;
     height: 342px;
+    border-radius: 8px;
   }
 
   &__wrapper {
@@ -70,6 +71,7 @@
       padding: 2px 8px;
       font-size: 10px;
       line-height: 12px;
+      border-radius: 0 8px 0 8px;
     }
   }
 

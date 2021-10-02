@@ -1,0 +1,64 @@
+.profile-address-card {
+  width: 370px;
+  height: 196px;
+  display: flex;
+  flex-direction: column;
+  padding: 36px 36px 24px 36px;
+  background-color: $white;
+  border-radius: 16px;
+
+  @media (max-width: $mobile-max) {
+    width: 100%;
+    max-width: 370px;
+    height: 224px;
+    padding: 24px 24px 32px 24px;
+  }
+
+  &__title {
+    font-size: 16px;
+    line-height: 18px;
+    font-weight: 500;
+  }
+
+  &__text {
+    margin: 20px 0 0;
+    padding-bottom: 8px;
+  }
+
+  &__buttons {
+    display: flex;
+    justify-content: space-between;
+    margin: auto 0 0;
+
+    @media (max-width: $mobile-max) {
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+    }
+  }
+
+  &__edit,
+  &__delete {
+    padding: 0;
+    background: none;
+    border: none;
+    transition: opacity 0.3s ease-in-out;
+    text-decoration: underline;
+
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+
+  &__edit {
+    color: #949494;
+  }
+
+  &__delete {
+    color: $red;
+
+    @media (max-width: $mobile-max) {
+      margin-top: 8px;
+    }
+  }
+}

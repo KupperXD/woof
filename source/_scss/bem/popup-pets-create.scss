@@ -1,0 +1,43 @@
+.popup-pets-create {
+
+  &__select-inner {
+    max-width: 300px;
+    margin: 12px auto 0;
+  }
+
+  &__group-wrapper {
+    max-width: 300px;
+    margin: 12px auto 0;
+  }
+
+  &__group {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @media (max-width: $mobile-max) {
+      display: block;
+    }
+  }
+
+  &__group-item {
+    width: 134px;
+
+    @media (max-width: $mobile-max) {
+      width: 100%;
+    }
+
+    &:not(:first-of-type) {
+      @media (max-width: $mobile-max) {
+        margin: 12px 0 0;
+      }
+    }
+  }
+
+
+  .select2-container .select2-results__option {
+    &:first-of-type {
+      display: none;
+    }
+  }
+}

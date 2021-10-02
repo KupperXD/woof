@@ -1,0 +1,127 @@
+@@include('components/head.html')
+<div style="display: none;">
+    @@include('../dist/img/svg/sprite.svg')
+</div>
+@@include('components/header-with-cart-user.html')
+<main class="all">
+    <section class="profile-page">
+        <div class="container container--content">
+            <div class="profile-page__wrapper">
+                <div class="profile-page__inner">
+                    <a class="profile-page__quit" href="#">Выйти из личного кабинета</a>
+                    <h2 class="profile-page__title">
+                        Личный кабинет
+                    </h2>
+                </div>
+                <div class="profile-page__navigation">
+                    <ul class="profile-page__tabs tabs">
+                        <li class="tabs__item">
+                            <a class="tabs__button" href="#">
+                                Личные данные
+                            </a>
+                        </li>
+                        <li class="tabs__item">
+                            <a class="tabs__button" href="#">
+                                Мои заказы
+                            </a>
+                        </li>
+                        <li class="tabs__item">
+                            <a class="tabs__button" href="#">
+                                Адреса доставки
+                            </a>
+                        </li>
+                        <li class="tabs__item active">
+                            <a class="tabs__button" href="#">
+                                Моё избранное
+                            </a>
+                        </li>
+                        <li class="tabs__item">
+                            <a class="tabs__button" href="#">
+                                Мои питомцы
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="profile-page__mobile-nav">
+                        <select class="js-select2">
+                            <option data-href="#" value="0">
+                                Личные данные
+                            </option>
+                            <option data-href="#" value="1">
+                                Мои заказы
+                            </option>
+                            <option data-href="#" value="2">
+                                Адрес доставки
+                            </option>
+                            <option selected data-href="#" value="3">
+                                Моё избранное
+                            </option>
+                            <option value="4">
+                                Мои питомцы
+                            </option>
+                        </select>
+                    </div>
+                </div>
+                <div class="profile-page__content">
+                    <div class="profile-favorite">
+                        <ul class="profile-favorite__list">
+                            <li class="profile-favorite__item">
+                                @@include('components/components/product-item.html')
+                            </li>
+                            <li class="profile-favorite__item">
+                                @@include('components/components/product-item.html')
+                            </li>
+                            <li class="profile-favorite__item">
+                                @@include('components/components/product-item.html')
+                            </li>
+                            <li class="profile-favorite__item">
+                                @@include('components/components/product-item.html')
+                            </li>
+                            <li class="profile-favorite__item">
+                                @@include('components/components/product-item.html')
+                            </li>
+                            <li class="profile-favorite__item">
+                                @@include('components/components/product-item.html')
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="hidden">
+        <div class="popup-with-form  js-popup-edit-or-create-address">
+            <p class="popup-with-form__title">
+                Введите новый адрес
+            </p>
+            <form action="">
+                <div class="popup-with-form__form-inner">
+                    <div class="form-field has-error">
+                        <label class="form-field__inner">
+                            <input name="name" placeholder="Название адреса" type="text">
+                        </label>
+                        <span class="form-field__error">Ошибка валидации</span>
+                    </div>
+                    <div class="form-field">
+                        <label class="form-field__inner">
+                            <input name="city" placeholder="Город" type="text">
+                        </label>
+                    </div>
+                    <div class="form-field">
+                        <label class="form-field__inner">
+                            <input name="address" placeholder="Адрес" type="text">
+                        </label>
+                    </div>
+                    <div class="form-field form-field--textarea">
+                        <label class="form-field__inner">
+                            <textarea name="comment" placeholder="Комментарии для курьера"></textarea>
+                        </label>
+                    </div>
+                    <button class="popup-with-form__submit button button--black" type="submit">
+                        Добавить
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</main>
+@@include('components/footer.html')

@@ -1,0 +1,24 @@
+.profile-favorite {
+  &__list {
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    margin: -13px -15px;
+
+    @media (max-width: $tablet-max) {
+      justify-content: center;
+    }
+
+    @media (max-width: $mobile-max) {
+      margin: -4px -3px;
+    }
+  }
+
+  &__item {
+    margin: 13px 15px;
+
+    @media (max-width: $mobile-max) {
+      margin: 4px 3px;
+    }
+  }
+}

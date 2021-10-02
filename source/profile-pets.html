@@ -1,0 +1,183 @@
+@@include('components/head.html')
+<div style="display: none;">
+    @@include('../dist/img/svg/sprite.svg')
+</div>
+@@include('components/header-with-cart-user.html')
+<main class="all">
+    <section class="profile-page">
+        <div class="container container--content">
+            <div class="profile-page__wrapper">
+                <div class="profile-page__inner">
+                    <a class="profile-page__quit" href="#">Выйти из личного кабинета</a>
+                    <h2 class="profile-page__title">
+                        Личный кабинет
+                    </h2>
+                </div>
+                <div class="profile-page__navigation">
+                    <ul class="profile-page__tabs tabs">
+                        <li class="tabs__item">
+                            <a class="tabs__button" href="#">
+                                Личные данные
+                            </a>
+                        </li>
+                        <li class="tabs__item">
+                            <a class="tabs__button" href="#">
+                                Мои заказы
+                            </a>
+                        </li>
+                        <li class="tabs__item">
+                            <a class="tabs__button" href="#">
+                                Адреса доставки
+                            </a>
+                        </li>
+                        <li class="tabs__item">
+                            <a class="tabs__button" href="#">
+                                Моё избранное
+                            </a>
+                        </li>
+                        <li class="tabs__item active">
+                            <a class="tabs__button" href="#">
+                                Мои питомцы
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="profile-page__mobile-nav">
+                        <select class="js-select2">
+                            <option data-href="#" value="0">
+                                Личные данные
+                            </option>
+                            <option data-href="#" value="1">
+                                Мои заказы
+                            </option>
+                            <option data-href="#" value="2">
+                                Адрес доставки
+                            </option>
+                            <option data-href="#" value="3">
+                                Моё избранное
+                            </option>
+                            <option selected value="4">
+                                Мои питомцы
+                            </option>
+                        </select>
+                    </div>
+                </div>
+                <div class="profile-page__content">
+                    <div class="profile-pets">
+                        <ul class="profile-pets__list">
+                            <li class="profile-pets__item profile-pets-card">
+                                <div class="profile-pets-card__picture">
+                                    <img src="img/official/profile_dog.png" alt="">
+                                </div>
+                                <div class="profile-pets-card__wrapper">
+                                    <p class="profile-pets-card__title">
+                                        Питулька
+                                    </p>
+                                    <p class="profile-pets-card__text">
+                                        Собака (Ж), без породы, 4 года
+                                    </p>
+                                    <div class="profile-pets-card__buttons">
+                                        <button class="profile-pets-card__edit js-open-profile-create-pets" type="button">
+                                            Редактировать информацию
+                                        </button>
+                                        <button class="profile-pets-card__delete" type="button">
+                                            Удалить
+                                        </button>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="profile-pets__item profile-pets-card profile-pets-card--cats">
+                                <div class="profile-pets-card__picture">
+                                    <img src="img/official/profile_cat.png" alt="">
+                                </div>
+                                <div class="profile-pets-card__wrapper">
+                                    <p class="profile-pets-card__title">
+                                        Питулька
+                                    </p>
+                                    <p class="profile-pets-card__text">
+                                        Собака (Ж), без породы, 4 года
+                                    </p>
+                                    <div class="profile-pets-card__buttons">
+                                        <button class="profile-pets-card__edit js-open-profile-create-pets" type="button">
+                                            Редактировать информацию
+                                        </button>
+                                        <button class="profile-pets-card__delete" type="button">
+                                            Удалить
+                                        </button>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="profile-pets__item profile-pets-card">
+                                <div class="profile-pets-card__wrapper">
+                                    <p class="profile-pets-card__title">
+                                        Добавьте нового питомца!
+                                    </p>
+                                    <p class="profile-pets-card__text">
+                                        Благодаря этой функции мы сможем
+                                        присылать вам персонализированные
+                                        предложения и акции
+                                    </p>
+                                    <div class="profile-pets-card__buttons">
+                                        <button class="button button--red profile-pets-card__create js-open-profile-create-pets" type="button">
+                                            Добавить
+                                        </button>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="hidden">
+        <div class="popup-with-form popup-pets-create  js-popup-create-or-edit-pets">
+            <p class="popup-with-form__title">
+                Добавьте нового питомца
+            </p>
+            <form action="">
+                <div class="popup-with-form__form-inner">
+                    <div class="popup-pets-create__select-inner">
+                        <select name="pets-type" class="js-popup-select">
+                            <option value="0">Вид животного</option>
+                            <option value="cat">Кошка</option>
+                            <option value="dog">Собака</option>
+                        </select>
+                    </div>
+                    <div class="popup-pets-create__group-wrapper">
+                        <div class="popup-pets-create__group">
+                            <div class="popup-pets-create__group-item">
+                                <select name="pets-type" class="js-popup-select">
+                                    <option value="0">Пол</option>
+                                    <option value="1">Мужской</option>
+                                    <option value="2">Женский</option>
+                                </select>
+                            </div>
+                            <div class="popup-pets-create__group-item">
+                                <select name="pets-type" class="js-popup-select">
+                                    <option value="0">Возраст</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-field has-error">
+                        <label class="form-field__inner">
+                            <input name="pets_name" placeholder="Введите кличку питомца" type="text">
+                        </label>
+                        <span class="form-field__error">Ошибка валидации</span>
+                    </div>
+                    <div class="form-field">
+                        <label class="form-field__inner">
+                            <input name="breed_name" placeholder="Введите название породы" type="text">
+                        </label>
+                    </div>
+                    <button class="popup-with-form__submit button button--black" type="submit">
+                        Добавить
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</main>
+@@include('components/footer.html')

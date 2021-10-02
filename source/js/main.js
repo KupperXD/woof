@@ -659,5 +659,58 @@
 
         });
 
+        $(document).on('click', '.js-open-popup-address-edit', () => {
+            const popupTemplate = $('.js-popup-edit-or-create-address').get(0);
+
+            if (typeof popupTemplate === 'undefined') {
+                console.log('Попап изменения данных не найден');
+                return;
+            }
+
+            const cloneTemplate = popupTemplate.cloneNode(true);
+            Swal.fire({
+                backdrop: true,
+                html: cloneTemplate,
+                customClass: {
+                    ...sweetAlertCssClass,
+                    popup: 'custom-popup custom-popup--with-form'
+                },
+                padding: 0,
+                showConfirmButton: false,
+                showCloseButton: true,
+            });
+        });
+
+        $(document).on('click', '.js-open-profile-create-pets', () => {
+            const popupTemplate = $('.js-popup-create-or-edit-pets').get(0);
+
+            if (typeof popupTemplate === 'undefined') {
+                console.log('Попап создания петомца в профиле не найден');
+                return;
+            }
+
+
+            const cloneTemplate = popupTemplate.cloneNode(true);
+            $(cloneTemplate).find('.js-popup-select').each((index, item) => {
+                console.log(item);
+                $(item).select2({
+                    placeholder: 'Выберете из списка',
+                    width: 'style',
+                    dropdownParent: $(item).parent(),
+                });
+            });
+            Swal.fire({
+                backdrop: true,
+                html: cloneTemplate,
+                customClass: {
+                    ...sweetAlertCssClass,
+                    popup: 'custom-popup custom-popup--with-form'
+                },
+                padding: 0,
+                showConfirmButton: false,
+                showCloseButton: true,
+            });
+        });
+
     });
 })(jQuery);
